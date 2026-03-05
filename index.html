@@ -157,7 +157,7 @@
 
 
   <!-- BG dla Header  -->
-  <section class="m-0 p-0 mx-auto container-xxl position-sticky top-0  " style="z-index: 9998 !important;">
+  <section class="m-0 p-0 mx-auto container-xxl position-sticky top-0  " style="z-index: 888 !important;">
     <div style="background-color: #141414;  height: 72px; " class="m-0 p-0 px-4 row"></div>
   </section> <!-- BG dla Header  -->
 
@@ -760,68 +760,125 @@
 
 
   <!-- Modal -->
-  <div style="z-index: 99999 !important;"  class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div style="z-index: 99999 !important;"  class="modal-dialog modal-lg">
-      <div style="z-index: 99999 !important;" class="modal-content bg-dark text-white">
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content bg-dark text-white">
   
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Banking details</h5>
-          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="m-0 p-3 modal-header bg-primary border-0">
+          <h5 class="m-0 me-auto p-0 modal-title" id="exampleModalLabel">Banking details</h5>
+          <button type="button" class="m-0 p-0 btn-close btn-close-white" data-bs-dismiss="modal"
+            aria-label="Close"></button>
         </div>
   
-        <div class="modal-body">
+        <div class="m-0 p-2 modal-body">
   
           <!-- Основні реквізити -->
-          <div class="mb-4 p-3 border rounded border-secondary">
-        
-            <p><strong>Recipient:</strong> IVANIUK ANDRIAN</p>
-            <p class="mb-0"><strong>SWIFT/BIC:</strong> UNJSUAUKXXX</p>
+          <div class="m-0 mt-2 mb-3 p-2">
+            <div class="m-0 p-3 border rounded border-secondary">
+  
+              <p><strong>Recipient:</strong> Andrian Ivaniuk </p>
+              <p class="mb-0"><strong>SWIFT/BIC:</strong> UNJSUAUKXXX</p>
+            </div>
           </div>
   
-              <!-- Картки валют -->
-              <div class="row g-3">
-
-            <!-- USD -->
-            <div class="col-md-6">
-              <div class="card bg-secondary text-white h-100">
-                <div class="card-body">
-                  <h6 class="card-title fw-bold">USD</h6>
-                  <p class="card-text small"> UA 403 2200 1000 0026 2033 7609 2704</p>
-                </div>
-              </div>
-            </div>
+          <!-- Картки валют -->
+          <div class="m-0 p-0 row g-3">
   
             <!-- EUR -->
-            <div class="col-md-6">
+            <div class="m-0 p-2 col-md-6">
               <div class="card bg-secondary text-white h-100">
-                <div class="card-body">
-                  <h6 class="card-title fw-bold">EUR</h6>
-                  <p class="card-text small"> UA 403 2200 1000 0026 2053 7612 8041</p>
+                <div class="card-body p-2">
+  
+                  <div class="d-flex justify-content-between align-items-center mb-2">
+                    <h6 class="card-title fw-bold d-flex align-items-center gap-2 m-0">
+                      <i class="bi bi-currency-euro"></i> EUR
+                    </h6>
+  
+                    <button class="btn btn-sm btn-dark border-0" onclick="copyIBAN('ibanUAH', this)">
+                      <i class="bi bi-clipboard"></i>
+                    </button>
+                  </div>
+  
+                  <div class="bg-dark rounded p-2">
+                    <span id="ibanEUR" class="small font-monospace">
+                      UA 40 3220 0100 0000 2620 5376 1280 41
+                    </span>
+                  </div>
+  
                 </div>
               </div>
             </div>
-
-        
+  
+            <!-- USD -->
+            <div class="m-0 p-2 col-md-6">
+              <div class="card bg-secondary text-white h-100">
+                <div class="card-body p-2">
+  
+                  <div class="d-flex justify-content-between align-items-center mb-2">
+                    <h6 class="card-title fw-bold d-flex align-items-center gap-2 m-0">
+                      <i class="bi bi-currency-dollar"></i> USD
+                    </h6>
+  
+                    <button class="btn btn-sm btn-dark border-0" onclick="copyIBAN('ibanUAH', this)">
+                      <i class="bi bi-clipboard"></i>
+                    </button>
+                  </div>
+  
+                  <div class="bg-dark rounded p-2">
+                    <span id="ibanUSD" class="small font-monospace">
+                      UA 40 3220 0100 0000 2620 3376 0927 04
+                    </span>
+                  </div>
+  
+                </div>
+              </div>
+            </div>
+  
             <!-- UAH -->
-            <div class="col-md-6">
+            <div class="m-0 p-2 col-md-6">
               <div class="card bg-secondary text-white h-100">
-                <div class="card-body">
-                  <h6 class="card-title fw-bold">UAH</h6>
-                  <p class="card-text small">UA 543 2200 1000 0026 2053 4708 4437</p>
+                <div class="card-body p-2">
+  
+                  <div class="d-flex justify-content-between align-items-center mb-2">
+                    <h6 class="card-title fw-bold d-flex align-items-center gap-2 m-0">
+                      <i class="bi bi-currency-exchange"></i> UAH
+                    </h6>
+  
+                    <button class="btn btn-sm btn-dark border-0" onclick="copyIBAN('ibanUAH', this)">
+                      <i class="bi bi-clipboard"></i>
+                    </button>
+                  </div>
+  
+                  <div class="bg-dark rounded p-2">
+                    <span id="ibanUAH" class="small font-monospace">
+                      UA 54 322001 00000 2620 5347 0844 37
+                    </span>
+                  </div>
+  
                 </div>
               </div>
             </div>
   
-  
-          <!-- Важливо знати -->
-          <div class="alert alert-warning text-dark mt-4" role="alert">
-            <strong>Important to know 🧐</strong>
-            <ul class="mb-0">
-              <li>Commission of intermediary banks for transfers is possible.</li>
-              <li>Transfers are received in 3-5 business days.</li>
-            </ul>
           </div>
   
+          <!-- Important -->
+          <div class="m-0 mt-3 p-2">
+  
+            <div class="m-0 p-3 alert alert-warning text-dark m-0" role="alert">
+              <strong>Important to know 🧐</strong>
+              <ul class="mb-0 pt-2">
+                <li>Commission of intermediary banks for transfers is possible.</li>
+                <li>Transfers are received in 3-5 business days.</li>
+              </ul>
+            </div>
+  
+          </div>
+        </div>
+  
+        <div class="m-0 mb-2 p-3 modal-footer border-0">
+          <button type="button" class="m-0 mx-auto p-2 px-3 btn btn-primary" data-bs-dismiss="modal">
+            Thank You!
+          </button>
         </div>
   
       </div>
