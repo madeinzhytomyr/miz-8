@@ -120,34 +120,51 @@ document.addEventListener("DOMContentLoaded", function () {
     let iso;
     let currentFilter = "*";
     const products = [
+        // {
+        //     name: "Coming Soon",
+        //     img: "https://i.postimg.cc/jjDjYd4c/photo-2026-03-03-23-56-04.jpg",
+        //     category: "Coming Soon",
+        //     tags: ["Coming", "Soon"],
+        //     date: "Coming Soon",
+        //     linkDetails: "https://www.instagram.com/p/DT8KW-Bja2W/",
+        //     filter: "2026",
+        // },
         {
-            name: "Soon",
-            img: "https://i.postimg.cc/jjDjYd4c/photo-2026-03-03-23-56-04.jpg",
+            name: "Developmental Activity for Preschoolers",
+            img: "https://i.postimg.cc/4xCBDHhm/project-3-1.jpg",
             category: "COMPLETED",
-            tags: ["УГКЦ Св. Варвари", "Відень"],
-            date: "22 січня 2026",
-            linkDetails: "https://www.instagram.com/p/DT8KW-Bja2W/",
-            filter: "2026",
+            tags: ["Krakow", "Poland"],
+            date: "18 August 2023",
+            linkDetails: "/",
+            filter: "2023",
         },
         {
-            name: "Soon",
-            img: "https://i.postimg.cc/jjDjYd4c/photo-2026-03-03-23-56-04.jpg",
+            name: "Dance Workshop for Girls",
+            img: "https://i.postimg.cc/LsjKdMX5/project-2-1.jpg",
             category: "COMPLETED",
-            tags: ["УГКЦ Св. Варвари", "Відень"],
-            date: "18 січня 2026",
-            linkDetails: "https://www.instagram.com/p/DTsH0YuCK47/?img_index=1",
-            filter: "2026",
+            tags: ["Krakow", "Poland"],
+            date: "20 July 2023",
+            linkDetails: "/",
+            filter: "2023",
         },
         {
-            name: "Soon",
-            img: "https://i.postimg.cc/jjDjYd4c/photo-2026-03-03-23-56-04.jpg",
+            name: "Drawing Workshop for Kids",
+            img: "https://i.postimg.cc/tCD4fWcm/project-1-1.jpg",
             category: "COMPLETED",
-            tags: ["УГКЦ Св. Варвари", "Відень"],
-            date: "12 грудня 2025",
-            linkDetails: "https://www.instagram.com/p/DSKxkowAsD_/",
-            filter: "2026",
+            tags: ["Krakow", "Poland"],
+            date: "30 Juny 2023",
+            linkDetails: "/",
+            filter: "2023",
         },
-  
+        {
+            name: "Donate for a child (Siepomaga)",
+            img: "https://i.postimg.cc/vTr1XD9D/photo-2026-03-05-14-39-12.jpg",
+            category: "COMPLETED",
+            tags: ["Krakow", "Poland"],
+            date: "30 Februar 2023",
+            linkDetails: "/",
+            filter: "2024",
+        },
     ];
 
     function createCard(product) {
@@ -170,8 +187,8 @@ document.addEventListener("DOMContentLoaded", function () {
                             <span class="project-category ${
                                 product.category === "COMPLETED"
                                     ? "bg-primary"
-                                    : product.category === "Актуально"
-                                    ? "bg-danger"
+                                    : product.category === "IN THE PROCESS"
+                                    ? "bg-primary"
                                     : ""
                             }">
                                 ${product.category}
@@ -333,7 +350,7 @@ document.addEventListener("DOMContentLoaded", function () {
         {
             name: "AN",
             img: "https://i.postimg.cc/GhJdk8cb/photo-2026-03-02-22-43-38.jpg",
-            position: "Ideological engine",
+            position: "Volunteer",
             social: [
                 // {  icon: "bi bi-instagram", link: "https://www.instagram.com/pushkar_roma/", },
                 // { icon: "bi bi-youtube", link: "https://www.youtube.com/" },
@@ -344,43 +361,25 @@ document.addEventListener("DOMContentLoaded", function () {
         {
             name: "Roman",
             img: "https://i.postimg.cc/y81g9zCn/8009cfc4-173a-429b-bcf6-0b2c20c38c3b.jpg",
-            position: "Architect",
-            social: [],
-        },
-        {
-            name: "Eugene",
-            img: "https://i.postimg.cc/y81g9zCn/8009cfc4-173a-429b-bcf6-0b2c20c38c3b.jpg",
-            position: "Hunter for new formats",
-            social: [],
-        },
-        {
-            name: "Dmitry",
-            img: "https://i.postimg.cc/y81g9zCn/8009cfc4-173a-429b-bcf6-0b2c20c38c3b.jpg",
-            position: "Curator",
-            social: [],
-        },
-        {
-            name: "Darina",
-            img: "https://i.postimg.cc/y81g9zCn/8009cfc4-173a-429b-bcf6-0b2c20c38c3b.jpg",
-            position: "Technical magician",
+            position: "Volunteer",
             social: [],
         },
         {
             name: "Artem",
             img: "https://i.postimg.cc/y81g9zCn/8009cfc4-173a-429b-bcf6-0b2c20c38c3b.jpg",
-            position: "Change engineer",
+            position: "Volunteer",
             social: [],
         },
         {
-            name: "Alexander",
+            name: "Oleksandr",
             img: "https://i.postimg.cc/y81g9zCn/8009cfc4-173a-429b-bcf6-0b2c20c38c3b.jpg",
-            position: "Harmony coordinator",
+            position: "Volunteer",
             social: [],
         },
         {
-            name: "Sofia",
+            name: "Sofiia",
             img: "https://i.postimg.cc/y81g9zCn/8009cfc4-173a-429b-bcf6-0b2c20c38c3b.jpg",
-            position: "Balance keeper",
+            position: "Volunteer",
             social: [],
         },
     ];
@@ -650,6 +649,46 @@ document.querySelectorAll("[data-section-title]").forEach((el) => {
       </div>
     `;
 });
+
+
+// щоб правильно працбвала форма
+// щоб правильно працбвала форма
+// щоб правильно працбвала форма
+// щоб правильно працбвала форма
+// щоб правильно працбвала форма
+// щоб правильно працбвала форма
+// щоб правильно працбвала форма
+// щоб правильно працбвала форма
+const form = document.getElementById("contact-form");
+const status = document.getElementById("form-status");
+
+form.addEventListener("submit", async function (e) {
+  e.preventDefault(); // зупиняємо стандартну відправку
+
+  const data = new FormData(form);
+
+  try {
+    const response = await fetch(form.action, {
+      method: "POST",
+      body: data,
+      headers: {
+        'Accept': 'application/json'
+      }
+    });
+
+    if (response.ok) {
+      status.style.display = "block";
+      form.reset();
+    } else {
+      status.innerHTML = "❌ Something went wrong.";
+      status.style.display = "block";
+    }
+  } catch (error) {
+    status.innerHTML = "❌ Network error.";
+    status.style.display = "block";
+  }
+});
+
 
 
 
