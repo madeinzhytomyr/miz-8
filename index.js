@@ -692,7 +692,23 @@ form.addEventListener("submit", async function (e) {
 
 
 
+// кнопка копіююваня біля номера рахунку
+// кнопка копіююваня біля номера рахунку
+// кнопка копіююваня біля номера рахунку
+// кнопка копіююваня біля номера рахунку
+// кнопка копіююваня біля номера рахунку
+// кнопка копіююваня біля номера рахунку
+// кнопка копіююваня біля номера рахунку
 
+function copyIBAN(elementId, btn) {
+  const text = document.getElementById(elementId).innerText.replace(/\s+/g, '');
+  navigator.clipboard.writeText(text).then(() => {
+    btn.innerHTML = '<i class="bi bi-check-lg"></i>';
+    setTimeout(() => {
+      btn.innerHTML = '<i class="bi bi-clipboard"></i>';
+    }, 1500);
+  });
+}
 
 
 
