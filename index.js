@@ -711,6 +711,3 @@ function copyIBAN(elementId, btn) {
 }
 
 
-
-
-
