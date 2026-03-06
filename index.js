@@ -352,9 +352,7 @@ document.addEventListener("DOMContentLoaded", function () {
             img: "https://i.postimg.cc/GhJdk8cb/photo-2026-03-02-22-43-38.jpg",
             position: "Volunteer",
             social: [
-                // {  icon: "bi bi-instagram", link: "https://www.instagram.com/pushkar_roma/", },
-                // { icon: "bi bi-youtube", link: "https://www.youtube.com/" },
-                // { icon: "bi bi-tiktok", link: "https://www.tiktok.com/" },
+                // {  icon: "bi bi-instagram", link: "https://www.instagram.com/mynameisandrian/", },
             ],
         },
       
@@ -709,5 +707,4 @@ function copyIBAN(elementId, btn) {
     }, 1500);
   });
 }
-
 
