@@ -315,12 +315,12 @@ header
 
 .my_social-links a:hover {
     color: var(--nav-color);
-    transform: rotate(-2deg);
+    transform: scale(0.8) rotate(-2deg);
 
 }
 .my_social-links a:active {
     color: var(--nav-color);
-    scale: 0.8;
+    transform: scale(0.6) rotate(-2deg);
 }
 
 @media (max-width: 1200px) {
@@ -633,11 +633,11 @@ header
 
 .footer .social-links a:hover {
     color: var(--nav-color);
-    scale: 0.8;
+    transform: scale(0.8) rotate(-2deg);
 }
 .footer .social-links a:active {
     color: var(--nav-color);
-    scale: 0.4;
+    transform: scale(0.6) rotate(-2deg);
 }
 
 .footer h4 {
@@ -2483,7 +2483,8 @@ header
 
 .team-nav-btn:hover {
     color: white;
-    transform: scale(0.8) rotate(-2deg);}
+    transform: scale(0.8) rotate(-2deg) ;
+}
 
 .team-nav-btn:active {
     color: white;
@@ -3140,12 +3141,14 @@ header
 
 .my_social-links_2 a:hover {
     color: var(--nav-color);
-    transform: rotate(-2deg);
+    transform: scale(0.8) rotate(-2deg);
 }
 .my_social-links_2 a:active {
     color: var(--nav-color);
-    scale: 0.8;
+    transform: scale(0.6) rotate(-2deg);
 }
+
+
 
 
 
