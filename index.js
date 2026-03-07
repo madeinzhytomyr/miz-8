@@ -710,3 +710,4 @@ function copyIBAN(elementId, btn) {
   });
 }
 
+
