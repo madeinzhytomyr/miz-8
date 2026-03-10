@@ -23,40 +23,39 @@
 document.addEventListener("DOMContentLoaded", function () {
     const services = [
         {
-            title: "Educational Activities",
+            title: "Support for the Ukrainian Army",
             icon: "bi bi-fire",
             description:
-                "Trainings, workshops, and non-formal education programs for all age groups.",
+                "We help the Ukrainian army in the war against Russia by collecting essential supplies, supporting soldiers, and assisting with their needs.",
         },
         {
-            title: "Social Support and Humanitarian Assistance",
+            title: "Support for People Affected by the War",
             icon: "bi bi-people",
             description:
-                "Aid and humanitarian support for vulnerable populations.",
+                "We help people who have been affected by the war with Russia by providing humanitarian aid, support, and essential resources for living.",
         },
         {
-            title: "Charitable and Fundraising Activities",
+            title: "Support for Children",
             icon: "bi bi-graph-up-arrow",
             description:
-                "Fundraising and donation collection to support charitable programs.",
+                "We help children in need by organizing fundraising for treatment, rehabilitation, and essential support, giving them and their families hope for a better future.",
         },
         {
-            title: "Psychological and Legal Support",
+            title: "Support for Orphanages",
             icon: "bi bi-heart-fill",
             description:
-                "Free counseling, consultations, and legal assistance.",
+                "We help orphanages by providing children with essential items, gifts, educational materials, and organizing charitable activities.",
         },
         {
-            title: "Cultural and Community Development",
+            title: "Humanitarian and Charitable Aid",
             icon: "bi bi-stars",
             description:
-                "Cultural events and initiatives that strengthen communities.",
+                "We organize fundraising campaigns and charity events to support people who are facing difficult life situations.",
         },
         {
-            title: "International Cooperation and Partnerships",
+            title: "International Cooperation",
             icon: "bi bi-compass",
-            description:
-                "Collaboration with local and international partners.",
+            description: "We cooperate with local and international partners to implement humanitarian and social projects.",
         },
     ];
 
@@ -120,51 +119,79 @@ document.addEventListener("DOMContentLoaded", function () {
     let iso;
     let currentFilter = "*";
     const products = [
+        {
+            name: "Coming Soon",
+            img: "https://i.postimg.cc/jjDjYd4c/photo-2026-03-03-23-56-04.jpg",
+            category: "Coming Soon",
+            tags: ["Coming", "Soon"],
+            date: "Coming Soon",
+            linkDetails: "https://www.instagram.com/p/DT8KW-Bja2W/",
+            filter: "2026",
+        },
+        {
+            name: "Coming Soon",
+            img: "https://i.postimg.cc/jjDjYd4c/photo-2026-03-03-23-56-04.jpg",
+            category: "Coming Soon",
+            tags: ["Coming", "Soon"],
+            date: "Coming Soon",
+            linkDetails: "https://www.instagram.com/p/DT8KW-Bja2W/",
+            filter: "2026",
+        },
+        {
+            name: "Coming Soon",
+            img: "https://i.postimg.cc/jjDjYd4c/photo-2026-03-03-23-56-04.jpg",
+            category: "Coming Soon",
+            tags: ["Coming", "Soon"],
+            date: "Coming Soon",
+            linkDetails: "https://www.instagram.com/p/DT8KW-Bja2W/",
+            filter: "2026",
+        },
+        {
+            name: "Coming Soon",
+            img: "https://i.postimg.cc/jjDjYd4c/photo-2026-03-03-23-56-04.jpg",
+            category: "Coming Soon",
+            tags: ["Coming", "Soon"],
+            date: "Coming Soon",
+            linkDetails: "https://www.instagram.com/p/DT8KW-Bja2W/",
+            filter: "2026",
+        },
+
         // {
-        //     name: "Coming Soon",
-        //     img: "https://i.postimg.cc/jjDjYd4c/photo-2026-03-03-23-56-04.jpg",
-        //     category: "Coming Soon",
-        //     tags: ["Coming", "Soon"],
-        //     date: "Coming Soon",
-        //     linkDetails: "https://www.instagram.com/p/DT8KW-Bja2W/",
-        //     filter: "2026",
+        //     name: "Developmental Activity for Preschoolers",
+        //     img: "https://i.postimg.cc/4xCBDHhm/project-3-1.jpg",
+        //     category: "COMPLETED",
+        //     tags: ["Krakow", "Poland"],
+        //     date: "18 August 2023",
+        //     linkDetails: "/",
+        //     filter: "2023",
         // },
-        {
-            name: "Developmental Activity for Preschoolers",
-            img: "https://i.postimg.cc/4xCBDHhm/project-3-1.jpg",
-            category: "COMPLETED",
-            tags: ["Krakow", "Poland"],
-            date: "18 August 2023",
-            linkDetails: "/",
-            filter: "2023",
-        },
-        {
-            name: "Dance Workshop for Girls",
-            img: "https://i.postimg.cc/LsjKdMX5/project-2-1.jpg",
-            category: "COMPLETED",
-            tags: ["Krakow", "Poland"],
-            date: "20 July 2023",
-            linkDetails: "/",
-            filter: "2023",
-        },
-        {
-            name: "Drawing Workshop for Kids",
-            img: "https://i.postimg.cc/tCD4fWcm/project-1-1.jpg",
-            category: "COMPLETED",
-            tags: ["Krakow", "Poland"],
-            date: "30 Juny 2023",
-            linkDetails: "/",
-            filter: "2023",
-        },
-        {
-            name: "Donate for a child (Siepomaga)",
-            img: "https://i.postimg.cc/vTr1XD9D/photo-2026-03-05-14-39-12.jpg",
-            category: "COMPLETED",
-            tags: ["Krakow", "Poland"],
-            date: "30 Februar 2023",
-            linkDetails: "/",
-            filter: "2024",
-        },
+        // {
+        //     name: "Dance Workshop for Girls",
+        //     img: "https://i.postimg.cc/LsjKdMX5/project-2-1.jpg",
+        //     category: "COMPLETED",
+        //     tags: ["Krakow", "Poland"],
+        //     date: "20 July 2023",
+        //     linkDetails: "/",
+        //     filter: "2023",
+        // },
+        // {
+        //     name: "Drawing Workshop for Kids",
+        //     img: "https://i.postimg.cc/tCD4fWcm/project-1-1.jpg",
+        //     category: "COMPLETED",
+        //     tags: ["Krakow", "Poland"],
+        //     date: "30 Juny 2023",
+        //     linkDetails: "/",
+        //     filter: "2023",
+        // },
+        // {
+        //     name: "Donate for a child (Siepomaga)",
+        //     img: "https://i.postimg.cc/vTr1XD9D/photo-2026-03-05-14-39-12.jpg",
+        //     category: "COMPLETED",
+        //     tags: ["Krakow", "Poland"],
+        //     date: "30 Februar 2023",
+        //     linkDetails: "/",
+        //     filter: "2024",
+        // },
     ];
 
     function createCard(product) {
@@ -357,7 +384,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 // { icon: "bi bi-tiktok", link: "https://www.tiktok.com/" },
             ],
         },
-      
+
         {
             name: "Roman",
             img: "https://i.postimg.cc/y81g9zCn/8009cfc4-173a-429b-bcf6-0b2c20c38c3b.jpg",
@@ -425,7 +452,6 @@ document.addEventListener("DOMContentLoaded", function () {
             const index = products.indexOf(product);
             openLightbox(index);
         });
-        
 
         return card;
     }
@@ -458,39 +484,31 @@ document.addEventListener("DOMContentLoaded", function () {
         document.body.style.overflow = "hidden";
     });
 
+    // ===== СТРІЛКИ =====
+    const lightboxPrev = document.getElementById("lightbox-prev");
+    const lightboxNext = document.getElementById("lightbox-next");
 
+    lightboxPrev.addEventListener("click", () => {
+        currentIndex = (currentIndex - 1 + products.length) % products.length;
+        openLightbox(currentIndex);
+    });
 
-
-        // ===== СТРІЛКИ =====
-        const lightboxPrev = document.getElementById("lightbox-prev");
-        const lightboxNext = document.getElementById("lightbox-next");
-
-
-        lightboxPrev.addEventListener("click", () => {
-            currentIndex =
-                (currentIndex - 1 + products.length) % products.length;
-            openLightbox(currentIndex);
-        });
-        
-        lightboxNext.addEventListener("click", () => {
-            currentIndex =
-                (currentIndex + 1) % products.length;
-            openLightbox(currentIndex);
-        });
-        
+    lightboxNext.addEventListener("click", () => {
+        currentIndex = (currentIndex + 1) % products.length;
+        openLightbox(currentIndex);
+    });
 
     // додавання блокування скролу
     // додавання блокування скролу
     function openLightbox(index) {
         currentIndex = index;
-    
+
         lightboxImg.src = products[currentIndex].img;
         lightboxName.textContent = products[currentIndex].name;
-    
+
         lightbox.style.display = "flex";
         document.body.style.overflow = "hidden";
     }
-    
 
     // інше
     // інше
@@ -650,7 +668,6 @@ document.querySelectorAll("[data-section-title]").forEach((el) => {
     `;
 });
 
-
 // щоб правильно працбвала форма
 // щоб правильно працбвала форма
 // щоб правильно працбвала форма
@@ -663,34 +680,31 @@ const form = document.getElementById("contact-form");
 const status = document.getElementById("form-status");
 
 form.addEventListener("submit", async function (e) {
-  e.preventDefault(); // зупиняємо стандартну відправку
+    e.preventDefault(); // зупиняємо стандартну відправку
 
-  const data = new FormData(form);
+    const data = new FormData(form);
 
-  try {
-    const response = await fetch(form.action, {
-      method: "POST",
-      body: data,
-      headers: {
-        'Accept': 'application/json'
-      }
-    });
+    try {
+        const response = await fetch(form.action, {
+            method: "POST",
+            body: data,
+            headers: {
+                Accept: "application/json",
+            },
+        });
 
-    if (response.ok) {
-      status.style.display = "block";
-      form.reset();
-    } else {
-      status.innerHTML = "❌ Something went wrong.";
-      status.style.display = "block";
+        if (response.ok) {
+            status.style.display = "block";
+            form.reset();
+        } else {
+            status.innerHTML = "❌ Something went wrong.";
+            status.style.display = "block";
+        }
+    } catch (error) {
+        status.innerHTML = "❌ Network error.";
+        status.style.display = "block";
     }
-  } catch (error) {
-    status.innerHTML = "❌ Network error.";
-    status.style.display = "block";
-  }
 });
-
-
-
 
 // кнопка копіююваня біля номера рахунку
 // кнопка копіююваня біля номера рахунку
@@ -701,13 +715,13 @@ form.addEventListener("submit", async function (e) {
 // кнопка копіююваня біля номера рахунку
 
 function copyIBAN(elementId, btn) {
-  const text = document.getElementById(elementId).innerText.replace(/\s+/g, '');
-  navigator.clipboard.writeText(text).then(() => {
-    btn.innerHTML = '<i class="bi bi-check-lg"></i>';
-    setTimeout(() => {
-      btn.innerHTML = '<i class="bi bi-clipboard"></i>';
-    }, 1500);
-  });
+    const text = document
+        .getElementById(elementId)
+        .innerText.replace(/\s+/g, "");
+    navigator.clipboard.writeText(text).then(() => {
+        btn.innerHTML = '<i class="bi bi-check-lg"></i>';
+        setTimeout(() => {
+            btn.innerHTML = '<i class="bi bi-clipboard"></i>';
+        }, 1500);
+    });
 }
-
-
