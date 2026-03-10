@@ -972,13 +972,16 @@ header
     margin: 0 auto 24px;
     position: relative;
     border-radius: 50%;
-    padding: 6px;
+    padding: 4px;
     background: linear-gradient(
         135deg,
         var(--accent-color),
         color-mix(in srgb, var(--accent-color), #ff6b9d 50%)
     );
-    background: var(--bs-primary)
+
+    
+    padding: 4px;
+    background: var(--bs-white)
 
 }
 
@@ -987,7 +990,8 @@ header
     height: 100%;
     object-fit: cover;
     border-radius: 50%;
-    border: 4px solid var(--surface-color);
+    /* border: 4px solid var(--surface-color); */
+    
 }
 
 .about .profile-card .profile-header .profile-avatar .status-indicator {
@@ -997,9 +1001,10 @@ header
     width: 24px;
     height: 24px;
     background: #ffffff;
-    border: 4px solid var(--surface-color);
+    /* border: 4px solid var(--surface-color); */
     border-radius: 50%;
     animation: pulse 2s infinite;
+
 }
 
 .about .profile-card .profile-header h3 {
