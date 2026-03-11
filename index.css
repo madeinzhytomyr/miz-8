@@ -183,15 +183,18 @@ h6 {
 
 .my_under_title {
     margin: 0;
-    margin-inline: auto;
+    margin-inline: auto !important;
     padding: 0;
 
     font-size: 1.125rem;
+    font-size: small;
     line-height: 1.8;
     color: color-mix(in srgb, var(--default-color), transparent 25%);
     max-width: 720px;
     /* text-wrap: balance; */
-    font-size: 16px;
+    font-size: 15px;
+
+
 }
 
 /*--------------------------------------------------------------
@@ -282,28 +285,29 @@ header
 
 .my_social-links {
     margin-top: 0px;
+    padding: 0px;
     display: none;
     justify-content: center;
-    gap: 15px;
+    gap: 0px;
 
     gap: 10px; /* spacing between icons */
     justify-content: center; /* optional: center icons horizontally */
     align-items: center; /* optional: align vertically */
 
-    position: absolute; /* place at bottom of nav */
-    bottom: 24px; /* distance from bottom */
-    left: 50%; /* center relative to nav */
-    transform: translateX(-50%); /* perfect horizontal centering */
+    positio1n: absolute; /* place at bottom of nav */
+    bott1om: 24px; /* distance from bottom */
+    left1: 50%; /* center relative to nav */
+    tr1ansform: translateX(-50%); /* perfect horizontal centering */
 }
 
 .my_social-links a {
     margin: 0;
-    padding: 0;
+    padding: 2px;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 36px;
-    height: 50px;
+    width: 32px;
+    height: auto;
     /* background: color-mix(in srgb, var(--default-color), transparent 92%); */
     color: var(--default-color);
     transition: 0.3s;
@@ -336,6 +340,8 @@ header
     .my_navmenu {
         order: 2;
     }
+
+   
 }
 
 /*--------------------------------------------------------------
@@ -422,19 +428,27 @@ header
 
     .my_navmenu_ul {
         margin: 0px;
+        margin-inline: auto !important;
+        margin-top: auto !important;
+        margin-bottom: auto !important;
+
         padding: 0px;
 
         display: none;
         list-style: none;
         position: absolute;
-        inset: 72px 24px 24px 24px;
+        inset: 16px 24px 24px 24px;
 
         border-radius: 6px;
         background-color: var(--nav-mobile-background-color);
         overflow-y: auto;
         z-index: 9998;
         box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
-    }
+
+max-width: 420px;
+max-height: 666px;    
+border-radius: 12px;
+}
 
     .my_navmenu_a {
         margin: 0;
@@ -1045,7 +1059,7 @@ header
 .about .profile-card .profile-stats .stat-item p {
     font-size: 13px;
     color: color-mix(in srgb, var(--default-color), transparent 30%);
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     letter-spacing: 0.5px;
     margin: 0;
 }
@@ -3155,5 +3169,64 @@ header
 
 
 
+/* language dropdown */
+/* language dropdown */
+/* language dropdown */
+/* language dropdown */
+/* language dropdown */
+/* language dropdown */
+/* language dropdown */
+/* language dropdown */
+/* language dropdown */
+/* language dropdown */
+/* language dropdown */
 
+
+.language-dropdown {
+    margin: 0;
+    padding: 8px 16px;
+    position: relative;
+
+
+  }
+  
+  .lang-toggle {
+    background: #1f1f1f;
+    color: white;
+    border: 1px solid #2a2a2a;
+    border-radius: 10px;
+    padding: 8px;
+    font-size: 14px;
+    transition: 0.2s;
+
+    background: transparent;
+    border: 0px;
+  }
+  
+  .lang-toggle:hover {
+    background: #2a2a2a;
+  }
+  
+  .lang-menu {
+    background: #1a1a1a;
+    border: 1px solid #2a2a2a;
+    border-radius: 10px;
+    padding: 8px;
+    min-width: 160px;
+  }
+  
+  .lang-item {
+    color: white;
+    border-radius: 8px;
+    padding: 8px 16px;
+    transition: 0.2s;
+    cursor: pointer;
+    font-size: 14px !important;
+
+  }
+  
+  .lang-item:hover {
+    background: #2a2a2a;
+    color: white;
+  }
 
