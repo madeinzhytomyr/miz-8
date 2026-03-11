@@ -20,85 +20,86 @@
 // карта RICHTUNG
 // карта RICHTUNG
 
-document.addEventListener("DOMContentLoaded", function () {
-    const services = [
-        {
-            title: "Support for the Ukrainian Army",
-            icon: "bi bi-fire",
-            description:
-                "We help the Ukrainian army in the war against Russia by collecting essential supplies, supporting soldiers, and assisting with their needs.",
-        },
-        {
-            title: "Support for People Affected by the War",
-            icon: "bi bi-people",
-            description:
-                "We help people who have been affected by the war with Russia by providing humanitarian aid, support, and essential resources for living.",
-        },
-        {
-            title: "Support for Children",
-            icon: "bi bi-graph-up-arrow",
-            description:
-                "We help children in need by organizing fundraising for treatment, rehabilitation, and essential support, giving them and their families hope for a better future.",
-        },
-        {
-            title: "Support for Orphanages",
-            icon: "bi bi-heart-fill",
-            description:
-                "We help orphanages by providing children with essential items, gifts, educational materials, and organizing charitable activities.",
-        },
-        {
-            title: "Humanitarian and Charitable Aid",
-            icon: "bi bi-stars",
-            description:
-                "We organize fundraising campaigns and charity events to support people who are facing difficult life situations.",
-        },
-        {
-            title: "International Cooperation",
-            icon: "bi bi-compass",
-            description: "We cooperate with local and international partners to implement humanitarian and social projects.",
-        },
-    ];
+// document.addEventListener("DOMContentLoaded", function () {
+//     const services = [
+//         {
+//             title: "Support for the Ukrainian Army",
+//             icon: "bi bi-fire",
+//             description:
+//                 "We help the Ukrainian army in the war against Russia by collecting essential supplies, supporting soldiers, and assisting with their needs.",
+//         },
+//         {
+//             title: "Support for People Affected by the War",
+//             icon: "bi bi-people",
+//             description:
+//                 "We help people who have been affected by the war with Russia by providing humanitarian aid, support, and essential resources for living.",
+//         },
+//         {
+//             title: "Support for Children",
+//             icon: "bi bi-graph-up-arrow",
+//             description:
+//                 "We help children in need by organizing fundraising for treatment, rehabilitation, and essential support, giving them and their families hope for a better future.",
+//         },
+//         {
+//             title: "Support for Orphanages",
+//             icon: "bi bi-heart-fill",
+//             description:
+//                 "We help orphanages by providing children with essential items, gifts, educational materials, and organizing charitable activities.",
+//         },
+//         {
+//             title: "Humanitarian and Charitable Aid",
+//             icon: "bi bi-stars",
+//             description:
+//                 "We organize fundraising campaigns and charity events to support people who are facing difficult life situations.",
+//         },
+//         {
+//             title: "International Cooperation",
+//             icon: "bi bi-compass",
+//             description:
+//                 "We cooperate with local and international partners to implement humanitarian and social projects.",
+//         },
+//     ];
 
-    const container = document.getElementById("servicesContainer");
+//     const container = document.getElementById("servicesContainer");
 
-    if (!container) {
-        console.error("❌ Контейнер #servicesContainer не знайдено!");
-        return;
-    }
+//     if (!container) {
+//         console.error("❌ Контейнер #servicesContainer не знайдено!");
+//         return;
+//     }
 
-    function createServiceItem(item, i) {
-        const div = document.createElement("div");
-        div.className = "col-md-6 col-lg-4";
-        div.style.cssText = "padding: 12px; margin: 0;";
+//     function createServiceItem(item, i) {
+//         const div = document.createElement("div");
+//         div.className = "col-md-6 col-lg-4";
+//         div.style.cssText = "padding: 12px; margin: 0;";
 
-        div.innerHTML = `
-            <div class="service-item row align-items-center">
-                <div class="m-0 p-0 col-auto">
-                    <div class="icon-wrapper">
-                        <i class="m-0 p-0 ${item.icon}"></i>
-                    </div>
-                </div>
+//         div.innerHTML = `
+//             <div class="service-item row align-items-center">
+//                 <div class="m-0 p-0 col-auto">
+//                     <div class="icon-wrapper">
+//                         <i class="m-0 p-0 ${item.icon}"></i>
+//                     </div>
+//                 </div>
 
-                <div class="m-0 p-0 ps-4 col text-start">
-                    <h4 class="m-0 p-0 pb-2">${item.title}</h4>
-                    <a href="#contact" class=" read-more ">
-                        <span>Support</span>
-                        <i class="m-0 p-0 bi bi-arrow-right"></i>
-                    </a>
-                </div>
+//                 <div class="m-0 p-0 ps-4 col text-start">
+//                     <h4 class="m-0 p-0 pb-2">${item.title}</h4>
+//                     <a href="#contact" class=" read-more ">
+//                         <span>Support</span>
+//                         <i class="m-0 p-0 bi bi-arrow-right"></i>
+//                     </a>
+//                 </div>
 
-                <p class="m-0 p-0 text-start">${item.description}</p>
-            </div>
-        `;
+//                 <p class="m-0 p-0 text-start">${item.description}</p>
+//             </div>
+//         `;
 
-        return div;
-    }
+//         return div;
+//     }
 
-    // 🔹 Рендер
-    services.forEach((item, i) => {
-        container.appendChild(createServiceItem(item, i));
-    });
-});
+//     // 🔹 Рендер
+//     services.forEach((item, i) => {
+//         container.appendChild(createServiceItem(item, i));
+//     });
+// });
 
 // карта ЗУСТРІЧІ
 // карта ЗУСТРІЧІ
@@ -575,6 +576,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const mobileNavToggle = document.querySelector(".my_burger");
     const body = document.querySelector("body");
     const navMenu = document.querySelector("#navmenu"); // правильний id
+    const scrollUPP = document.getElementById("scrollUPP");
 
     if (mobileNavToggle) {
         mobileNavToggle.addEventListener("click", function (e) {
@@ -584,6 +586,9 @@ document.addEventListener("DOMContentLoaded", function () {
             // Змінюємо іконку (бургер <-> хрестик)
             this.classList.toggle("bi-list");
             this.classList.toggle("bi-x");
+
+            // додаємо / забираємо клас
+            scrollUPP.classList.toggle("d-none");
         });
     }
 
@@ -657,16 +662,34 @@ document.querySelectorAll(".js_name").forEach((el) => {
 });
 
 // заголовок функціЯ щоб не дублювати
+// заголовок функціЯ щоб не дублювати
+// заголовок функціЯ щоб не дублювати
+// заголовок функціЯ щоб не дублювати
 
-document.querySelectorAll("[data-section-title]").forEach((el) => {
-    el.innerHTML = `
-      <div class="my_section_title row" data-aos="fade-up">
-        <div class="my_subtitle col-12">MADE in Zhytomyr</div>
-        <div class="my_title col-12">${el.dataset.title}</div>
-        <div class="my_under_title col-12">${el.dataset.under}</div>
-      </div>
-    `;
-});
+function renderSectionTitles(lang = "en") {
+    document.querySelectorAll("[data-section-title]").forEach((el) => {
+        let title = el.dataset.title;
+        let under = el.dataset.under;
+
+        if (el.dataset.i18nTitle) {
+            title = translations[lang][el.dataset.i18nTitle];
+        }
+
+        if (el.dataset.i18nUnder) {
+            under = translations[lang][el.dataset.i18nUnder];
+        }
+
+        el.innerHTML = `
+        <div class="my_section_title row" data-aos="fade-up">
+          <div class="my_subtitle col-12">MADE in Zhytomyr</div>
+          <div class="my_title col-12 text-center">${title}</div>
+          <div class="my_under_title col-12 text">${under}</div>
+        </div>
+
+
+      `;
+    });
+}
 
 // щоб правильно працбвала форма
 // щоб правильно працбвала форма
@@ -725,3 +748,451 @@ function copyIBAN(elementId, btn) {
         }, 1500);
     });
 }
+
+// зміна мови
+// зміна мови
+// зміна мови
+// зміна мови
+// зміна мови
+// зміна мови
+// зміна мови
+// зміна мови
+// зміна мови
+// зміна мови
+// зміна мови
+// зміна мови
+// зміна мови
+// зміна мови
+
+// 3️⃣ Додай словник мов
+// 3️⃣ Додай словник мов
+// 3️⃣ Додай словник мов
+// 3️⃣ Додай словник мов
+// 3️⃣ Додай словник мов
+
+const translations = {
+    en: {
+        motto: "Together, we can make the impossible possible!",
+
+        // Навігація
+        about: "About us",
+        directions: "Directions",
+        activities: "Activities",
+        team: "Team",
+        contact: "Contact",
+        support: "Support Us",
+        donate: "Donate Now",
+        // volunteer: "Become a Volunteer",
+        // internalNeeds: "Internal Needs",
+        // getMembership: "Get Membership",
+
+        // Hero Section
+        heroSlogan: "Together, we can make the impossible possible!",
+
+        // About Section
+        aboutTitle: "About us",
+        aboutSubtitle:
+            "We are a non-profit organization that unites caring and active people to support communities and create sustainable, meaningful change.",
+
+        whoWeAreTag: "Who We Are",
+        whoWeAreTitle: "Together for Positive Change",
+        whoWeAreText1:
+            "We are a non-profit organization that brings together active and caring people who want to make a difference. We support one another, develop initiatives, and work to strengthen our community.",
+        whoWeAreText2:
+            "Our path is built on simple but meaningful actions: collaboration, honest dialogue, service to others, and consistent efforts toward sustainable development. Through these steps, we create real and lasting impact.",
+        projects: "Projects",
+        activeMembers: "Community Members",
+        meetingPlace: "Meeting Place",
+        howToJoin: "How to Join",
+
+        // Services Section
+        directionsTitle: "Directions",
+        directionsSubtitle:
+            "We implement social and charitable initiatives that support people, strengthen communities, and drive positive change.",
+
+        serviceArmyTitle: "Support for the Army",
+        serviceArmyText:
+            "We help the Ukrainian army by collecting supplies and supporting soldiers.",
+
+        serviceWarTitle: "Aid for War Victims",
+        serviceWarText:
+            "We provide humanitarian aid and support to people affected by the war.",
+
+        serviceChildrenTitle: "Support for Children",
+        serviceChildrenText:
+            "We organize fundraising for treatment, rehabilitation and support for children.",
+
+        serviceOrphanTitle: "Support for Orphanages",
+        serviceOrphanText:
+            "We provide orphanages with essential items and organize charitable activities.",
+
+            serviceHumanTitle: "Humanitarian Aid",
+            serviceHumanText:
+            "We organize charity campaigns to help people in difficult life situations.",
+
+            serviceInternationalTitle: "International Partnership",
+            serviceInternationalText:
+            "We cooperate with international partners on humanitarian projects.",
+
+        makeADifference: "Make a Difference!",
+        makeADifferenceText:
+            "Your donation helps us support people, strengthen communities, and create positive change. Every donation brings real help to someone in need.",
+
+        // Portfolio Section
+        activitiesTitle: "Our Activities",
+        activitiesSubtitle:
+            "Explore our charitable events and initiatives, where we support others, unite communities, and create positive change.",
+
+        loadMoreProjects: "Load More Projects",
+        helpUsChangeLives: "Help Us Change Lives",
+        helpUsChangeLivesText:
+            "Even a small donation can support people, strengthen communities, and make a real impact.",
+
+        // Team Section
+        teamTitle: "Our Team",
+        teamSubtitle:
+            "We are a community of caring people committed to helping others and making the world better.",
+        supportOurWork: "Support Our Work",
+        back: "Back",
+        forward: "Forward",
+
+        // Support Section
+        supportTitle: "Support Us",
+        supportSubtitle:
+            "Your support helps us develop charitable projects, implement important initiatives, and assist those in need.",
+
+        supportMissionTitle: "Support Our Work",
+        supportMissionText:
+            "Your contribution helps us develop charitable projects, organize initiatives, and provide assistance to those who need it most.",
+        donateNow: "Donate Now",
+
+        internalNeedsTitle: "Internal Needs",
+        internalNeedsText:
+            "Donations for internal needs help support our work. A significant part of these funds is used for advertising to attract more people to donate.",
+        supportOurWork1: "Support Our Work",
+
+        becomeVolunteerTitle: "Become a Volunteer",
+        becomeVolunteerText:
+            "People who join our community help us organize initiatives, support charitable projects, and make a positive impact through good deeds.",
+        joinUs: "Join Us",
+
+        transparencyTitle: "Transparency & Accountability",
+        transparencyText:
+            "Donations made to support our general activities are fully accounted for. We publish monthly reports detailing all incoming donations and expenses. Donations made for internal organizational needs help us maintain and develop the organization and cover operational expenses such as administration, infrastructure, promotion, and project development. These funds are managed at the organization’s discretion to ensure stable operations and long-term impact. Donations allocated for internal needs are not included in public financial reports. We sincerely thank everyone who supports our mission and helps us continue our work.",
+
+        // Contact Section
+        contactTitle: "Contact us",
+        contactSubtitle:
+            "Do you have any questions or would you like to join our initiatives? We are always open to communication and cooperation!",
+
+        email: "Email",
+        address: "Address",
+        yourName: "Your name",
+        yourEmail: "Your email address",
+        messageSubject: "Message subject",
+        yourMessage: "Your message",
+        sendMessage: "Send message",
+        messageSent: "✅ Message sent!",
+
+        // Footer
+        links: "LINKS",
+        supportFooter: "SUPPORT",
+        contactFooter: "CONTACT",
+        allRightsReserved: "All rights reserved",
+        footerText:
+            "A community of caring individuals committed to creating real, measurable impact. Together, we run charitable projects, provide support to those in need, and create meaningful change.",
+    },
+
+    ua: {
+        motto: "Разом ми можемо зробити неможливе можливим!",
+
+        // Навігація
+        about: "Про нас",
+        directions: "Напрямки",
+        activities: "Діяльність",
+        team: "Команда",
+        contact: "Контакти",
+        support: "Підтримати",
+        donate: "Задонатити",
+        // volunteer: "Стати волонтером",
+        // internalNeeds: "Внутрішні потреби",
+        // getMembership: "Отримати членство",
+
+        // Hero Section
+        heroSlogan: "Разом ми можемо зробити неможливе можливим!",
+
+        // About Section
+        aboutTitle: "Про нас",
+        aboutSubtitle:
+            "Ми-некомерційна організація, яка об'єднує небайдужих і активних людей для підтримки спільнот і створення стійких, значущих змін.",
+
+        whoWeAreTag: "Хто ми",
+        whoWeAreTitle: "Разом за позитивні зміни",
+        whoWeAreText1:
+            "Ми – неприбуткова організація, яка об’єднує активних та небайдужих людей, які хочуть змінювати світ. Ми підтримуємо один одного, розвиваємо ініціативи та працюємо на зміцнення нашої спільноти.",
+        whoWeAreText2:
+            "Наш шлях будується на простих, але значущих діях: співпраця, чесний діалог, служіння іншим та постійні зусилля задля сталого розвитку. Через ці кроки ми створюємо реальний та довготривалий вплив.",
+        projects: "Проекти",
+        activeMembers: "Учасники спільноти",
+        meetingPlace: "Місце зустрічей",
+        howToJoin: "Як приєднатися",
+
+        // Services Section
+        directionsTitle: "Напрямки",
+        directionsSubtitle:
+            "Ми реалізуємо соціальні та благодійні ініціативи, які підтримують людей, зміцнюють спільноти та сприяють позитивним змінам.",
+        serviceArmyTitle: "Підтримка ЗСУ",
+        serviceArmyText:
+            "Ми допомагаємо українській армії, збираючи необхідні речі та підтримуючи військових.",
+
+        serviceWarTitle: "Допомога жертвам війни",
+        serviceWarText:
+            "Ми надаємо гуманітарну допомогу людям, які постраждали від війни.",
+
+        serviceChildrenTitle: "Підтримка дітей",
+        serviceChildrenText:
+            "Ми організовуємо збори коштів на лікування та підтримку дітей.",
+
+        serviceOrphanTitle: "Підтримка дитбудинків",
+        serviceOrphanText:
+            "Ми допомагаємо дитячим будинкам речами та організовуємо благодійні заходи.",
+
+        serviceHumanTitle: "Гуманітарна допомога",
+        serviceHumanText:
+            "Ми проводимо благодійні збори для допомоги людям у складних життєвих ситуаціях.",
+
+        serviceInternationalTitle: "Міжнародне партнерство",
+        serviceInternationalText:
+            "Ми співпрацюємо з міжнародними партнерами для реалізації гуманітарних проєктів.",
+        makeADifference: "Зроби різницю!",
+        makeADifferenceText:
+            "Ваша пожертва допомагає нам підтримувати людей, зміцнювати спільноти та створювати позитивні зміни. Кожна пожертва приносить реальну допомогу тому, хто її потребує.",
+
+        // Portfolio Section
+        activitiesTitle: "Наша діяльність",
+        activitiesSubtitle:
+            "Дізнайтеся про наші благодійні події та ініціативи, де ми підтримуємо інших, об’єднуємо спільноти та створюємо позитивні зміни.",
+
+        loadMoreProjects: "Завантажити більше проєктів",
+        helpUsChangeLives: "Допоможіть змінити життя",
+        helpUsChangeLivesText:
+            "Навіть невелика пожертва може підтримати людей, зміцнити спільноти та мати реальний вплив.",
+
+        // Team Section
+        teamTitle: "Наша команда",
+        teamSubtitle:
+            "Ми – спільнота небайдужих людей, що прагнуть допомагати іншим та робити світ кращим.",
+
+        supportOurWork: "Підтримати нашу роботу",
+        back: "Назад",
+        forward: "Вперед",
+
+        // Support Section
+        supportTitle: "Підтримайте нас",
+        supportSubtitle:
+            "Ваша підтримка допомагає нам реалізовувати благодійні проєкти, впроваджувати важливі ініціативи та допомагати тим, хто цього потребує.",
+
+        supportMissionTitle: "Підтримати нашу місію",
+        supportMissionText:
+            "Ваш внесок допомагає нам реалізовувати благодійні проєкти, організовувати ініціативи та надавати допомогу тим, хто цього потребує найбільше.",
+        donateNow: "Пожертвувати",
+
+        internalNeedsTitle: "Внутрішні потреби",
+        internalNeedsText:
+            "Пожертви на внутрішні потреби допомагають підтримувати нашу роботу. Значна частина цих коштів спрямовується на рекламу, щоб залучити більше людей до пожертв.",
+        supportOurWork1: "Підтримати наc",
+
+        becomeVolunteerTitle: "Стати волонтером",
+        becomeVolunteerText:
+            "Люди, які приєднуються до нашої спільноти, допомагають організовувати ініціативи, підтримувати благодійні проєкти та робити позитивний вплив через добрі справи.",
+        joinUs: "Доєднатися",
+        transparencyTitle: "Прозорість та підзвітність",
+        transparencyText:
+            "Пожертви, зроблені для підтримки загальної діяльності, повністю враховуються. Ми публікуємо щомісячні звіти про всі надходження та витрати. Пожертви на внутрішні потреби допомагають підтримувати та розвивати організацію і покривати операційні витрати, такі як адміністрація, інфраструктура, просування та розвиток проєктів. Ці кошти управляються на розсуд організації для забезпечення стабільної роботи та довгострокового впливу. Пожертви, призначені для внутрішніх потреб, не включаються до публічних фінансових звітів. Щиро дякуємо всім, хто підтримує нашу місію та допомагає нам продовжувати роботу.",
+
+        // Contact Section
+        contactTitle: "Контакти",
+        contactSubtitle:
+            "У вас є питання або ви хочете приєднатися до наших ініціатив? Ми завжди відкриті до спілкування та співпраці!",
+
+        email: "Електронна пошта",
+        address: "Адреса",
+        yourName: "Ваше ім'я",
+        yourEmail: "Ваш email",
+        messageSubject: "Тема повідомлення",
+        yourMessage: "Ваше повідомлення",
+        sendMessage: "Відправити повідомлення",
+        messageSent: "✅ Повідомлення надіслано!",
+
+        // Footer
+        links: "ПОСИЛАННЯ",
+        supportFooter: "ПІДТРИМКА",
+        contactFooter: "КОНТАКТИ",
+        allRightsReserved: "Всі права захищені",
+        footerText:
+            "Спільнота небайдужих людей прагне до створення реальних, відчутних результатів. Разом, ми біжимо благодійні проекти, надавати підтримку тим, хто її потребує, і створити значущі зміни.",
+    },
+
+    de: {
+        motto: "Gemeinsam können wir das Unmögliche möglich machen!",
+
+        // Навігація
+        about: "Über uns",
+        directions: "Richtungen",
+        activities: "Aktivitäten",
+        team: "Team",
+        contact: "Kontakt",
+        support: "Unterstützen",
+        donate: "Spenden",
+        // volunteer: "Freiwilliger werden",
+        // internalNeeds: "Interne Bedürfnisse",
+        // getMembership: "Mitgliedschaft erhalten",
+
+        // Hero Section
+        heroSlogan: "Gemeinsam können wir das Unmögliche möglich machen!",
+
+        // About Section
+        aboutTitle: "Über uns",
+        aboutSubtitle:
+            "Wir sind eine gemeinnützige Organisation, die fürsorgliche und aktive Menschen vereint, um Gemeinschaften zu unterstützen und nachhaltige, sinnvolle Veränderungen herbeizuführen.",
+
+        whoWeAreTag: "Wer wir sind",
+        whoWeAreTitle: "Gemeinsam für positive Veränderungen",
+        whoWeAreText1:
+            "Wir sind eine gemeinnützige Organisation, die aktive und fürsorgliche Menschen zusammenbringt, die einen Unterschied machen möchten. Wir unterstützen uns gegenseitig, entwickeln Initiativen und arbeiten daran, unsere Gemeinschaft zu stärken.",
+        whoWeAreText2:
+            "Unser Weg basiert auf einfachen, aber bedeutungsvollen Handlungen: Zusammenarbeit, ehrlicher Dialog, Dienst an anderen und konsequente Bemühungen um nachhaltige Entwicklung. Durch diese Schritte schaffen wir echte und dauerhafte Wirkung.",
+        projects: "Projekte",
+        activeMembers: "Mitglieder",
+        meetingPlace: "Treffpunkt",
+        howToJoin: "Wie beitreten",
+
+        // Services Section
+        directionsTitle: "Richtungen",
+        directionsSubtitle:
+            "Wir setzen soziale und wohltätige Initiativen um, die Menschen unterstützen, Gemeinschaften stärken und positive Veränderungen vorantreiben.",
+            serviceArmyTitle: "Unterstützung der Armee",
+            serviceArmyText:
+            "Wir helfen der ukrainischen Armee mit wichtigen Materialien und Unterstützung für Soldaten.",
+
+            serviceWarTitle: "Hilfe für Kriegsopfer",
+            serviceWarText:
+            "Wir leisten humanitäre Hilfe für Menschen, die vom Krieg betroffen sind.",
+
+        serviceChildrenTitle: "Hilfe für Kinder",
+        serviceChildrenText:
+            "Wir organisieren Spendenaktionen für Behandlung und Unterstützung von Kindern.",
+
+        serviceOrphanTitle: "Hilfe für Waisenhäuser",
+        serviceOrphanText:
+            "Wir unterstützen Waisenhäuser mit wichtigen Dingen und organisieren Wohltätigkeitsaktionen.",
+
+            serviceHumanTitle: "Humanitäre Hilfe",
+            serviceHumanText:
+            "Wir organisieren Spendenaktionen für Menschen in schwierigen Lebenssituationen.",
+
+        serviceInternationalTitle: "Internationale Zusammenarbeit",
+        serviceInternationalText:
+            "Wir arbeiten mit internationalen Partnern an humanitären Projekten.",
+        makeADifference: "Mach einen Unterschied!",
+        makeADifferenceText:
+            "Ihre Spende hilft uns, Menschen zu unterstützen, Gemeinschaften zu stärken und positive Veränderungen zu schaffen. Jede Spende bringt echte Hilfe für jemanden, der sie braucht.",
+
+        // Portfolio Section
+        activitiesTitle: "Unsere Aktivitäten",
+        activitiesSubtitle:
+            "Entdecken Sie unsere Wohltätigkeitsveranstaltungen und Initiativen, bei denen wir andere unterstützen, Gemeinschaften vereinen und positive Veränderungen schaffen.",
+
+        loadMoreProjects: "Mehr Projekte laden",
+        helpUsChangeLives: "Helfen Sie uns, Leben zu verändern",
+        helpUsChangeLivesText:
+            "Schon eine kleine Spende kann Menschen unterstützen, Gemeinschaften stärken und einen echten Unterschied machen.",
+
+        // Team Section
+        teamTitle: "Unser Team",
+        teamSubtitle:
+            "Wir sind eine Gemeinschaft von fürsorglichen Menschen, die sich dafür einsetzen, anderen zu helfen und die Welt besser zu machen.",
+
+        supportOurWork: "Unterstütze unsere Arbeit",
+        back: "Zurück",
+        forward: "Vorwärts",
+
+        // Support Section
+        supportTitle: "Unterstützen Sie uns",
+        supportSubtitle:
+            "Ihre Unterstützung hilft uns, wohltätige Projekte zu entwickeln, wichtige Initiativen umzusetzen und denen zu helfen, die sie brauchen.",
+
+        supportMissionTitle: "Unterstützen Sie uns",
+        supportMissionText:
+            "Ihr Beitrag hilft uns, wohltätige Projekte zu entwickeln, Initiativen zu organisieren und denen zu helfen, die sie am dringendsten benötigen.",
+        donateNow: "Jetzt spenden",
+
+        internalNeedsTitle: "Interne Bedürfnisse",
+        internalNeedsText:
+            "Spenden für interne Bedürfnisse helfen, unsere Arbeit zu unterstützen. Ein großer Teil dieser Mittel wird für Werbung verwendet, um mehr Menschen zum Spenden zu motivieren.",
+        supportOurWork1: "Unterstützen Sie uns",
+
+        becomeVolunteerTitle: "Freiwilliger werden",
+        becomeVolunteerText:
+            "Menschen, die sich unserer Gemeinschaft anschließen, helfen uns, Initiativen zu organisieren, wohltätige Projekte zu unterstützen und durch gute Taten positive Auswirkungen zu erzielen.",
+        joinUs: "Begleiten Sie uns",
+
+        transparencyTitle: "Transparenz & Verantwortung",
+        transparencyText:
+            "Spenden, die zur Unterstützung unserer allgemeinen Aktivitäten geleistet werden, werden vollständig erfasst. Wir veröffentlichen monatliche Berichte über alle Einnahmen und Ausgaben. Spenden für interne organisatorische Bedürfnisse helfen uns, die Organisation aufrechtzuerhalten und zu entwickeln sowie Betriebskosten wie Verwaltung, Infrastruktur, Werbung und Projektentwicklung zu decken. Diese Mittel werden nach Ermessen der Organisation verwaltet, um einen stabilen Betrieb und langfristige Wirkung zu gewährleisten. Für interne Bedürfnisse bestimmte Spenden sind nicht in den öffentlichen Finanzberichten enthalten. Wir danken allen, die unsere Mission unterstützen und uns helfen, unsere Arbeit fortzusetzen.",
+
+        // Contact Section
+        contactTitle: "Kontakt",
+        contactSubtitle:
+            "Haben Sie Fragen oder möchten Sie an unseren Initiativen teilnehmen? Wir sind immer offen für Kommunikation und Zusammenarbeit!",
+
+        email: "E-Mail",
+        address: "Adresse",
+        yourName: "Ihr Name",
+        yourEmail: "Ihre E-Mail-Adresse",
+        messageSubject: "Betreff der Nachricht",
+        yourMessage: "Ihre Nachricht",
+        sendMessage: "Nachricht senden",
+        messageSent: "✅ Nachricht gesendet!",
+
+        // Footer
+        links: "LINKS",
+        supportFooter: "UNTERSTÜTZUNG",
+        contactFooter: "KONTAKT",
+        allRightsReserved: "Alle Rechte vorbehalten",
+        footerText:
+            "Eine Gemeinschaft von fürsorglichen Menschen, die sich dafür einsetzen, echte, messbare Auswirkungen zu erzielen. Zusammen laufen wir gemeinnützige Projekte, unterstützen Bedürftige und schaffen sinnvolle Veränderungen.",
+    },
+};
+
+//   4️⃣ Функція зміни мови
+//   4️⃣ Функція зміни мови
+//   4️⃣ Функція зміни мови
+//   4️⃣ Функція зміни мови
+//   4️⃣ Функція зміни мови
+
+function setLang(lang) {
+    localStorage.setItem("lang", lang);
+
+    document.querySelectorAll("[data-i18n]").forEach((el) => {
+        const key = el.dataset.i18n;
+        if (translations[lang][key]) {
+            el.textContent = translations[lang][key];
+        }
+    });
+
+    document.querySelectorAll(".currentLang").forEach((el) => {
+        el.textContent = lang.toUpperCase();
+    });
+}
+
+// 5️⃣ Запам'ятовування мови
+// 5️⃣ Запам'ятовування мови
+// 5️⃣ Запам'ятовування мови
+// 5️⃣ Запам'ятовування мови
+// 5️⃣ Запам'ятовування мови
+// 5️⃣ Запам'ятовування мови
+document.addEventListener("DOMContentLoaded", () => {
+    const savedLang = localStorage.getItem("lang") || "en";
+    setLang(savedLang);
+});
