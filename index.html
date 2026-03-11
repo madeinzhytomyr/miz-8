@@ -51,34 +51,57 @@
         <nav id="navmenu" class="my_navmenu col-auto">
           <ul class="my_navmenu_ul">
 
-            <li class="my_navmenu_li"><a href="#teame" class="my_navmenu_a  p-0 py-3"></a></li>
-            <div class="m-0  p-0 d-block d-xl-none text-center  " style="padding: 0px; padding-left: 12px;">
+            <!-- LANGUAGE -->
+            <li
+              class="language-dropdown  dropdown col-auto d-block d-xl-none text-center p-3 pb-4 position-absolute top-0 right-0 ">
+              <button class="lang-toggle dropdown-toggle p-0 m-0 ps-1" type="button" data-bs-toggle="dropdown">
+                <i class="bi bi-globe pe-1"></i> <span class="currentLang">EN</span>
+              </button>
+
+              <ul class="dropdown-menu lang-menu text-white mt-2">
+                <li> <a class="dropdown-item lang-item " onclick="setLang('en')">English</a> </li>
+                <li> <a class="dropdown-item lang-item" onclick="setLang('ua')">Українська</a> </li>
+                <li> <a class="dropdown-item lang-item" onclick="setLang('de')">Deutsch</a> </li>
+              </ul>
+            </li>
+
+
+
+            <div class="m-0  p-0 d-block d-xl-none text-center  mt-3 pt-4 pb-5"
+              style="padding: 0px; padding-left: 12px;">
               <img class="m-0 p-0 rounded-circle border border-3 border-white" style="max-width: 120px;"
                 src="https://i.postimg.cc/qqYWjXf2/photo-2026-03-05-17-24-26.jpg" alt="Logo">
             </div>
-            <li class="my_navmenu_li"><a href="#teame" class="my_navmenu_a  p-0 py-4"></a></li>
 
 
-            <li class="my_navmenu_li "><a href="#about" class="my_navmenu_a ">About us</a></li>
-            <li class="my_navmenu_li"><a href="#services" class="my_navmenu_a">Directions</a></li>
-            <li class="my_navmenu_li"><a href="#portfolio" class="my_navmenu_a">Activities</a></li>
-            <li class="my_navmenu_li"><a href="#team" class="my_navmenu_a ">Team</a></li>
-            <li class="my_navmenu_li"><a href="#contact" class="my_navmenu_a ">Contact</a></li>
 
-            <li class="m-0 p-3 p-md-2"></li>
+            <li class="my_navmenu_li"> <a href="#about" class="my_navmenu_a" data-i18n="about">About us</a> </li>
+            <li class="my_navmenu_li"> <a href="#services" class="my_navmenu_a" data-i18n="directions">Directions</a>
+            </li>
+            <li class="my_navmenu_li"> <a href="#portfolio" class="my_navmenu_a" data-i18n="activities">Activities</a>
+            </li>
+            <li class="my_navmenu_li"> <a href="#team" class="my_navmenu_a" data-i18n="team">Team</a> </li>
+            <li class="my_navmenu_li"> <a href="#contact" class="my_navmenu_a" data-i18n="contact">Contact</a> </li>
 
-            <li class="my_navmenu_li">
-              <a href="#support" class="m-0 p-0 my_navmenu_a  ">
+
+            <li class="m-0 p-3 p-md-2 "></li>
+
+            <li class="my_navmenu_li ">
+              <a href="#support" class="m-0 p-0 my_navmenu_a">
                 <div class="m-0 p-2 px-3 bg-primary rounded-3 row">
                   <i style="font-size: 18px;" class="m-0 p-0 pe-2 col-auto bi bi-heart-fill"></i>
-                  <span class="m-0 p-0 col">Support Us</span>
+                  <span class="m-0 p-0 col" data-i18n="support">Support Us</span>
                 </div>
               </a>
             </li>
 
+
+
             <!-- СОЦМЕРЕЖІ ТЕПЕР В LI -->
-            <li class="my_navmenu_li ">
+            <li class="my_navmenu_li pb-4 pt-5 mt-5 p-xl-0 mxl-0">
               <div class="my_social-links">
+
+
                 <a href="https://www.instagram.com/madeinzhytomyr/" target="_blank">
                   <i class="bi bi-instagram"></i>
                 </a>
@@ -97,7 +120,14 @@
               </div>
             </li>
 
+
+
+
+
+
+
           </ul>
+
           <i class="my_burger  d-xl-none bi bi-list"></i>
           <i class="my_burger  d-none bi bi-x"></i>
 
@@ -115,6 +145,19 @@
 
         <a href="#support" style="font-size: 18px; margin: 0px; margin-right: 12px;"
           class="my_btn_support team-nav-btn p-1 px-2 col-auto bg-primary rounded-2 d-none bi bi-heart-fill"></a>
+
+        <div class="language-dropdown dropdown col-auto d-none d-xl-block ">
+          <button class="lang-toggle dropdown-toggle " type="button" data-bs-toggle="dropdown">
+            <i class="bi bi-globe pe-1"></i> <span class="currentLang">EN</span>
+          </button>
+
+          <ul class="dropdown-menu lang-menu mt-2">
+            <li> <a class="dropdown-item lang-item" onclick="setLang('en')">English</a> </li>
+            <li> <a class="dropdown-item lang-item" onclick="setLang('ua')">Українська</a> </li>
+            <li> <a class="dropdown-item lang-item" onclick="setLang('de')">Deutsch</a> </li>
+          </ul>
+        </div>
+
 
       </div>
     </div>
@@ -137,7 +180,7 @@
         <div class="col-lg-9 text-center ">
 
           <h2 class="js_name"></h2>
-          <div class="mt-4">Together, we can make the impossible possible!
+          <div class="mt-4" data-i18n="motto">Together, we can make the impossible possible!
           </div>
 
           <div class="social-links">
@@ -150,7 +193,8 @@
           </div>
 
           <div class="mt-4">
-            <a href="#support" class="team-nav-btn"><i class="bi bi-coin pe-2"></i>Donate Now</a>
+            <a href="#support" class="team-nav-btn"><i class="bi bi-coin pe-2"></i><span class="m-0 p-0"
+                data-i18n="support"></span></a>
           </div>
 
         </div>
@@ -167,61 +211,57 @@
 
 
   <!-- About Section -->
-  <section id="about" class=" m-0 p-0 d-flex justify-content-center about  ">
+  <section id="about" class="m-0 p-0 d-flex justify-content-center about">
     <div class="m-0 p-0 container">
 
       <!-- Section Title -->
-      <div data-section-title data-title="About us"
-        data-under="We are a non-profit organization that unites caring and active people to support communities and create sustainable, meaningful change.">
+      <div class="my_section_title row">
+        <div class="my_subtitle col-12">MADE in Zhytomyr</div>
+        <div class="my_title col-12" data-i18n="aboutTitle"></div>
+        <div class="my_under_title col-12" data-i18n="aboutSubtitle"></div>
       </div>
-
 
       <div class="my_section_info row">
 
-        <div class="m-0  col-lg-4" style="padding: 12px;">
+        <div class="m-0 col-lg-4" style="padding: 12px;">
           <div class="profile-card">
             <div class="profile-header">
-              <div class="profile-avatar ">
-                <img src="https://i.postimg.cc/qqYWjXf2/photo-2026-03-05-17-24-26.jpg" class="img-fluid "
+              <div class="profile-avatar">
+                <img src="https://i.postimg.cc/qqYWjXf2/photo-2026-03-05-17-24-26.jpg" class="img-fluid"
                   alt="Команда Made in Житомир">
-                <!-- <div class="status-indicator"></div> -->
               </div>
-              <h3 class="js_name"> </h3>
-              <span class="role">Non-profit organization</span>
-
+              <h3 class="js_name" data-i18n="organizationName"></h3>
+              <span class="role" data-i18n="organizationRole">Non-profit organization</span>
             </div>
 
             <div class="profile-stats">
-
               <div class="stat-item">
                 <h4>2025</h4>
-                <p>Established</p>
+                <p data-i18n="established">Established</p>
               </div>
-
               <div class="stat-item">
                 <h4>12+</h4>
-                <p>Active members</p>
+                <p data-i18n="activeMembers">Active members</p>
               </div>
-
               <div class="stat-item">
                 <h4>6+</h4>
-                <p>Completed projects</p>
+                <p data-i18n="projects">Completed projects</p>
               </div>
             </div>
 
             <div class="profile-actions">
-              <a href="#support" class="team-nav-btn  rounded-3 fs-6 py-2 px-4"><i class="bi bi-heart-fill"></i>
-                Support</a>
+              <a href="#support" class="team-nav-btn rounded-3 fs-6 py-2 px-4">
+                <i class="bi bi-heart-fill"></i>
+                <span data-i18n="support"></span>
+              </a>
             </div>
 
             <div class="social-connect">
               <a href="https://www.instagram.com/madeinzhytomyr/" target="_blank"><i class="bi bi-instagram"></i></a>
-              <a href="https://www.instagram.com/madeinzhytomyr/" target="_blank"> <i class="bi bi-facebook"></i> </a>
+              <a href="https://www.instagram.com/madeinzhytomyr/" target="_blank"><i class="bi bi-facebook"></i></a>
               <a href="https://www.tiktok.com/@madeinzhytomyr" target="_blank"><i class="bi bi-tiktok"></i></a>
               <a href="https://www.youtube.com/@madeinzhytomyr" target="_blank"><i class="bi bi-youtube"></i></a>
               <a href="https://t.me/madeinzhytomyr884" target="_blank"><i class="bi bi-telegram"></i></a>
-
-
             </div>
           </div>
         </div>
@@ -230,166 +270,290 @@
           <div class="content-wrapper">
 
             <div class="bio-section" style="padding: 12px;">
-              <div class="section-tag">Who We Are</div>
-              <h2>Together for Positive Change</h2>
-              <p>
-                We are a non-profit organization that brings together active and caring people
-                who want to make a difference. We support one another, develop initiatives,
-                and work to strengthen our community.
+              <div class="section-tag" data-i18n="whoWeAreTag">Who We Are</div>
+              <h2 data-i18n="whoWeAreTitle">Together for Positive Change</h2>
+              <p data-i18n="whoWeAreText1">
+                We are a non-profit organization that brings together active and caring people who want to make a
+                difference. We support one another, develop initiatives, and work to strengthen our community.
               </p>
-              <p>
-                Our path is built on simple but meaningful actions: collaboration, honest dialogue,
-                service to others, and consistent efforts toward sustainable development.
-                Through these steps, we create real and lasting impact.
+              <p data-i18n="whoWeAreText2">
+                Our path is built on simple but meaningful actions: collaboration, honest dialogue, service to others,
+                and consistent efforts toward sustainable development. Through these steps, we create real and lasting
+                impact.
               </p>
             </div>
 
             <div class="m-0 details-grid" style="padding: 12px;">
-
               <div class="detail-item" data-aos="fade-up" data-aos-delay="250">
                 <i class="bi bi-briefcase"></i>
                 <div class="detail-content">
-                  <span>Projects</span>
-                  <strong>6+ Completed projects</strong>
+                  <span data-i18n="projects">Projects</span>
+                  <strong data-i18n="projectsCompleted">6+ Completed projects</strong>
                 </div>
               </div>
 
               <div class="detail-item" data-aos="fade-up" data-aos-delay="300">
                 <i class="bi bi-people"></i>
                 <div class="detail-content">
-                  <span>Community Members </span>
-                  <strong>12 active members</strong>
+                  <span data-i18n="activeMembers">Community Members</span>
+                  <strong data-i18n="activeMembersCount">12 active members</strong>
                 </div>
               </div>
 
               <div class="detail-item" data-aos="fade-up" data-aos-delay="350">
                 <i class="bi bi-geo-alt"></i>
                 <div class="detail-content">
-                  <span>Meeting Place </span>
-                  <strong>Zhytomyr, Ukraine</strong>
+                  <span data-i18n="meetingPlace">Meeting Place</span>
+                  <strong data-i18n="meetingPlaceLocation">Zhytomyr, Ukraine</strong>
                 </div>
               </div>
 
               <div class="detail-item" data-aos="fade-up" data-aos-delay="100">
                 <i class="bi bi-envelope"></i>
                 <div class="detail-content">
-                  <span>How to Join </span>
-                  <strong>Message us</strong>
+                  <span data-i18n="howToJoin">How to Join</span>
+                  <strong data-i18n="howToJoinAction">Message us</strong>
                 </div>
               </div>
-
             </div>
+
           </div>
         </div>
 
       </div>
-
     </div>
-  </section><!-- /About Section -->
+  </section>
 
 
   <!-- RICHTUNG Section -->
-  <section id="services" class="m-0 p-0 d-flex justify-content-center services ">
+  <section id="services" class="m-0 p-0 d-flex justify-content-center services">
     <div class="m-0 p-0 container">
 
+      <!-- Section Title -->
+      <div class="my_section_title row">
+        <div class="my_subtitle col-12">MADE in Zhytomyr</div>
+        <div class="my_title col-12" data-i18n="directionsTitle"></div>
+        <div class="my_under_title col-12" data-i18n="directionsSubtitle"></div>
+      </div>
 
       <!-- Section Title -->
       <div data-section-title data-title="Directions"
-        data-under="We implement social and charitable initiatives that support people, strengthen communities, and drive positive change.">
+        data-under="We implement social and charitable initiatives that support people, strengthen communities, and drive positive change."
+        data-i18n-title="directionsTitle" data-i18n-under="directionsSubtitle">
       </div>
 
+      <!-- <div id="servicesContainer" class="my_section_info row justify-content-center align-items-start"></div> -->
 
+      <div id="servicesContainer" class="my_section_info row justify-content-center align-items-start">
 
-      <div id="servicesContainer" class="my_section_info row justify-content-center align-items-start"></div>
-
-
-
-      <div class="my_section_info row">
-        <div class="m-0 p-0 col-12" data-aos="fade-up" data-aos-delay="200">
-          <div class=" my_cta_box">
-            <div class="m-0 p-0 row align-items-center">
-
-              <div class="m-0 p-0 col-lg-8">
-                <h3>Make a Difference!</h3>
-                <p>Your donation helps us support people, strengthen communities, and create positive change. Every
-                  donation brings real help to someone in need.</p>
-              </div>
-
-              <div class="col-lg-4 text-lg-end text-center">
-                <a href="#support" class="cta-btn fs-6"><i class="bi bi-coin pe-2"></i>Donate Now</a>
+        <div style="padding: 12px; margin: 0;" class="col-md-6 col-lg-4">
+          <div class="service-item row align-items-center">
+            <div class="m-0 p-0 col-auto">
+              <div class="icon-wrapper">
+                <i class="bi bi-fire"></i>
               </div>
             </div>
+
+            <div class="m-0 p-0 ps-4 col text-start">
+              <h4 class="m-0 p-0 pb-2" data-i18n="serviceArmyTitle"></h4>
+              <a href="#contact" class=" read-more ">
+                <span data-i18n="support"></span>
+                <i class="m-0 p-0 bi bi-arrow-right"></i>
+              </a>
+            </div>
+
+            <p class="m-0 p-0 text-start"  data-i18n="serviceArmyText"></p>
+          </div>
+        </div>
+
+        <div style="padding: 12px; margin: 0;" class="col-md-6 col-lg-4">
+          <div class="service-item row align-items-center">
+            <div class="m-0 p-0 col-auto">
+              <div class="icon-wrapper">
+                <i class="bi bi-people"></i>
+              </div>
+            </div>
+
+            <div class="m-0 p-0 ps-4 col text-start">
+              <h4 class="m-0 p-0 pb-2" data-i18n="serviceWarTitle"></h4>
+              <a href="#contact" class=" read-more ">
+                <span data-i18n="support"></span>
+                <i class="m-0 p-0 bi bi-arrow-right"></i>
+              </a>
+            </div>
+
+            <p class="m-0 p-0 text-start"  data-i18n="serviceWarText"></p>
+          </div>
+        </div>
+
+        <div style="padding: 12px; margin: 0;" class="col-md-6 col-lg-4">
+          <div class="service-item row align-items-center">
+            <div class="m-0 p-0 col-auto">
+              <div class="icon-wrapper">
+                <i class="bi bi-graph-up-arrow "></i>
+              </div>
+            </div>
+
+            <div class="m-0 p-0 ps-4 col text-start">
+              <h4 class="m-0 p-0 pb-2" data-i18n="serviceChildrenTitle"></h4>
+              <a href="#contact" class=" read-more ">
+                <span data-i18n="support"></span>
+                <i class="m-0 p-0 bi bi-arrow-right"></i>
+              </a>
+            </div>
+
+            <p class="m-0 p-0 text-start"  data-i18n="serviceChildrenText"></p>
+          </div>
+        </div>
+
+        <div style="padding: 12px; margin: 0;" class="col-md-6 col-lg-4">
+          <div class="service-item row align-items-center">
+            <div class="m-0 p-0 col-auto">
+              <div class="icon-wrapper">
+                <i class="bi bi-heart-fill"></i>
+              </div>
+            </div>
+
+            <div class="m-0 p-0 ps-4 col text-start">
+              <h4 class="m-0 p-0 pb-2" data-i18n="serviceOrphanTitle"></h4>
+              <a href="#contact" class=" read-more ">
+                <span data-i18n="support"></span>
+                <i class="m-0 p-0 bi bi-arrow-right"></i>
+              </a>
+            </div>
+
+            <p class="m-0 p-0 text-start"  data-i18n="serviceOrphanText"></p>
+          </div>
+        </div>
+
+        <div style="padding: 12px; margin: 0;" class="col-md-6 col-lg-4">
+          <div class="service-item row align-items-center">
+            <div class="m-0 p-0 col-auto">
+              <div class="icon-wrapper">
+                <i class="bi bi-stars"></i>
+              </div>
+            </div>
+
+            <div class="m-0 p-0 ps-4 col text-start">
+              <h4 class="m-0 p-0 pb-2" data-i18n="serviceHumanTitle"></h4>
+              <a href="#contact" class=" read-more ">
+                <span data-i18n="support"></span>
+                <i class="m-0 p-0 bi bi-arrow-right"></i>
+              </a>
+            </div>
+
+            <p class="m-0 p-0 text-start"  data-i18n="serviceHumanText"></p>
+          </div>
+        </div>
+
+        <div style="padding: 12px; margin: 0;" class="col-md-6 col-lg-4">
+          <div class="service-item row align-items-center">
+            <div class="m-0 p-0 col-auto">
+              <div class="icon-wrapper">
+                <i class="bi bi-compass"></i>
+              </div>
+            </div>
+
+            <div class="m-0 p-0 ps-4 col text-start">
+              <h4 class="m-0 p-0 pb-2" data-i18n="serviceInternationalTitle"></h4>
+              <a href="#contact" class=" read-more ">
+                <span data-i18n="support"></span>
+                <i class="m-0 p-0 bi bi-arrow-right"></i>
+              </a>
+            </div>
+
+            <p class="m-0 p-0 text-start"  data-i18n="serviceInternationalText"></p>
           </div>
         </div>
 
       </div>
 
+      <div class="my_section_info row">
+        <div class="m-0 p-0 col-12" data-aos="fade-up" data-aos-delay="200">
+          <div class="my_cta_box">
+            <div class="m-0 p-0 row align-items-center">
+
+              <div class="m-0 p-0 col-lg-8">
+                <h3 data-i18n="makeADifference">Make a Difference!</h3>
+                <p data-i18n="makeADifferenceText">
+                  Your donation helps us support people, strengthen communities, and create positive change. Every
+                  donation brings real help to someone in need.
+                </p>
+              </div>
+
+              <div class="col-lg-4 text-lg-end text-center">
+                <a href="#support" class="cta-btn fs-6" data-i18n="donateNow">
+                  <i class="bi bi-coin pe-2"></i>Donate Now
+                </a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
-  </section><!-- /RICHTUNG Section -->
+  </section>
 
 
   <!-- PROJECT Section -->
-  <section id="portfolio" class="m-0 p-0 d-flex justify-content-center portfolio ">
+  <section id="portfolio" class="m-0 p-0 d-flex justify-content-center portfolio">
     <div class="m-0 p-0 container">
 
+      <!-- Section Title -->
+      <div class="my_section_title row">
+        <div class="my_subtitle col-12">MADE in Zhytomyr</div>
+        <div class="my_title col-12" data-i18n="activitiesTitle"></div>
+        <div class="my_under_title col-12" data-i18n="activitiesSubtitle"></div>
+      </div>
 
       <!-- Section Title -->
       <div data-section-title data-title="Our Activities"
-        data-under="Explore our charitable events and initiatives, where we support others, unite communities, and create positive change.">
+        data-under="Explore our charitable events and initiatives, where we support others, unite communities, and create positive change."
+        data-i18n-title="activitiesTitle" data-i18n-under="activitiesSubtitle">
       </div>
-
-
-
 
       <div class="my_section_info row" data-aos="fade-up" data-aos-delay="100">
         <div style="padding: 12px;" class="m-0 isotope-layout" data-default-filter="*" data-layout="masonry"
           data-sort="original-order">
 
           <ul class="m-0 p-0 portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="200">
-            <li data-filter="*" class="filter-active">All</li>
-            <!-- <li data-filter=".filter-actual">Активні</li> -->
+            <li data-filter="*" class="filter-active" data-i18n="all">All</li>
+            <!-- <li data-filter=".filter-actual" data-i18n="active">Активні</li> -->
             <li data-filter=".filter-2026">2026</li>
-
-
-
           </ul>
 
         </div>
       </div>
 
-
       <div class="my_section_info row" data-aos="fade-up" data-aos-delay="100">
         <div class="m-0 p-0 isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
 
-          <div id="products_2" class="m-0 p-0 row gy-4  " data-aos="fade-up"></div>
+          <div id="products_2" class="m-0 p-0 row gy-4" data-aos="fade-up"></div>
 
           <div class="text-center">
-            <button id="loadMoreProjects" class="team-nav-btn "
-              style="display:none; margin-top:36px; margin-bottom:0px">
+            <button id="loadMoreProjects" class="team-nav-btn" style="display:none; margin-top:36px; margin-bottom:0px"
+              data-i18n="loadMoreProjects">
               Load More Projects
             </button>
-
           </div>
 
-
         </div>
-
       </div>
 
-
-      <div style="padding: 12px;  margin: 0px; margin-top: 24px" class=" portfolio-bottom" data-aos="fade-up"
+      <div style="padding: 12px; margin: 0px; margin-top: 24px" class="portfolio-bottom" data-aos="fade-up"
         data-aos-delay="400">
-        <div style="padding: 24px;" class="m-0 row align-items-center ">
+        <div style="padding: 24px;" class="m-0 row align-items-center">
 
           <div class="m-0 p-0 col-lg-8 text-center text-md-start">
-            <h3 class="m-0 p-0 pb-2 mb-1">Help Us Change Lives</h3>
-            <p class="m-0 p-0 pb-4 pb-md-0">
+            <h3 class="m-0 p-0 pb-2 mb-1" data-i18n="helpUsChangeLives">Help Us Change Lives</h3>
+            <p class="m-0 p-0 pb-4 pb-md-0" data-i18n="helpUsChangeLivesText">
               Even a small donation can support people, strengthen communities, and make a real impact.
             </p>
           </div>
 
           <div class="m-0 p-0 col-lg-4 text-lg-end">
-            <a href="#support" class="px-4 team-nav-btn">
+            <a href="#support" class="px-4 team-nav-btn" data-i18n="donateNow">
               <i class="bi bi-coin pe-2"></i>Donate Now
             </a>
           </div>
@@ -397,28 +561,29 @@
         </div>
       </div>
 
-
     </div>
-
-  </section><!-- /PROJECT Section -->
+  </section>
 
 
   <!-- Team Section -->
   <section id="team" class="m-0 p-0 d-flex justify-content-center ">
     <div class="m-0 p-0 container">
 
+      <!-- Section Title -->
+      <div class="my_section_title row">
+        <div class="my_subtitle col-12">MADE in Zhytomyr</div>
+        <div class="my_title col-12" data-i18n="teamTitle"></div>
+        <div class="my_under_title col-12" data-i18n="teamSubtitle"></div>
+      </div>
 
       <!-- Section Title -->
       <div data-section-title data-title="Our Team"
-        data-under="We are a community of caring people committed to helping others and making the world better.">
+        data-under="We are a community of caring people committed to helping others and making the world better."
+        data-i18n-title="teamTitle" data-i18n-under="teamSubtitle">
       </div>
-
-
-
 
       <div class="my_section_info row">
         <div class="m-0 p-0 team-slider-window">
-
           <div id="products_199" class="m-0 p-0 team-slider-track"></div>
 
           <!-- Lightbox на весь екран -->
@@ -431,182 +596,163 @@
             <button id="lightbox-prev">&#10094;</button>
             <button id="lightbox-next">&#10095;</button>
           </div>
-
         </div>
       </div>
 
-
       <div class="my_section_info row justify-content-center">
-        <button id="prevCard99" class="team-nav-btn col-auto "><span class="m-0 p-0 pe-2">❮</span>Back</button>
-        <button id="nextCard99" class="team-nav-btn col-auto ">Forward <span class="m-0 p-0 ps-2 ">❯</span></button>
+
+        <button id="prevCard99" style="width: 120px;" class="team-nav-btn col-auto">
+          <span class="m-0 p-0 pe-2 me-1">❮</span>
+          <span class="m-0 p-0" data-i18n="back">Back</span>
+        </button>
+
+        <button id="nextCard99" style="width: 120px;" class="team-nav-btn col-auto">
+          <span class="m-0 p-0" data-i18n="forward">Forward</span>
+          <span class="m-0 p-0 ps-2 ms-1">❯</span>
+
+        </button>
       </div>
 
-
-
-      <div class="my_section_info row justify-content-center align-items-center p-5 cta-wrapper ">
-
+      <div class="my_section_info row justify-content-center align-items-center p-5 cta-wrapper">
 
         <div class="m-0 p-0 col-md text-center text-lg-start">
-          <h3 class="text-white fw-bold mb-2 pb-2">Support Our Work</h3>
-          <p class="text-secondary mb-0 pb-4 pb-md-0">
+          <h3 class="text-white fw-bold mb-2 pb-2" data-i18n="supportOurWork">Support Our Work</h3>
+          <p class="text-secondary mb-0 pb-4 pb-md-0" data-i18n="supportOurWorkText">
             You don’t need to do a lot — just care about helping others.
             Your donation helps us support people, strengthen communities, and create real change.
           </p>
         </div>
 
-        <a href="#support" class="col-md-auto btn btn-gradient btn-lg fw-semibold fs-6 border border-primary border-1">
+        <a href="#support" class="col-md-auto btn btn-gradient btn-lg fw-semibold fs-6 border border-primary border-1"
+          data-i18n="donateNow">
           <i class="bi bi-coin pe-2"></i>Donate Now
         </a>
 
       </div>
 
+    </div>
   </section>
+
 
   <!-- Support Section -->
   <section id="support" class="m-0 p-0 d-flex justify-content-center support ">
     <div class="m-0 p-0 container">
 
-      <div data-section-title data-title="Support Us"
-        data-under="Your support helps us develop charitable projects, implement important initiatives, and assist those in need.">
+      <!-- Section Title -->
+      <div class="my_section_title row">
+        <div class="my_subtitle col-12">MADE in Zhytomyr</div>
+        <div class="my_title col-12" data-i18n="supportTitle"></div>
+        <div class="my_under_title col-12" data-i18n="supportSubtitle"></div>
       </div>
 
-      <div class="my_section_info row  justify-content-center">
+      <div data-section-title data-title="Support Us"
+        data-under="Your support helps us develop charitable projects, implement important initiatives, and assist those in need."
+        data-i18n-title="supportTitle" data-i18n-under="supportSubtitle">
+      </div>
 
+      <div class="my_section_info row justify-content-center">
 
         <!-- Donate Card -->
-        <div style="padding: 12px;" class="m-0 col-md-6 col-xl-4">
+        <div style="padding: 12px;" class="m-0 col-sm-9 col-md-6 col-lg-5 col-xl-4">
           <div class="my_support_card text-center">
-        
+
             <div class="my_support_card_icon ms-auto me-auto bi bi-heart-fill"></div>
-        
-            <h4 class="m-0 p-0 pb-3 fw-bold">Support Our Mission</h4>
-        
-            <div class="m-0 p-0 pb-4 text-secondary small">
-              Your contribution helps us
-              develop charitable projects, organize initiatives, and provide
-              assistance to those who need it most.
+
+            <h4 class="m-0 p-0 pb-3 fw-bold" data-i18n="supportMissionTitle">Support Our Mission</h4>
+
+            <div class="m-0 p-0 pb-4 text-secondary small" data-i18n="supportMissionText">
+              Your contribution helps us develop charitable projects, organize initiatives, and provide assistance to
+              those who need it most.
             </div>
-        
+
             <button data-bs-toggle="modal" data-bs-target="#exampleModal" class="team-nav-btn m-0">
               <i class="bi bi-heart-fill pe-2"></i>
-              <span class="m-0 p-0 ps-1">Donate Now</span>
+              <span class="m-0 p-0 ps-1" data-i18n="donateNow">Donate Now</span>
             </button>
-        
+
           </div>
         </div>
 
         <!-- Internal Support Card -->
-        <div style="padding: 12px;" class="m-0 col-md-6 col-xl-4">
+        <div style="padding: 12px;" class="m-0 col-sm-9 col-md-6 col-lg-5 col-xl-4">
           <div class="my_support_card text-center">
 
             <div class="my_support_card_icon ms-auto me-auto bi bi-building"></div>
 
-            <h4 class="m-0 p-0 pb-3 fw-bold">Internal Needs</h4>
+            <h4 class="m-0 p-0 pb-3 fw-bold" data-i18n="internalNeedsTitle">Internal Needs</h4>
 
-            <div class="m-0 p-0 pb-4 text-secondary small">
-              Donations for internal needs help us maintain our organization,
-              improve infrastructure, and support the daily work behind our
-              charitable initiatives.
+            <div class="m-0 p-0 pb-4 text-secondary small" data-i18n="internalNeedsText">
+              Donations for internal needs help us maintain our organization, improve infrastructure, and support the
+              daily work behind our charitable initiatives.
             </div>
 
             <a href="https://send.monobank.ua/jar/9Yy4Pc3zTx" target="_blank" rel="noopener noreferrer"
               class="m-0 team-nav-btn">
               <i class="bi bi-cash-coin pe-2"></i>
-              <span class="m-0 p-0 ps-1">Support Our Work</span>
+              <span class="m-0 p-0 ps-1" data-i18n="supportOurWork1">Support Our Work</span>
             </a>
-         
+
           </div>
         </div>
-
-
-
-        <!-- Patreon Card -->
-        <!-- <div style="padding: 12px;" class="m-0  col-md-6  col-xl-4">
-          <div class="my_support_card text-center">
-
-            <div class="my_support_card_icon ms-auto me-auto  bi-currency-dollar"></div>
-
-            <h4 class="m-0 p-0 pb-3 fw-bold">Get Membership</h4>
-
-
-            <div class="m-0 p-0 pb-4 text-secondary small">Support us monthly on Patreon and help us continue doing
-              good.
-            </div>
-
-            <a href="https://www.patreon.com/madeinzhytomyr" target="_blank" rel="noopener noreferrer"
-              class="team-nav-btn m-0"> <i class="bi bi-shop pe-2"></i><span class="m-0 p-0 ps-1">Join
-                Patreon</span>
-            </a>
-
-
-          </div>
-        </div> -->
-
 
         <!-- Volunteer Card -->
-        <div style="padding: 12px;" class="m-0 col-md-6 col-xl-4">
+        <div style="padding: 12px;" class="m-0 col-sm-9 col-md-6 col-lg-5 col-xl-4">
           <div class="my_support_card text-center">
-        
+
             <div class="my_support_card_icon ms-auto me-auto bi bi-people-fill"></div>
-        
-            <h4 class="m-0 p-0 pb-3 fw-bold">Become a Volunteer</h4>
-        
-            <div class="m-0 p-0 pb-4 text-secondary small">
-              People who join our community help us organize initiatives,
-              support charitable projects, and make a positive impact through
-              good deeds.
+
+            <h4 class="m-0 p-0 pb-3 fw-bold" data-i18n="becomeVolunteerTitle">Become a Volunteer</h4>
+
+            <div class="m-0 p-0 pb-4 text-secondary small" data-i18n="becomeVolunteerText">
+              People who join our community help us organize initiatives, support charitable projects, and make a
+              positive impact through good deeds.
             </div>
-        
+
             <a href="#contact" class="team-nav-btn m-0">
               <i class="bi bi-person-plus pe-1"></i>
-              <span class="m-0 p-0 ps-1">Join Us</span>
+              <span class="m-0 p-0 ps-1" data-i18n="joinUs">Join Us</span>
             </a>
-        
+
           </div>
         </div>
-
 
       </div>
 
-
-
-
-
-
-
-
       <div class="m-0 p-4">
-        <h5 class="fw-bold mb-3">Transparency & Accountability</h5>
+        <h5 class="fw-bold mb-3" data-i18n="transparencyTitle">Transparency & Accountability</h5>
 
-        <div class="m-0 mt-2 p-0 small text-secondary">
-
+        <div class="m-0 mt-2 p-0 small text-secondary" data-i18n="transparencyText">
           Donations made to support our general activities are fully accounted for.
           We publish monthly reports detailing all incoming donations and expenses.
 
           <br><br>
 
-          Donations made for internal organizational needs help us maintain and
-          develop the organization and cover operational expenses such as
-          administration, infrastructure, promotion, and project development.
+          Donations made for internal organizational needs help us maintain and develop the organization and cover
+          operational expenses such as administration, infrastructure, promotion, and project development.
 
-          These funds are managed at the organization’s discretion to ensure
-          stable operations and long-term impact. Donations allocated for
-          internal needs are not included in public financial reports.
+          These funds are managed at the organization’s discretion to ensure stable operations and long-term impact.
+          Donations allocated for internal needs are not included in public financial reports.
 
           <br><br>
 
-          We sincerely thank everyone who supports our mission and helps us
-          continue our work.
-
+          We sincerely thank everyone who supports our mission and helps us continue our work.
         </div>
       </div>
 
     </div>
   </section>
 
+
   <!-- Contact Section -->
   <section id="contact" class="m-0 p-0 d-flex justify-content-center contact ">
     <div class="m-0 p-0 container">
+
+      <!-- Section Title -->
+      <div class="my_section_title row">
+        <div class="my_subtitle col-12">MADE in Zhytomyr</div>
+        <div class="my_title col-12" data-i18n="contactTitle"></div>
+        <div class="my_under_title col-12" data-i18n="contactSubtitle"></div>
+      </div>
 
       <!-- Section Title -->
       <div data-section-title data-title="Contact us"
@@ -614,6 +760,10 @@
       </div>
 
 
+      <!-- <div data-section-title data-title="Contact us"
+        data-under="Do you have any questions or would you like to join our initiatives? We are always open to communication and cooperation!"
+        data-i18n-title="contactTitle" data-i18n-under="contactSubtitle">
+      </div> -->
 
 
       <div class="my_section_info row ">
@@ -689,6 +839,7 @@
     </div>
   </section><!-- /Contact Section -->
 
+
   <!-- footer -->
   <footer id="footer" class=" d-flex justify-content-center footer ">
     <div class="m-0 p-0 container">
@@ -699,9 +850,9 @@
             <span class="sitename">MADE in Zhytomyr</span>
           </a>
 
-          <p>A community of caring individuals committed to creating real, measurable impact. Together, we run
-            charitable
-            projects, provide support to those in need, and create meaningful change.</p>
+          <p data-i18n="footerText">A community of caring individuals committed to creating real, measurable impact.
+            Together, we run
+            charitable projects, provide support to those in need, and create meaningful change.</p>
 
           <div class="social-links d-flex pt-4">
             <a href="https://www.instagram.com/madeinzhytomyr/" target="_blank"><i class="bi bi-instagram"></i></a>
@@ -716,29 +867,33 @@
         </div>
 
         <div class="col-lg-2 col-6 footer-links">
-          <h4>LINKS</h4>
+          <h4 data-i18n="links">LINKS</h4>
           <ul>
-            <li><a href="#about">About us</a></li>
-            <li><a href="#services">Directions</a></li>
-            <li><a href="#portfolio">Activities</a></li>
-            <li><a href="#team">Team</a></li>
-            <li class="m-0 p-0"><a href="#contact">Contact</a></li>
+            <li><a href="#about" data-i18n="about">About us</a></li>
+            <li><a href="#services" data-i18n="directions">Directions</a></li>
+            <li><a href="#portfolio" data-i18n="activities">Activities</a></li>
+            <li><a href="#team" data-i18n="team">Team</a></li>
+            <li class="m-0 p-0"><a href="#contact" data-i18n="contact">Contact</a></li>
           </ul>
         </div>
 
         <div class="col-lg-2 col-6 footer-links">
-          <h4>SUPPORT</h4>
+          <h4 data-i18n="supportFooter">SUPPORT</h4>
           <ul>
-            <li><a style="cursor: pointer !important" data-bs-toggle="modal" data-bs-target="#exampleModal">Support Our Mission
-            </a></li>
-            <li><a href="https://send.monobank.ua/jar/9Yy4Pc3zTx" target="_blank" rel="noopener noreferrer">Internal Needs
-            </a></li>
-            <li><a href="#contact">Become a Volunteer</a></li>
+            <li><a style="cursor: pointer !important" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                data-i18n="supportOurWork1">Support Our
+                Mission
+              </a></li>
+            <li><a href="https://send.monobank.ua/jar/9Yy4Pc3zTx" target="_blank" rel="noopener noreferrer"
+                data-i18n="internalNeedsTitle">Internal
+                Needs
+              </a></li>
+            <li><a href="#contact" data-i18n="becomeVolunteerTitle">Become a Volunteer</a></li>
           </ul>
         </div>
 
         <div class="col-lg-3 col-md-12 footer-contact text-md-start">
-          <h4>CONTACT</h4>
+          <h4 data-i18n="contactFooter">CONTACT</h4>
 
           <div class="d-flex align-items-center mb-2 my_email">
             <i class="bi bi-envelope-fill me-2 fs-5"></i>
@@ -747,7 +902,7 @@
 
           <div class="d-flex align-items-center ">
             <i class="bi bi-geo-alt-fill me-2 fs-5"></i>
-            <p class="mb-0">Zhytomyr, Ukraine </p>
+            <p class="mb-0" data-i18n="allRightsReserved">Zhytomyr, Ukraine </p>
           </div>
 
 
@@ -778,7 +933,7 @@
           <span>©</span>
           <span id="currentYear"></span>
           <span class="px-2 fw-bold">MADE in Zhytomyr</span>
-          <span>All rights reserved</span>
+          <span data-i18n="allRightsReserved">All rights reserved</span>
         </p>
       </div>
 
@@ -792,14 +947,14 @@
 
 
   <!-- Scroll Top Button -->
-  <a href="#" class="scroll-top d-flex align-items-center justify-content-center">
+  <a id="scrollUPP" href="#" class="scroll-top d-flex align-items-center justify-content-center ">
     <i class="bi bi-arrow-up-short"></i>
   </a>
 
 
   <!-- Modal -->
   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div style="max-width: 498px;" class="modal-dialog modal-md modal-dialog-centered p-2">
       <div class="modal-content bg-dark text-white">
 
         <div class="m-0 p-3 modal-header bg-primary border-0">
@@ -811,30 +966,13 @@
 
         <div class="m-0 p-2 modal-body">
 
-          <!-- Додати кнопку Monobank -->
-          <div class="m-0 my-5 p-0 row justify-content-center">
-            <a href="https://send.monobank.ua/jar/8nhXXe1Jue" target="_blank" rel="noopener noreferrer"
-              class="m-0 p-2 col-auto team-nav-btn bg-transparent">
-              <img class="m-0 p-0 rounded-4" style="max-width: 120px;"
-                src="https://i.postimg.cc/85hQ4khD/photo-2026-03-05-20-57-39.jpg" alt="Logo">
-            </a>
-
-            <a href="https://send.monobank.ua/jar/8nhXXe1Jue" target="_blank" rel="noopener noreferrer"
-              class="m-0 p-2 col-auto team-nav-btn bg-transparent">
-              <img class="m-0 p-0 rounded-4" style="max-width: 120px;"
-                src="https://i.postimg.cc/5N8Yz8HL/photo-2026-03-05-20-53-52.jpg" alt="Logo">
-            </a>
 
 
-            <a href="https://send.monobank.ua/jar/8nhXXe1Jue" target="_blank" rel="noopener noreferrer"
-              class="m-0 p-2 col-auto team-nav-btn bg-transparent">
-              <img class="m-0 p-0 rounded-4" style="max-width: 120px;"
-                src="https://i.postimg.cc/tJk00rSD/photo-2026-03-05-20-56-55.jpg" alt="Logo">
-            </a>
+
+
+          <div class="m-0 p-3 col-12 text-center fs-2 fw-bold text-white">
+            Thank You!
           </div>
-
-
-
 
 
 
@@ -843,79 +981,136 @@
 
 
           <!-- Картки валют -->
-          <div class="m-0 p-0 row justify-content-center g-3">
+          <div class="row justify-content-center g-3 m-0 p-0">
+
+            <div class="m-0 p-2 col-12 row justify-content-start small">
+              <p class="m-0 p-2  "><strong class="m-0 p-0 pe-1">Recipient:</strong> Andrian Ivaniuk</p>
+              <p class="m-0 p-2  "><strong class="m-0 p-0 pe-1">SWIFT/BIC:</strong> UNJSUAUKXXX</p>
+            </div>
+
+
 
             <!-- Основні реквізити -->
-            <div class="m-0 p-2 col-md-6">
-              <div class="m-0 p-2 border rounded border-primary row">
-
-                <p class="m-0 p-2 col-12"><strong class="m-0 p-0 pe-1">Recipient:</strong> Andrian Ivaniuk </p>
-                <p class="m-0 p-2  col-12"><strong class="m-0 p-0 pe-1">SWIFT/BIC:</strong> UNJSUAUKXXX</p>
+            <!-- <div class="col-auto">
+              <div class="bor9der rounded p-2 small">
+                <p class="m-0 p-1"><strong>Recipient:</strong> Andrian Ivaniuk</p>
               </div>
             </div>
 
-            <div class="m-0 p-0"></div>
-
+            <div class="col-auto">
+              <div class="b9order rounded p-2 small">
+                <p class="m-0 p-1"><strong>SWIFT/BIC:</strong> UNJSUAUKXXX</p>
+              </div>
+            </div> -->
 
             <!-- USD -->
-            <div class="m-0 p-2 col-md-6">
-              <div class="card bg-primary text-white h-100">
-                <div class="card-body p-2">
+            <div class="col-12 m-0 p-2">
+              <div class="card border h-100 bg-black text-white border-0 rounded-3">
+                <div class="card-body p-2 d-flex align-items-center justify-content-between flex-wrap ">
 
-                  <div class="d-flex justify-content-between align-items-center mb-2">
-                    <h6 class="card-title fw-bold d-flex align-items-center gap-2 m-0">
-                      <i class="bi bi-currency-dollar"></i> USD
-                    </h6>
+                  <!-- Валюта та кнопка мобільна -->
+                  <div class="d-flex align-items-center gap-1 m-0 p-0">
+                    <!-- <div class="rounded-circle d-flex align-items-center justify-content-center bg-light text-dark  bor0der border-dark "
+                         style="width:32px; height:32px;">
+                      <i class="bi bi-currency-dollar"></i>
+                    </div> -->
+                    <span class="fw-bold ps-2 ">USD</span>
 
-                    <button class="btn btn-sm btn-dark border-0" onclick="copyIBAN('ibanUAH', this)">
+                    <button class="btn btn-outline-secondary btn-sm d-sm-none ms-2" onclick="copyIBAN('ibanUSD', this)">
                       <i class="bi bi-clipboard"></i>
                     </button>
                   </div>
 
-                  <div class="bg-dark rounded p-2 text-center">
-                    <span id="ibanEUR" class="small font-monospace" style="font-size: clamp(13px, 1.2vw, 14px);">
+                  <!-- IBAN -->
+                  <div class="flex-grow-1 text-center bg-black rounded m-0 p-1 overflow-auto text-truncate">
+                    <span id="ibanUSD" class="font-monospace" style="font-size: clamp(13px,1.2vw,14px);">
                       UA 40 3220 0100 0000 2620 3376 0927 04
                     </span>
                   </div>
 
+                  <!-- Копіювання десктоп -->
+                  <button class="btn btn-outline-secondary btn-sm d-none d-sm-block border-white "
+                    onclick="copyIBAN('ibanUSD', this)">
+                    <i class="bi bi-clipboard text-white"></i>
+                  </button>
+
                 </div>
               </div>
             </div>
 
-            <div class="m-0 p-0"></div>
-
             <!-- EUR -->
-            <div class="m-0 p-2 col-md-6">
-              <div class="card bg-primary text-white h-100">
-                <div class="card-body p-2">
+            <div class="m-0 p-2 col-12">
+              <div class="card border h-100 bg-black text-white border-0 rounded-3">
+                <div class="card-body p-2 d-flex align-items-center justify-content-between flex-wrap">
 
-                  <div class="d-flex justify-content-between align-items-center mb-2">
-                    <h6 class="card-title fw-bold d-flex align-items-center gap-2 m-0">
-                      <i class="bi bi-currency-euro"></i> EUR
-                    </h6>
+                  <!-- Валюта та кнопка мобільна -->
+                  <div class="d-flex align-items-center gap-1 m-0  p-0">
+                    <!-- <div class="rounded-circle d-flex align-items-center justify-content-center bg-light text-dark  bo0rder border-dark "
+                         style="width:32px; height:32px;">
+                      <i class="bi bi-currency-euro"></i>
+                    </div> -->
+                    <span class="fw-bold  ps-2">EUR</span>
 
-                    <button class="btn btn-sm btn-dark border-0" onclick="copyIBAN('ibanUAH', this)">
+                    <button class="btn btn-outline-secondary btn-sm d-sm-none ms-2" onclick="copyIBAN('ibanUSD', this)">
                       <i class="bi bi-clipboard"></i>
                     </button>
                   </div>
 
-                  <div class="bg-dark rounded p-2 text-center">
-                    <span id="ibanEUR" class="small font-monospace" style="font-size: clamp(13px, 1.2vw, 14px);">
+                  <!-- IBAN -->
+                  <div class="flex-grow-1 text-center bg-black rounded m-0 p-1 overflow-auto text-truncate">
+                    <span id="ibanUSD" class="font-monospace" style="font-size: clamp(13px,1.2vw,14px);">
                       UA 40 3220 0100 0000 2620 5376 1280 41
                     </span>
                   </div>
+
+                  <!-- Копіювання десктоп -->
+                  <button class="btn btn-outline-secondary btn-sm d-none d-sm-block border-white"
+                    onclick="copyIBAN('ibanUSD', this)">
+                    <i class="bi bi-clipboard text-white"></i>
+                  </button>
 
                 </div>
               </div>
             </div>
 
 
+
+
+          </div>
+
+
+          <!-- Додати кнопку Monobank -->
+          <div class="m-0 my-5 p-0 row justify-content-center">
+            <a href="https://send.monobank.ua/jar/8nhXXe1Jue" target="_blank" rel="noopener noreferrer"
+              class="m-0 p-2 col-auto team-nav-btn bg-transparent">
+              <img class="m-0 p-0 rounded-4" style="max-width: 90px;"
+                src="https://i.postimg.cc/85hQ4khD/photo-2026-03-05-20-57-39.jpg" alt="Logo">
+            </a>
+
+            <a href="https://send.monobank.ua/jar/8nhXXe1Jue" target="_blank" rel="noopener noreferrer"
+              class="m-0 p-2 col-auto team-nav-btn bg-transparent">
+              <img class="m-0 p-0 rounded-4" style="max-width: 90px;"
+                src="https://i.postimg.cc/5N8Yz8HL/photo-2026-03-05-20-53-52.jpg" alt="Logo">
+            </a>
+
+
+            <a href="https://send.monobank.ua/jar/8nhXXe1Jue" target="_blank" rel="noopener noreferrer"
+              class="m-0 p-2 col-auto team-nav-btn bg-transparent">
+              <img class="m-0 p-0 rounded-4" style="max-width: 90px;"
+                src="https://i.postimg.cc/tJk00rSD/photo-2026-03-05-20-56-55.jpg" alt="Logo">
+            </a>
+
+            <a href="https://paypal.me/mynameisandrian" target="_blank" rel="noopener noreferrer"
+              class="m-0 p-2 col-auto team-nav-btn bg-transparent">
+              <img class="m-0 p-0 rounded-4" style="max-width: 90px;"
+                src="https://i.postimg.cc/Gt6tCZKX/photo-2026-03-11-12-27-10.jpg" alt="Logo">
+            </a>
           </div>
 
           <!-- Important -->
           <div class="m-0 mt-5 p-2">
 
-            <div class="m-0 p-3 text-secondary text-center" role="alert">
+            <div class="m-0 p-3 text-secondary text-center small" role="alert">
               Commission of intermediary banks for transfers is possible. </div>
 
           </div>
@@ -933,7 +1128,7 @@
 
 
 
-    
+
 
 
   <!-- НЕ ЗНАЮ ТРЕБА ДЛЯ ПРОГРУЗИ ДЖАПВА -->
