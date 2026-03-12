@@ -1,5 +1,3 @@
-
-
 // карта ЗУСТРІЧІ
 // карта ЗУСТРІЧІ
 // карта ЗУСТРІЧІ
@@ -273,7 +271,6 @@ document.addEventListener("DOMContentLoaded", function () {
 // карта team
 
 document.addEventListener("DOMContentLoaded", function () {
-
     const container = document.getElementById("products_199");
     const lightbox = document.getElementById("lightbox");
     const lightboxImg = document.getElementById("lightbox-img");
@@ -321,17 +318,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function openLightbox(index) {
         currentIndex = index;
-    
+
         const img = images[currentIndex];
         const card = img.closest(".team-card");
-    
+
         const name = card.querySelector("h6").innerText;
         const desc = card.querySelector("span").innerText;
-    
+
         lightboxImg.src = img.src;
         lightboxName.textContent = name;
         lightboxDesc.textContent = desc;
-    
+
         lightbox.style.display = "flex";
         document.body.style.overflow = "hidden";
     }
@@ -346,7 +343,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function updateSlider() {
         const cardWidth = container.children[0].offsetWidth;
-        container.style.transform = `translateX(${-currentIndex * cardWidth}px)`;
+        container.style.transform = `translateX(${
+            -currentIndex * cardWidth
+        }px)`;
     }
 
     document.getElementById("nextCard99").addEventListener("click", () => {
@@ -363,7 +362,7 @@ document.addEventListener("DOMContentLoaded", function () {
     window.addEventListener("resize", updateSlider);
 
     updateSlider();
-})
+});
 
 // КНОПКА БУРГЕР НА МАЛЕНЬКИХ ЕКРАНАХ ШРЬ ПРАЦБВАЛО
 // КНОПКА БУРГЕР НА МАЛЕНЬКИХ ЕКРАНАХ ШРЬ ПРАЦБВАЛО
@@ -386,44 +385,38 @@ document.addEventListener("DOMContentLoaded", function () {
 // КНОПКА БУРГЕР НА МАЛЕНЬКИХ ЕКРАНАХ ШРЬ ПРАЦБВАЛО
 // КНОПКА БУРГЕР НА МАЛЕНЬКИХ ЕКРАНАХ ШРЬ ПРАЦБВАЛО
 // КНОПКА БУРГЕР НА МАЛЕНЬКИХ ЕКРАНАХ ШРЬ ПРАЦБВАЛО
-
 document.addEventListener("DOMContentLoaded", function () {
-    const mobileNavToggle = document.querySelector(".my_burger");
-    const body = document.querySelector("body");
-    const navMenu = document.querySelector("#navmenu"); // правильний id
+    const mobileNavToggle = document.querySelector(".my_burger"); // бургер зовні
+    const mobileClose = document.querySelector(".mobile-close"); // хрестик всередині
+    const body = document.body;
+    const navMenu = document.querySelector("#navmenu");
     const scrollUPP = document.getElementById("scrollUPP");
 
+    function closeMenu() {
+        body.classList.remove("mobile-nav-active");
+        mobileNavToggle.classList.add("bi-list");
+        mobileNavToggle.classList.remove("bi-x");
+        if (scrollUPP) scrollUPP.classList.remove("d-none");
+    }
+
     if (mobileNavToggle) {
-        mobileNavToggle.addEventListener("click", function (e) {
-            e.preventDefault();
+        mobileNavToggle.addEventListener("click", function () {
             body.classList.toggle("mobile-nav-active");
-
-            // Змінюємо іконку (бургер <-> хрестик)
             this.classList.toggle("bi-list");
-            this.classList.toggle("bi-x");
-
-            if (scrollUPP) {
-                if (body.classList.contains("mobile-nav-active")) {
-                    scrollUPP.classList.add("d-none"); // ховаємо при відкритті меню
-                } else {
-                    scrollUPP.classList.remove("d-none"); // показуємо при закритті
-                }
-            }
+            // this.classList.toggle("bi-x");
+            if (scrollUPP) scrollUPP.classList.toggle("d-none", body.classList.contains("mobile-nav-active"));
         });
     }
 
-    // Закривання меню після кліку по пункту
+    if (mobileClose) {
+        mobileClose.addEventListener("click", closeMenu);
+    }
+
+    // Закриття меню при кліку на пункт
     navMenu.querySelectorAll("a").forEach((link) => {
-        link.addEventListener("click", function () {
-            if (body.classList.contains("mobile-nav-active")) {
-                body.classList.remove("mobile-nav-active");
-                mobileNavToggle.classList.add("bi-list");
-                mobileNavToggle.classList.remove("bi-x");
-            }
-        });
+        link.addEventListener("click", closeMenu);
     });
 });
-
 //   scroll-top
 //   scroll-top
 //   scroll-top
@@ -477,9 +470,9 @@ document.getElementById("currentYear").textContent = new Date().getFullYear();
 // назва АВТОМАТИЧНО ОНОВЛЮЄТЬСЯ
 // назва АВТОМАТИЧНО ОНОВЛЮЄТЬСЯ
 
-document.querySelectorAll(".js_name").forEach((el) => {
-    el.textContent = "MADE in Zhytomyr";
-});
+// document.querySelectorAll(".js_name").forEach((el) => {
+//     el.textContent = "MADE in Zhytomyr";
+// });
 
 // заголовок функціЯ щоб не дублювати
 // заголовок функціЯ щоб не дублювати
@@ -592,27 +585,28 @@ function copyIBAN(elementId, btn) {
 
 const translations = {
     en: {
-        motto: "Together, we can make the impossible possible!",
-
         // Навігація
+        madeInZhytomyr: "MADE in Zhytomyr",
         about: "About us",
         directions: "Directions",
         activities: "Activities",
         team: "Team",
         contact: "Contact",
         support: "Support Us",
-        donate: "Donate Now",
-        // volunteer: "Become a Volunteer",
-        // internalNeeds: "Internal Needs",
-        // getMembership: "Get Membership",
 
         // Hero Section
         heroSlogan: "Together, we can make the impossible possible!",
+        donate: "Donate Now",
 
         // About Section
         aboutTitle: "About us",
         aboutSubtitle:
             "We are a non-profit organization that unites caring and active people to support communities and create sustainable, meaningful change.",
+
+        organizationRole: "Non-profit organization",
+        established1: "Established",
+        activeMembers1: "Members",
+        projects1: "Completed projects",
 
         whoWeAreTag: "Who We Are",
         whoWeAreTitle: "Together for Positive Change",
@@ -620,10 +614,15 @@ const translations = {
             "We are a non-profit organization that brings together active and caring people who want to make a difference. We support one another, develop initiatives, and work to strengthen our community.",
         whoWeAreText2:
             "Our path is built on simple but meaningful actions: collaboration, honest dialogue, service to others, and consistent efforts toward sustainable development. Through these steps, we create real and lasting impact.",
+
         projects: "Projects",
+        projectsCompleted: "6+ Completed projects",
         activeMembers: "Community Members",
+        activeMembersCount: "12 active members",
         meetingPlace: "Meeting Place",
+        meetingPlaceLocation: "Zhytomyr, Ukraine",
         howToJoin: "How to Join",
+        howToJoinAction: "Message us",
 
         // Services Section
         directionsTitle: "Directions",
@@ -633,25 +632,20 @@ const translations = {
         serviceArmyTitle: "Support for the Army",
         serviceArmyText:
             "We help the Ukrainian army by collecting supplies and supporting soldiers.",
-
         serviceWarTitle: "Aid for War Victims",
         serviceWarText:
             "We provide humanitarian aid and support to people affected by the war.",
-
         serviceChildrenTitle: "Support for Children",
         serviceChildrenText:
             "We organize fundraising for treatment, rehabilitation and support for children.",
-
         serviceOrphanTitle: "Support for Orphanages",
         serviceOrphanText:
             "We provide orphanages with essential items and organize charitable activities.",
-
-            serviceHumanTitle: "Humanitarian Aid",
-            serviceHumanText:
+        serviceHumanTitle: "Humanitarian Aid",
+        serviceHumanText:
             "We organize charity campaigns to help people in difficult life situations.",
-
-            serviceInternationalTitle: "International Partnership",
-            serviceInternationalText:
+        serviceInternationalTitle: "International Partnership",
+        serviceInternationalText:
             "We cooperate with international partners on humanitarian projects.",
 
         makeADifference: "Make a Difference!",
@@ -672,7 +666,6 @@ const translations = {
         teamTitle: "Our Team",
         teamSubtitle:
             "We are a community of caring people committed to helping others and making the world better.",
-        supportOurWork: "Support Our Work",
 
         teamName1: "AN",
         teamDesc1: "Volunteer",
@@ -684,7 +677,10 @@ const translations = {
         teamDesc4: "Volunteer",
         teamName5: "Sofiia",
         teamDesc5: "Volunteer",
-        
+
+        supportOurWork: "Support Our Work",
+        supportOurWorkText:
+            "   You don’t need to do a lot — just care about helping others. Your donation helps us support people, strengthen communities, and create real change.",
         back: "Back",
         forward: "Forward",
 
@@ -697,12 +693,10 @@ const translations = {
         supportMissionText:
             "Your contribution helps us develop charitable projects, organize initiatives, and provide assistance to those who need it most.",
         donateNow: "Donate Now",
-
         internalNeedsTitle: "Internal Needs",
         internalNeedsText:
             "Donations for internal needs help support our work. A significant part of these funds is used for advertising to attract more people to donate.",
         supportOurWork1: "Support Our Work",
-
         becomeVolunteerTitle: "Become a Volunteer",
         becomeVolunteerText:
             "People who join our community help us organize initiatives, support charitable projects, and make a positive impact through good deeds.",
@@ -719,44 +713,47 @@ const translations = {
 
         email: "Email",
         address: "Address",
+
         yourName: "Your name",
         yourEmail: "Your email address",
         messageSubject: "Message subject",
         yourMessage: "Your message",
+
         sendMessage: "Send message",
-        messageSent: "✅ Message sent!",
+        messageSent: "Message sent!",
 
         // Footer
         links: "LINKS",
         supportFooter: "SUPPORT",
         contactFooter: "CONTACT",
-        allRightsReserved: "All rights reserved",
         footerText:
             "A community of caring individuals committed to creating real, measurable impact. Together, we run charitable projects, provide support to those in need, and create meaningful change.",
+        allRightsReserved: "All rights reserved",
     },
 
     ua: {
-        motto: "Разом ми можемо зробити неможливе можливим!",
-
         // Навігація
+        madeInZhytomyr: "MADE in Zhytomyr",
         about: "Про нас",
         directions: "Напрямки",
         activities: "Діяльність",
         team: "Команда",
         contact: "Контакти",
         support: "Підтримати",
-        donate: "Задонатити",
-        // volunteer: "Стати волонтером",
-        // internalNeeds: "Внутрішні потреби",
-        // getMembership: "Отримати членство",
 
         // Hero Section
         heroSlogan: "Разом ми можемо зробити неможливе можливим!",
+        donate: "Задонатити",
 
         // About Section
         aboutTitle: "Про нас",
         aboutSubtitle:
             "Ми-некомерційна організація, яка об'єднує небайдужих і активних людей для підтримки спільнот і створення стійких, значущих змін.",
+
+        organizationRole: "Некомерційна організація",
+        established1: "Установлений",
+        activeMembers1: "Члени",
+        projects1: "Завершені проекти",
 
         whoWeAreTag: "Хто ми",
         whoWeAreTitle: "Разом за позитивні зміни",
@@ -764,38 +761,40 @@ const translations = {
             "Ми – неприбуткова організація, яка об’єднує активних та небайдужих людей, які хочуть змінювати світ. Ми підтримуємо один одного, розвиваємо ініціативи та працюємо на зміцнення нашої спільноти.",
         whoWeAreText2:
             "Наш шлях будується на простих, але значущих діях: співпраця, чесний діалог, служіння іншим та постійні зусилля задля сталого розвитку. Через ці кроки ми створюємо реальний та довготривалий вплив.",
+
         projects: "Проекти",
+        projectsCompleted: "Більше 6 завершених проектів",
         activeMembers: "Учасники спільноти",
+        activeMembersCount: "12 активних членів",
         meetingPlace: "Місце зустрічей",
+        meetingPlaceLocation: "Житомир, Україна",
         howToJoin: "Як приєднатися",
+        howToJoinAction: "Напишіть нам",
 
         // Services Section
         directionsTitle: "Напрямки",
         directionsSubtitle:
             "Ми реалізуємо соціальні та благодійні ініціативи, які підтримують людей, зміцнюють спільноти та сприяють позитивним змінам.",
+
         serviceArmyTitle: "Підтримка ЗСУ",
         serviceArmyText:
             "Ми допомагаємо українській армії, збираючи необхідні речі та підтримуючи військових.",
-
         serviceWarTitle: "Допомога жертвам війни",
         serviceWarText:
             "Ми надаємо гуманітарну допомогу людям, які постраждали від війни.",
-
         serviceChildrenTitle: "Підтримка дітей",
         serviceChildrenText:
             "Ми організовуємо збори коштів на лікування та підтримку дітей.",
-
         serviceOrphanTitle: "Підтримка дитбудинків",
         serviceOrphanText:
             "Ми допомагаємо дитячим будинкам речами та організовуємо благодійні заходи.",
-
         serviceHumanTitle: "Гуманітарна допомога",
         serviceHumanText:
             "Ми проводимо благодійні збори для допомоги людям у складних життєвих ситуаціях.",
-
         serviceInternationalTitle: "Міжнародне партнерство",
         serviceInternationalText:
             "Ми співпрацюємо з міжнародними партнерами для реалізації гуманітарних проєктів.",
+
         makeADifference: "Зроби різницю!",
         makeADifferenceText:
             "Ваша пожертва допомагає нам підтримувати людей, зміцнювати спільноти та створювати позитивні зміни. Кожна пожертва приносить реальну допомогу тому, хто її потребує.",
@@ -815,19 +814,20 @@ const translations = {
         teamSubtitle:
             "Ми – спільнота небайдужих людей, що прагнуть допомагати іншим та робити світ кращим.",
 
-
-            teamName1: "AN",
-            teamDesc1: "Волонтер",
-            teamName2: "Роман",
-            teamDesc2: "Волонтер",
-            teamName3: "Артем",
-            teamDesc3: "Волонтер",
-            teamName4: "Олександр",
-            teamDesc4: "Волонтер",
-            teamName5: "Софія",
-            teamDesc5: "Волонтер",
+        teamName1: "AN",
+        teamDesc1: "Волонтер",
+        teamName2: "Роман",
+        teamDesc2: "Волонтер",
+        teamName3: "Артем",
+        teamDesc3: "Волонтер",
+        teamName4: "Олександр",
+        teamDesc4: "Волонтер",
+        teamName5: "Софія",
+        teamDesc5: "Волонтер",
 
         supportOurWork: "Підтримати нашу роботу",
+        supportOurWorkText:
+            "   Вам не потрібно багато робити-просто дбайте про те, щоб допомагати іншим. Ваші пожертви допомагають нам підтримувати людей, зміцнювати громади та вносити реальні зміни.",
         back: "Назад",
         forward: "Вперед",
 
@@ -840,12 +840,10 @@ const translations = {
         supportMissionText:
             "Ваш внесок допомагає нам реалізовувати благодійні проєкти, організовувати ініціативи та надавати допомогу тим, хто цього потребує найбільше.",
         donateNow: "Пожертвувати",
-
         internalNeedsTitle: "Внутрішні потреби",
         internalNeedsText:
             "Пожертви на внутрішні потреби допомагають підтримувати нашу роботу. Значна частина цих коштів спрямовується на рекламу, щоб залучити більше людей до пожертв.",
         supportOurWork1: "Підтримати наc",
-
         becomeVolunteerTitle: "Стати волонтером",
         becomeVolunteerText:
             "Люди, які приєднуються до нашої спільноти, допомагають організовувати ініціативи, підтримувати благодійні проєкти та робити позитивний вплив через добрі справи.",
@@ -861,44 +859,47 @@ const translations = {
 
         email: "Електронна пошта",
         address: "Адреса",
+
         yourName: "Ваше ім'я",
         yourEmail: "Ваш email",
         messageSubject: "Тема повідомлення",
         yourMessage: "Ваше повідомлення",
+
         sendMessage: "Відправити повідомлення",
-        messageSent: "✅ Повідомлення надіслано!",
+        messageSent: "Повідомлення надіслано!",
 
         // Footer
         links: "ПОСИЛАННЯ",
         supportFooter: "ПІДТРИМКА",
         contactFooter: "КОНТАКТИ",
-        allRightsReserved: "Всі права захищені",
         footerText:
             "Спільнота небайдужих людей прагне до створення реальних, відчутних результатів. Разом, ми біжимо благодійні проекти, надавати підтримку тим, хто її потребує, і створити значущі зміни.",
+        allRightsReserved: "Всі права захищені",
     },
 
     de: {
-        motto: "Gemeinsam können wir das Unmögliche möglich machen!",
-
         // Навігація
+        madeInZhytomyr: "MADE in Zhytomyr",
         about: "Über uns",
         directions: "Richtungen",
         activities: "Aktivitäten",
         team: "Team",
         contact: "Kontakt",
         support: "Unterstützen",
-        donate: "Spenden",
-        // volunteer: "Freiwilliger werden",
-        // internalNeeds: "Interne Bedürfnisse",
-        // getMembership: "Mitgliedschaft erhalten",
 
         // Hero Section
         heroSlogan: "Gemeinsam können wir das Unmögliche möglich machen!",
+        donate: "Spenden",
 
         // About Section
         aboutTitle: "Über uns",
         aboutSubtitle:
             "Wir sind eine gemeinnützige Organisation, die fürsorgliche und aktive Menschen vereint, um Gemeinschaften zu unterstützen und nachhaltige, sinnvolle Veränderungen herbeizuführen.",
+
+        organizationRole: "Gemeinnützige Organisation",
+        established1: "Etablierten",
+        activeMembers1: "Mitglieder",
+        projects1: "Abgeschlossene Projekte",
 
         whoWeAreTag: "Wer wir sind",
         whoWeAreTitle: "Gemeinsam für positive Veränderungen",
@@ -906,38 +907,40 @@ const translations = {
             "Wir sind eine gemeinnützige Organisation, die aktive und fürsorgliche Menschen zusammenbringt, die einen Unterschied machen möchten. Wir unterstützen uns gegenseitig, entwickeln Initiativen und arbeiten daran, unsere Gemeinschaft zu stärken.",
         whoWeAreText2:
             "Unser Weg basiert auf einfachen, aber bedeutungsvollen Handlungen: Zusammenarbeit, ehrlicher Dialog, Dienst an anderen und konsequente Bemühungen um nachhaltige Entwicklung. Durch diese Schritte schaffen wir echte und dauerhafte Wirkung.",
+
         projects: "Projekte",
+        projectsCompleted: "6+ Abgeschlossene Projekte",
         activeMembers: "Mitglieder",
+        activeMembersCount: "12 aktive Mitglieder",
         meetingPlace: "Treffpunkt",
+        meetingPlaceLocation: "Schytomyr, Ukraine",
         howToJoin: "Wie beitreten",
+        howToJoinAction: "Nachricht an uns",
 
         // Services Section
         directionsTitle: "Richtungen",
         directionsSubtitle:
             "Wir setzen soziale und wohltätige Initiativen um, die Menschen unterstützen, Gemeinschaften stärken und positive Veränderungen vorantreiben.",
-            serviceArmyTitle: "Unterstützung der Armee",
-            serviceArmyText:
+
+        serviceArmyTitle: "Unterstützung der Armee",
+        serviceArmyText:
             "Wir helfen der ukrainischen Armee mit wichtigen Materialien und Unterstützung für Soldaten.",
-
-            serviceWarTitle: "Hilfe für Kriegsopfer",
-            serviceWarText:
+        serviceWarTitle: "Hilfe für Kriegsopfer",
+        serviceWarText:
             "Wir leisten humanitäre Hilfe für Menschen, die vom Krieg betroffen sind.",
-
         serviceChildrenTitle: "Hilfe für Kinder",
         serviceChildrenText:
             "Wir organisieren Spendenaktionen für Behandlung und Unterstützung von Kindern.",
-
         serviceOrphanTitle: "Hilfe für Waisenhäuser",
         serviceOrphanText:
             "Wir unterstützen Waisenhäuser mit wichtigen Dingen und organisieren Wohltätigkeitsaktionen.",
-
-            serviceHumanTitle: "Humanitäre Hilfe",
-            serviceHumanText:
+        serviceHumanTitle: "Humanitäre Hilfe",
+        serviceHumanText:
             "Wir organisieren Spendenaktionen für Menschen in schwierigen Lebenssituationen.",
-
         serviceInternationalTitle: "Internationale Zusammenarbeit",
         serviceInternationalText:
             "Wir arbeiten mit internationalen Partnern an humanitären Projekten.",
+
         makeADifference: "Mach einen Unterschied!",
         makeADifferenceText:
             "Ihre Spende hilft uns, Menschen zu unterstützen, Gemeinschaften zu stärken und positive Veränderungen zu schaffen. Jede Spende bringt echte Hilfe für jemanden, der sie braucht.",
@@ -946,7 +949,6 @@ const translations = {
         activitiesTitle: "Unsere Aktivitäten",
         activitiesSubtitle:
             "Entdecken Sie unsere Wohltätigkeitsveranstaltungen und Initiativen, bei denen wir andere unterstützen, Gemeinschaften vereinen und positive Veränderungen schaffen.",
-
         loadMoreProjects: "Mehr Projekte laden",
         helpUsChangeLives: "Helfen Sie uns, Leben zu verändern",
         helpUsChangeLivesText:
@@ -957,20 +959,20 @@ const translations = {
         teamSubtitle:
             "Wir sind eine Gemeinschaft von fürsorglichen Menschen, die sich dafür einsetzen, anderen zu helfen und die Welt besser zu machen.",
 
-
-            teamName1: "AN",
-            teamDesc1: "Volunteer",
-            teamName2: "Roman",
-            teamDesc2: "Volunteer",
-            teamName3: "Artem",
-            teamDesc3: "Volunteer",
-            teamName4: "Oleksandr",
-            teamDesc4: "Volunteer",
-            teamName5: "Sofiia",
-            teamDesc5: "Volunteer",
-
+        teamName1: "AN",
+        teamDesc1: "Volunteer",
+        teamName2: "Roman",
+        teamDesc2: "Volunteer",
+        teamName3: "Artem",
+        teamDesc3: "Volunteer",
+        teamName4: "Oleksandr",
+        teamDesc4: "Volunteer",
+        teamName5: "Sofiia",
+        teamDesc5: "Volunteer",
 
         supportOurWork: "Unterstütze unsere Arbeit",
+        supportOurWorkText:
+            " Du musst nicht viel tun - kümmere dich nur darum, anderen zu helfen. Ihre Spende hilft uns, Menschen zu unterstützen, Gemeinschaften zu stärken und echte Veränderungen herbeizuführen.",
         back: "Zurück",
         forward: "Vorwärts",
 
@@ -983,17 +985,14 @@ const translations = {
         supportMissionText:
             "Ihr Beitrag hilft uns, wohltätige Projekte zu entwickeln, Initiativen zu organisieren und denen zu helfen, die sie am dringendsten benötigen.",
         donateNow: "Jetzt spenden",
-
         internalNeedsTitle: "Interne Bedürfnisse",
         internalNeedsText:
             "Spenden für interne Bedürfnisse helfen, unsere Arbeit zu unterstützen. Ein großer Teil dieser Mittel wird für Werbung verwendet, um mehr Menschen zum Spenden zu motivieren.",
         supportOurWork1: "Unterstützen Sie uns",
-
         becomeVolunteerTitle: "Freiwilliger werden",
         becomeVolunteerText:
             "Menschen, die sich unserer Gemeinschaft anschließen, helfen uns, Initiativen zu organisieren, wohltätige Projekte zu unterstützen und durch gute Taten positive Auswirkungen zu erzielen.",
         joinUs: "Begleiten Sie uns",
-
         transparencyTitle: "Transparenz & Verantwortung",
         transparencyText:
             "Spenden, die zur Unterstützung unserer allgemeinen Aktivitäten geleistet werden, werden vollständig erfasst. Wir veröffentlichen monatliche Berichte über alle Einnahmen und Ausgaben. Spenden für interne organisatorische Bedürfnisse helfen uns, die Organisation aufrechtzuerhalten und zu entwickeln sowie Betriebskosten wie Verwaltung, Infrastruktur, Werbung und Projektentwicklung zu decken. Diese Mittel werden nach Ermessen der Organisation verwaltet, um einen stabilen Betrieb und langfristige Wirkung zu gewährleisten. Für interne Bedürfnisse bestimmte Spenden sind nicht in den öffentlichen Finanzberichten enthalten. Wir danken allen, die unsere Mission unterstützen und uns helfen, unsere Arbeit fortzusetzen.",
@@ -1005,20 +1004,22 @@ const translations = {
 
         email: "E-Mail",
         address: "Adresse",
+
         yourName: "Ihr Name",
         yourEmail: "Ihre E-Mail-Adresse",
         messageSubject: "Betreff der Nachricht",
         yourMessage: "Ihre Nachricht",
+
         sendMessage: "Nachricht senden",
-        messageSent: "✅ Nachricht gesendet!",
+        messageSent: "Nachricht gesendet!",
 
         // Footer
         links: "LINKS",
         supportFooter: "UNTERSTÜTZUNG",
         contactFooter: "KONTAKT",
-        allRightsReserved: "Alle Rechte vorbehalten",
         footerText:
             "Eine Gemeinschaft von fürsorglichen Menschen, die sich dafür einsetzen, echte, messbare Auswirkungen zu erzielen. Zusammen laufen wir gemeinnützige Projekte, unterstützen Bedürftige und schaffen sinnvolle Veränderungen.",
+        allRightsReserved: "Alle Rechte vorbehalten",
     },
 };
 
@@ -1028,9 +1029,26 @@ const translations = {
 //   4️⃣ Функція зміни мови
 //   4️⃣ Функція зміни мови
 
+// function setLang(lang) {
+//     localStorage.setItem("lang", lang);
+
+//     document.querySelectorAll("[data-i18n]").forEach((el) => {
+//         const key = el.dataset.i18n;
+//         if (translations[lang][key]) {
+//             el.textContent = translations[lang][key];
+//         }
+//     });
+
+//     document.querySelectorAll(".currentLang").forEach((el) => {
+//         el.textContent = lang.toUpperCase();
+//     });
+// }
+
+
 function setLang(lang) {
     localStorage.setItem("lang", lang);
 
+    // Тексти
     document.querySelectorAll("[data-i18n]").forEach((el) => {
         const key = el.dataset.i18n;
         if (translations[lang][key]) {
@@ -1038,11 +1056,27 @@ function setLang(lang) {
         }
     });
 
+    // Поточна мова
     document.querySelectorAll(".currentLang").forEach((el) => {
         el.textContent = lang.toUpperCase();
     });
-}
 
+    // --- Додаємо для input placeholder ---
+    document.querySelectorAll("input[data-i18n-placeholder]").forEach((el) => {
+        const key = el.dataset.i18nPlaceholder;
+        if (translations[lang][key]) {
+            el.placeholder = translations[lang][key];
+        }
+    });
+
+    // --- Для textarea (якщо потрібно) ---
+    document.querySelectorAll("textarea[data-i18n-placeholder]").forEach((el) => {
+        const key = el.dataset.i18nPlaceholder;
+        if (translations[lang][key]) {
+            el.placeholder = translations[lang][key];
+        }
+    });
+}
 // 5️⃣ Запам'ятовування мови
 // 5️⃣ Запам'ятовування мови
 // 5️⃣ Запам'ятовування мови
