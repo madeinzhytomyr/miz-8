@@ -1047,7 +1047,7 @@
 
 
   <!-- Modal -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"  >
     <div style="max-width: 498px;" class="modal-dialog modal-md modal-dialog-centered p-2">
       <div class="modal-content bg-dark text-white">
 
@@ -1064,7 +1064,7 @@
 
 
 
-          <div class="m-0 p-3 py-5 col-12 text-center fs-2 fw-bold text-white">
+          <div class="m-0 p-3 py-5 col-12 text-center fs-2 fw-bold text-white" data-i18n="modalThank">
             Thank You!
           </div>
 
@@ -1078,8 +1078,14 @@
           <div class="row justify-content-center g-3 m-0 p-0">
 
             <div class="m-0 p-2 col-12 row justify-content-start small">
-              <p class="m-0 p-2  "><strong class="m-0 p-0 pe-1">Recipient:</strong> Andrian Ivaniuk</p>
-              <p class="m-0 p-2  "><strong class="m-0 p-0 pe-1">SWIFT/BIC:</strong> UNJSUAUKXXX</p>
+              <p class="m-0 p-2  ">
+                <strong class="m-0 p-0 pe-1" data-i18n="modalRecipient">Recipient:</strong> 
+                <span data-i18n="allRightsAN">Andrian Ivaniuk</span>
+              </p>
+              <p class="m-0 p-2  ">
+                <strong class="m-0 p-0 pe-1">SWIFT/BIC:</strong> 
+               <span>UNJSUAUKXXX</span> 
+              </p>
             </div>
 
 
@@ -1201,7 +1207,7 @@
           <!-- Important -->
           <div class="m-0 mt-5 p-2">
 
-            <div class="m-0 p-3 text-secondary text-center small" role="alert">
+            <div class="m-0 p-3 text-secondary text-center small" role="alert" data-i18n="modalText">
               Commission of intermediary banks for transfers is possible. </div>
 
           </div>
