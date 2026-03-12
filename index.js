@@ -605,28 +605,28 @@ const translations = {
         // About Section
         aboutTitle: "About us",
         aboutSubtitle:
-            "We are a non-profit organization that unites caring and active people to support communities and create sustainable, meaningful change.",
+            "We are a community of caring people, uniting active and compassionate individuals to support communities and create sustainable, meaningful change.",
 
-        organizationRole: "Non-profit organization",
-        established1: "Established",
-        activeMembers1: "Members",
-        projects1: "Completed projects",
+        organizationRole: "A Community of Caring People",
+        // established1: "Years Of Work",
+        // projects1: "Saved Lives",
+        // activeMembers1: "Team Members",
 
         whoWeAreTag: "Who We Are",
         whoWeAreTitle: "Together for Positive Change",
         whoWeAreText1:
-            "We are a non-profit organization that brings together active and caring people who want to make a difference. We support one another, develop initiatives, and work to strengthen our community.",
+            "We are a community of caring individuals, united to make a difference. We support each other, develop initiatives, and work to strengthen our community.",
         whoWeAreText2:
             "Our path is built on simple but meaningful actions: collaboration, honest dialogue, service to others, and consistent efforts toward sustainable development. Through these steps, we create real and lasting impact.",
 
-        projects: "Projects",
-        projectsCompleted: "6+ Completed projects",
-        activeMembers: "Community Members",
-        activeMembersCount: "12 active members",
-        meetingPlace: "Meeting Place",
-        meetingPlaceLocation: "Zhytomyr, Ukraine",
-        howToJoin: "How to Join",
-        howToJoinAction: "Message us",
+        projects: "Funds Raised",
+        projectsAmount: "1 000 EUR",
+        savedLives: "Lives Saved",
+        savedLivesCount: "6+ happy stories",
+        team: "Our Team",
+        teamMembersCount: "5+ active members",
+        experience: "Years of Work",
+        experienceDuration: "1 year of experience",
 
         // Services Section
         directionsTitle: "Directions",
@@ -759,28 +759,28 @@ const translations = {
         // About Section
         aboutTitle: "Про нас",
         aboutSubtitle:
-            "Ми-некомерційна організація, яка об'єднує небайдужих і активних людей для підтримки спільнот і створення стійких, значущих змін.",
+            "Ми Об’єднання Небайдужих Людей, яка об'єднує небайдужих і активних людей для підтримки спільнот і створення стійких, значущих змін.",
 
-        organizationRole: "Некомерційна організація",
-        established1: "Установлений",
-        activeMembers1: "Члени",
-        projects1: "Завершені проекти",
+        organizationRole: "Об’єднання Небайдужих Людей",
+        // established1: "Років Працюємо",
+        // projects1: "Врятованих Життів",
+        // activeMembers1: "Членів Команди",
 
         whoWeAreTag: "Хто ми",
         whoWeAreTitle: "Разом за позитивні зміни",
         whoWeAreText1:
-            "Ми – неприбуткова організація, яка об’єднує активних та небайдужих людей, які хочуть змінювати світ. Ми підтримуємо один одного, розвиваємо ініціативи та працюємо на зміцнення нашої спільноти.",
+            "Ми – Об’єднання Небайдужих Людей, яка об’єднує активних та небайдужих людей, які хочуть змінювати світ. Ми підтримуємо один одного, розвиваємо ініціативи та працюємо на зміцнення нашої спільноти.",
         whoWeAreText2:
             "Наш шлях будується на простих, але значущих діях: співпраця, чесний діалог, служіння іншим та постійні зусилля задля сталого розвитку. Через ці кроки ми створюємо реальний та довготривалий вплив.",
 
-        projects: "Проекти",
-        projectsCompleted: "Більше 6 завершених проектів",
-        activeMembers: "Учасники спільноти",
-        activeMembersCount: "12 активних членів",
-        meetingPlace: "Місце зустрічей",
-        meetingPlaceLocation: "Житомир, Україна",
-        howToJoin: "Як приєднатися",
-        howToJoinAction: "Напишіть нам",
+        projects: "Зібрано грошей",
+        projectsAmount: "1 000 EUR",
+        savedLives: "Врятовані життя",
+        savedLivesCount: "6+ щасливих історій",
+        team: "Наша команда",
+        teamMembersCount: "5+ активних членів",
+        experience: "Років працюємо",
+        experienceDuration: "1 рік роботи",
 
         // Services Section
         directionsTitle: "Напрямки",
@@ -911,28 +911,28 @@ const translations = {
         // About Section
         aboutTitle: "Über uns",
         aboutSubtitle:
-            "Wir sind eine gemeinnützige Organisation, die fürsorgliche und aktive Menschen vereint, um Gemeinschaften zu unterstützen und nachhaltige, sinnvolle Veränderungen herbeizuführen.",
+            "Wir sind Menschen, denen es nicht egal ist – fürsorgliche und aktive Menschen, die sich vereinen, um Gemeinschaften zu unterstützen und nachhaltige, sinnvolle Veränderungen zu bewirken.",
 
-        organizationRole: "Gemeinnützige Organisation",
-        established1: "Etablierten",
-        activeMembers1: "Mitglieder",
-        projects1: "Abgeschlossene Projekte",
+        organizationRole: "Menschen, denen es nicht egal ist",
+        // established1: "Jahr Erfahrung",
+        // projects1: "Gerettete Leben",
+        // activeMembers1: "Teammitglieder",
 
         whoWeAreTag: "Wer wir sind",
         whoWeAreTitle: "Gemeinsam für positive Veränderungen",
         whoWeAreText1:
-            "Wir sind eine gemeinnützige Organisation, die aktive und fürsorgliche Menschen zusammenbringt, die einen Unterschied machen möchten. Wir unterstützen uns gegenseitig, entwickeln Initiativen und arbeiten daran, unsere Gemeinschaft zu stärken.",
+            "Wir sind Menschen, denen es nicht egal ist – aktive und fürsorgliche Menschen, die einen Unterschied machen wollen. Wir unterstützen uns gegenseitig, entwickeln Initiativen und arbeiten daran, unsere Gemeinschaft zu stärken.",
         whoWeAreText2:
             "Unser Weg basiert auf einfachen, aber bedeutungsvollen Handlungen: Zusammenarbeit, ehrlicher Dialog, Dienst an anderen und konsequente Bemühungen um nachhaltige Entwicklung. Durch diese Schritte schaffen wir echte und dauerhafte Wirkung.",
 
-        projects: "Projekte",
-        projectsCompleted: "6+ Abgeschlossene Projekte",
-        activeMembers: "Mitglieder",
-        activeMembersCount: "12 aktive Mitglieder",
-        meetingPlace: "Treffpunkt",
-        meetingPlaceLocation: "Schytomyr, Ukraine",
-        howToJoin: "Wie beitreten",
-        howToJoinAction: "Nachricht an uns",
+        projects: "Gesammelte Mittel",
+        projectsAmount: "1 000 EUR",
+        savedLives: "Gerettete Leben",
+        savedLivesCount: "6+ glückliche Geschichten",
+        team: "Unser Team",
+        teamMembersCount: "5+ aktive Mitglieder",
+        experience: "Jahre der Arbeit",
+        experienceDuration: "1 Jahr Erfahrung",
 
         // Services Section
         directionsTitle: "Richtungen",
@@ -1052,21 +1052,6 @@ const translations = {
 //   4️⃣ Функція зміни мови
 //   4️⃣ Функція зміни мови
 //   4️⃣ Функція зміни мови
-
-// function setLang(lang) {
-//     localStorage.setItem("lang", lang);
-
-//     document.querySelectorAll("[data-i18n]").forEach((el) => {
-//         const key = el.dataset.i18n;
-//         if (translations[lang][key]) {
-//             el.textContent = translations[lang][key];
-//         }
-//     });
-
-//     document.querySelectorAll(".currentLang").forEach((el) => {
-//         el.textContent = lang.toUpperCase();
-//     });
-// }
 
 function setLang(lang) {
     localStorage.setItem("lang", lang);
