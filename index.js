@@ -404,7 +404,11 @@ document.addEventListener("DOMContentLoaded", function () {
             body.classList.toggle("mobile-nav-active");
             this.classList.toggle("bi-list");
             // this.classList.toggle("bi-x");
-            if (scrollUPP) scrollUPP.classList.toggle("d-none", body.classList.contains("mobile-nav-active"));
+            if (scrollUPP)
+                scrollUPP.classList.toggle(
+                    "d-none",
+                    body.classList.contains("mobile-nav-active")
+                );
         });
     }
 
@@ -729,6 +733,13 @@ const translations = {
         footerText:
             "A community of caring individuals committed to creating real, measurable impact. Together, we run charitable projects, provide support to those in need, and create meaningful change.",
         allRightsReserved: "All rights reserved",
+
+        //modal
+        modalThank: "Thank You!",
+        modalRecipient: "Recipient:",
+        allRightsAN: "Andrian Ivaniuk",
+        modalText:
+            "Commission of intermediary banks for transfers is possible. ",
     },
 
     ua: {
@@ -875,6 +886,12 @@ const translations = {
         footerText:
             "Спільнота небайдужих людей прагне до створення реальних, відчутних результатів. Разом, ми біжимо благодійні проекти, надавати підтримку тим, хто її потребує, і створити значущі зміни.",
         allRightsReserved: "Всі права захищені",
+
+        //modal
+        modalThank: "Дуже Дякуємо!",
+        modalRecipient: "Отримувач:",
+        allRightsAN: "Андріан Іванюк",
+        modalText: "Можлива комісія банків-посередників за перекази. ",
     },
 
     de: {
@@ -1020,6 +1037,13 @@ const translations = {
         footerText:
             "Eine Gemeinschaft von fürsorglichen Menschen, die sich dafür einsetzen, echte, messbare Auswirkungen zu erzielen. Zusammen laufen wir gemeinnützige Projekte, unterstützen Bedürftige und schaffen sinnvolle Veränderungen.",
         allRightsReserved: "Alle Rechte vorbehalten",
+
+        //modal
+        modalThank: "Danke Schön!",
+        modalRecipient: "Empfänger:",
+        allRightsAN: "Andrian Ivaniuk",
+        modalText:
+            "Provisionen von Zwischenbanken für Überweisungen sind möglich.",
     },
 };
 
@@ -1043,7 +1067,6 @@ const translations = {
 //         el.textContent = lang.toUpperCase();
 //     });
 // }
-
 
 function setLang(lang) {
     localStorage.setItem("lang", lang);
@@ -1070,12 +1093,14 @@ function setLang(lang) {
     });
 
     // --- Для textarea (якщо потрібно) ---
-    document.querySelectorAll("textarea[data-i18n-placeholder]").forEach((el) => {
-        const key = el.dataset.i18nPlaceholder;
-        if (translations[lang][key]) {
-            el.placeholder = translations[lang][key];
-        }
-    });
+    document
+        .querySelectorAll("textarea[data-i18n-placeholder]")
+        .forEach((el) => {
+            const key = el.dataset.i18nPlaceholder;
+            if (translations[lang][key]) {
+                el.placeholder = translations[lang][key];
+            }
+        });
 }
 // 5️⃣ Запам'ятовування мови
 // 5️⃣ Запам'ятовування мови
@@ -1088,10 +1113,6 @@ document.addEventListener("DOMContentLoaded", () => {
     setLang(savedLang);
 });
 
-
-
-
-
 // закриття скрол ап на модалці
 // закриття скрол ап на модалці
 // закриття скрол ап на модалці
@@ -1099,13 +1120,11 @@ const modal = document.getElementById("exampleModal");
 const scrollUPP = document.getElementById("scrollUPP");
 
 if (modal) {
+    modal.addEventListener("show.bs.modal", function () {
+        if (scrollUPP) scrollUPP.classList.add("d-none");
+    });
 
-  modal.addEventListener("show.bs.modal", function () {
-    if (scrollUPP) scrollUPP.classList.add("d-none");
-  });
-
-  modal.addEventListener("hidden.bs.modal", function () {
-    if (scrollUPP) scrollUPP.classList.remove("d-none");
-  });
-
+    modal.addEventListener("hidden.bs.modal", function () {
+        if (scrollUPP) scrollUPP.classList.remove("d-none");
+    });
 }
