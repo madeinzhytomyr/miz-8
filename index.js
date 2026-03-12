@@ -1087,3 +1087,25 @@ document.addEventListener("DOMContentLoaded", () => {
     const savedLang = localStorage.getItem("lang") || "en";
     setLang(savedLang);
 });
+
+
+
+
+
+// закриття скрол ап на модалці
+// закриття скрол ап на модалці
+// закриття скрол ап на модалці
+const modal = document.getElementById("exampleModal");
+const scrollUPP = document.getElementById("scrollUPP");
+
+if (modal) {
+
+  modal.addEventListener("show.bs.modal", function () {
+    if (scrollUPP) scrollUPP.classList.add("d-none");
+  });
+
+  modal.addEventListener("hidden.bs.modal", function () {
+    if (scrollUPP) scrollUPP.classList.remove("d-none");
+  });
+
+}
