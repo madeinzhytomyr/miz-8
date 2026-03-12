@@ -1,105 +1,4 @@
-// карта RICHTUNG
-// карта RICHTUNG
-// карта RICHTUNG
-// карта RICHTUNG
-// карта RICHTUNG
-// карта RICHTUNG
-// карта RICHTUNG
-// карта RICHTUNG
-// карта RICHTUNG
-// карта RICHTUNG
-// карта RICHTUNG
-// карта RICHTUNG
-// карта RICHTUNG
-// карта RICHTUNG
-// карта RICHTUNG
-// карта RICHTUNG
-// карта RICHTUNG
-// карта RICHTUNG
-// карта RICHTUNG
-// карта RICHTUNG
-// карта RICHTUNG
 
-// document.addEventListener("DOMContentLoaded", function () {
-//     const services = [
-//         {
-//             title: "Support for the Ukrainian Army",
-//             icon: "bi bi-fire",
-//             description:
-//                 "We help the Ukrainian army in the war against Russia by collecting essential supplies, supporting soldiers, and assisting with their needs.",
-//         },
-//         {
-//             title: "Support for People Affected by the War",
-//             icon: "bi bi-people",
-//             description:
-//                 "We help people who have been affected by the war with Russia by providing humanitarian aid, support, and essential resources for living.",
-//         },
-//         {
-//             title: "Support for Children",
-//             icon: "bi bi-graph-up-arrow",
-//             description:
-//                 "We help children in need by organizing fundraising for treatment, rehabilitation, and essential support, giving them and their families hope for a better future.",
-//         },
-//         {
-//             title: "Support for Orphanages",
-//             icon: "bi bi-heart-fill",
-//             description:
-//                 "We help orphanages by providing children with essential items, gifts, educational materials, and organizing charitable activities.",
-//         },
-//         {
-//             title: "Humanitarian and Charitable Aid",
-//             icon: "bi bi-stars",
-//             description:
-//                 "We organize fundraising campaigns and charity events to support people who are facing difficult life situations.",
-//         },
-//         {
-//             title: "International Cooperation",
-//             icon: "bi bi-compass",
-//             description:
-//                 "We cooperate with local and international partners to implement humanitarian and social projects.",
-//         },
-//     ];
-
-//     const container = document.getElementById("servicesContainer");
-
-//     if (!container) {
-//         console.error("❌ Контейнер #servicesContainer не знайдено!");
-//         return;
-//     }
-
-//     function createServiceItem(item, i) {
-//         const div = document.createElement("div");
-//         div.className = "col-md-6 col-lg-4";
-//         div.style.cssText = "padding: 12px; margin: 0;";
-
-//         div.innerHTML = `
-//             <div class="service-item row align-items-center">
-//                 <div class="m-0 p-0 col-auto">
-//                     <div class="icon-wrapper">
-//                         <i class="m-0 p-0 ${item.icon}"></i>
-//                     </div>
-//                 </div>
-
-//                 <div class="m-0 p-0 ps-4 col text-start">
-//                     <h4 class="m-0 p-0 pb-2">${item.title}</h4>
-//                     <a href="#contact" class=" read-more ">
-//                         <span>Support</span>
-//                         <i class="m-0 p-0 bi bi-arrow-right"></i>
-//                     </a>
-//                 </div>
-
-//                 <p class="m-0 p-0 text-start">${item.description}</p>
-//             </div>
-//         `;
-
-//         return div;
-//     }
-
-//     // 🔹 Рендер
-//     services.forEach((item, i) => {
-//         container.appendChild(createServiceItem(item, i));
-//     });
-// });
 
 // карта ЗУСТРІЧІ
 // карта ЗУСТРІЧІ
@@ -374,149 +273,68 @@ document.addEventListener("DOMContentLoaded", function () {
 // карта team
 
 document.addEventListener("DOMContentLoaded", function () {
-    const products = [
-        {
-            name: "AN",
-            img: "https://i.postimg.cc/GhJdk8cb/photo-2026-03-02-22-43-38.jpg",
-            position: "Volunteer",
-            social: [
-                // {  icon: "bi bi-instagram", link: "https://www.instagram.com/pushkar_roma/", },
-                // { icon: "bi bi-youtube", link: "https://www.youtube.com/" },
-                // { icon: "bi bi-tiktok", link: "https://www.tiktok.com/" },
-            ],
-        },
-
-        {
-            name: "Roman",
-            img: "https://i.postimg.cc/y81g9zCn/8009cfc4-173a-429b-bcf6-0b2c20c38c3b.jpg",
-            position: "Volunteer",
-            social: [],
-        },
-        {
-            name: "Artem",
-            img: "https://i.postimg.cc/y81g9zCn/8009cfc4-173a-429b-bcf6-0b2c20c38c3b.jpg",
-            position: "Volunteer",
-            social: [],
-        },
-        {
-            name: "Oleksandr",
-            img: "https://i.postimg.cc/y81g9zCn/8009cfc4-173a-429b-bcf6-0b2c20c38c3b.jpg",
-            position: "Volunteer",
-            social: [],
-        },
-        {
-            name: "Sofiia",
-            img: "https://i.postimg.cc/y81g9zCn/8009cfc4-173a-429b-bcf6-0b2c20c38c3b.jpg",
-            position: "Volunteer",
-            social: [],
-        },
-    ];
 
     const container = document.getElementById("products_199");
     const lightbox = document.getElementById("lightbox");
     const lightboxImg = document.getElementById("lightbox-img");
     const lightboxName = document.getElementById("lightbox-name");
+    const lightboxDesc = document.getElementById("lightbox-desc");
     const lightboxClose = document.getElementById("lightbox-close");
+
+    const images = document.querySelectorAll(".img_team");
 
     let currentIndex = 0;
 
-    function createCard(product) {
-        const card = document.createElement("div");
-
-        card.className =
-            "m-0 team-card col-12 col-sm-6 col-md-6 col-lg-4 col-xxl-3 team-member0 ";
-
-        // Генеруємо посилання на соцмережі
-        const socialLinks = product.social
-            .map(
-                (s) =>
-                    `<a href="${s.link}" target="_blank" rel="noopener noreferrer" class="mt-3"><i class="${s.icon}"></i></a>`
-            )
-            .join("");
-
-        card.innerHTML = `
-            <div style="padding: 12px;" class="team-member card bg-transparent border-0 shadow-sm rounded-4 ">
-                <div class="member-img rounded-3 overflow-hidden mb-2 mx-auto">
-                    <img src="${product.img}" class="img-fluid rounded-3 img_team" alt="${product.name}">
-                </div>
-                <div class="member-info text-center mt-2">
-                    <h6 class="fw-semibold text-white  mb-2">${product.name}</h6>
-                    <span class="small text-secondary d-block">${product.position}</span>
-                     <div class="team_social m-0 p-0">  ${socialLinks}    </div>
-                </div>
-            </div>
-        `;
-
-        // ✅ LIGHTBOX по кліку
-        const img = card.querySelector(".img_team");
+    // клік по картинках
+    images.forEach((img, index) => {
         img.addEventListener("click", () => {
-            const index = products.indexOf(product);
             openLightbox(index);
         });
-
-        return card;
-    }
-
-    // 👉 рендер
-    products.forEach((p) => {
-        container.appendChild(createCard(p));
     });
 
-    // 👉 закриття lightbox
+    // закриття lightbox
     lightboxClose.addEventListener("click", () => {
         lightbox.style.display = "none";
-
-        // відновлюємо скрол
         document.body.style.overflow = "";
     });
 
-    // 👉 закриття по кліку на фон
+    // закриття по кліку на фон
     lightbox.addEventListener("click", (e) => {
-        if (e.target === lightbox && e.target !== lightboxImg) {
+        if (e.target === lightbox) {
             lightbox.style.display = "none";
-
-            // відновлюємо скрол ТІЛЬКИ при закритті
             document.body.style.overflow = "";
         }
     });
 
-    // 👉 закриття lightbox
-    lightboxImg.addEventListener("click", () => {
-        document.body.style.overflow = "hidden";
-    });
-
-    // ===== СТРІЛКИ =====
     const lightboxPrev = document.getElementById("lightbox-prev");
     const lightboxNext = document.getElementById("lightbox-next");
 
     lightboxPrev.addEventListener("click", () => {
-        currentIndex = (currentIndex - 1 + products.length) % products.length;
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
         openLightbox(currentIndex);
     });
 
     lightboxNext.addEventListener("click", () => {
-        currentIndex = (currentIndex + 1) % products.length;
+        currentIndex = (currentIndex + 1) % images.length;
         openLightbox(currentIndex);
     });
 
-    // додавання блокування скролу
-    // додавання блокування скролу
     function openLightbox(index) {
         currentIndex = index;
-
-        lightboxImg.src = products[currentIndex].img;
-        lightboxName.textContent = products[currentIndex].name;
-
+    
+        const img = images[currentIndex];
+        const card = img.closest(".team-card");
+    
+        const name = card.querySelector("h6").innerText;
+        const desc = card.querySelector("span").innerText;
+    
+        lightboxImg.src = img.src;
+        lightboxName.textContent = name;
+        lightboxDesc.textContent = desc;
+    
         lightbox.style.display = "flex";
         document.body.style.overflow = "hidden";
     }
-
-    // інше
-    // інше
-    // інше
-    // інше
-    // інше
-    // інше
 
     function perView() {
         const w = window.innerWidth;
@@ -527,16 +345,13 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function updateSlider() {
-        const visible = perView();
-        const cardWidth = container.children[0].offsetWidth + 0; // картка + gap
-        container.style.transform = `translateX(${
-            -currentIndex * cardWidth
-        }px)`;
+        const cardWidth = container.children[0].offsetWidth;
+        container.style.transform = `translateX(${-currentIndex * cardWidth}px)`;
     }
 
     document.getElementById("nextCard99").addEventListener("click", () => {
         const visible = perView();
-        currentIndex = Math.min(currentIndex + 1, products.length - visible);
+        currentIndex = Math.min(currentIndex + 1, images.length - visible);
         updateSlider();
     });
 
@@ -548,7 +363,7 @@ document.addEventListener("DOMContentLoaded", function () {
     window.addEventListener("resize", updateSlider);
 
     updateSlider();
-});
+})
 
 // КНОПКА БУРГЕР НА МАЛЕНЬКИХ ЕКРАНАХ ШРЬ ПРАЦБВАЛО
 // КНОПКА БУРГЕР НА МАЛЕНЬКИХ ЕКРАНАХ ШРЬ ПРАЦБВАЛО
@@ -587,8 +402,13 @@ document.addEventListener("DOMContentLoaded", function () {
             this.classList.toggle("bi-list");
             this.classList.toggle("bi-x");
 
-            // додаємо / забираємо клас
-            scrollUPP.classList.toggle("d-none");
+            if (scrollUPP) {
+                if (body.classList.contains("mobile-nav-active")) {
+                    scrollUPP.classList.add("d-none"); // ховаємо при відкритті меню
+                } else {
+                    scrollUPP.classList.remove("d-none"); // показуємо при закритті
+                }
+            }
         });
     }
 
@@ -853,6 +673,18 @@ const translations = {
         teamSubtitle:
             "We are a community of caring people committed to helping others and making the world better.",
         supportOurWork: "Support Our Work",
+
+        teamName1: "AN",
+        teamDesc1: "Volunteer",
+        teamName2: "Roman",
+        teamDesc2: "Volunteer",
+        teamName3: "Artem",
+        teamDesc3: "Volunteer",
+        teamName4: "Oleksandr",
+        teamDesc4: "Volunteer",
+        teamName5: "Sofiia",
+        teamDesc5: "Volunteer",
+        
         back: "Back",
         forward: "Forward",
 
@@ -983,6 +815,18 @@ const translations = {
         teamSubtitle:
             "Ми – спільнота небайдужих людей, що прагнуть допомагати іншим та робити світ кращим.",
 
+
+            teamName1: "AN",
+            teamDesc1: "Волонтер",
+            teamName2: "Роман",
+            teamDesc2: "Волонтер",
+            teamName3: "Артем",
+            teamDesc3: "Волонтер",
+            teamName4: "Олександр",
+            teamDesc4: "Волонтер",
+            teamName5: "Софія",
+            teamDesc5: "Волонтер",
+
         supportOurWork: "Підтримати нашу роботу",
         back: "Назад",
         forward: "Вперед",
@@ -1112,6 +956,19 @@ const translations = {
         teamTitle: "Unser Team",
         teamSubtitle:
             "Wir sind eine Gemeinschaft von fürsorglichen Menschen, die sich dafür einsetzen, anderen zu helfen und die Welt besser zu machen.",
+
+
+            teamName1: "AN",
+            teamDesc1: "Volunteer",
+            teamName2: "Roman",
+            teamDesc2: "Volunteer",
+            teamName3: "Artem",
+            teamDesc3: "Volunteer",
+            teamName4: "Oleksandr",
+            teamDesc4: "Volunteer",
+            teamName5: "Sofiia",
+            teamDesc5: "Volunteer",
+
 
         supportOurWork: "Unterstütze unsere Arbeit",
         back: "Zurück",
