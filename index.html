@@ -72,10 +72,12 @@
             <!-- хрестик -->
 
             <!-- <i class="my_bu0rger cursor-pointer  bi bi-x position-absolute top-0 end-0 bg-transparent fs-2"></i> -->
-  <!-- Хрестик всередині меню -->
-  <li style="cursor: pointer !important; " class="mobile-close-li d-xl-none position-absolute top-0 end-0  bg-transparent p-2 pe-3 m-0">
-    <i style="margin: 0px !important; background-color: transparent;" class="mobile-close bi bi-x fs-2 cursor-pointer  "></i>
-  </li>
+            <!-- Хрестик всередині меню -->
+            <li style="cursor: pointer !important; "
+              class="mobile-close-li d-xl-none position-absolute top-0 end-0  bg-transparent p-2 pe-3 m-0">
+              <i style="margin: 0px !important; background-color: transparent;"
+                class="mobile-close bi bi-x fs-2 cursor-pointer  "></i>
+            </li>
 
             <div class="m-0  p-0 d-block d-xl-none text-center  mt-3 pt-4 pb-5"
               style="padding: 0px; padding-left: 12px;">
@@ -1106,25 +1108,24 @@
                          style="width:32px; height:32px;">
                       <i class="bi bi-currency-dollar"></i>
                     </div> -->
-                    <span class="fw-bold ps-2 ">USD</span>
+                    <span class="fw-bold ps-2 small">USD</span>
 
-                    <button class="btn btn-outline-secondary btn-sm d-sm-none ms-2" onclick="copyIBAN('ibanUSD', this)">
-                      <i class="bi bi-clipboard"></i>
+                    <!-- Копіювання десктоп -->
+                    <button class="btn btn-outline-secondary btn-sm  position-absolute end-0 m-0 me-2 border-0"
+                      onclick="copyIBAN('ibanUSD', this)">
+                      <i class="bi bi-clipboard text-white"></i>
                     </button>
                   </div>
 
                   <!-- IBAN -->
-                  <div class="flex-grow-1 text-center bg-black rounded m-0 p-1 overflow-auto text-truncate">
+                  <div
+                    class="flex-grow-1 text-center bg-black rounded m-0 p-1 overflow-auto text-truncate col-12 col-sm-auto">
                     <span id="ibanUSD" class="font-monospace" style="font-size: clamp(12px,1.2vw,14px);">
                       UA 40 3220 0100 0000 2620 3376 0927 04
                     </span>
                   </div>
 
-                  <!-- Копіювання десктоп -->
-                  <button class="btn btn-outline-secondary btn-sm d-none d-sm-block border-white "
-                    onclick="copyIBAN('ibanUSD', this)">
-                    <i class="bi bi-clipboard text-white"></i>
-                  </button>
+
 
                 </div>
               </div>
@@ -1141,25 +1142,23 @@
                          style="width:32px; height:32px;">
                       <i class="bi bi-currency-euro"></i>
                     </div> -->
-                    <span class="fw-bold  ps-2">EUR</span>
+                    <span class="fw-bold  ps-2 small">EUR</span>
 
-                    <button class="btn btn-outline-secondary btn-sm d-sm-none ms-2" onclick="copyIBAN('ibanUSD', this)">
-                      <i class="bi bi-clipboard"></i>
+                    <!-- Копіювання десктоп -->
+                    <button class="btn btn-outline-secondary btn-sm    position-absolute end-0 m-0 me-2 border-0"
+                      onclick="copyIBAN('ibanUSD', this)">
+                      <i class="bi bi-clipboard text-white"></i>
                     </button>
                   </div>
 
                   <!-- IBAN -->
-                  <div class="flex-grow-1 text-center bg-black rounded m-0 p-1 overflow-auto text-truncate">
+                  <div class="flex-grow-1 text-center bg-black rounded m-0 p-1 overflow-auto text-truncate col-12 col-sm-auto">
                     <span id="ibanUSD" class="font-monospace" style="font-size: clamp(12px,1.2vw,14px);">
                       UA 40 3220 0100 0000 2620 5376 1280 41
                     </span>
                   </div>
 
-                  <!-- Копіювання десктоп -->
-                  <button class="btn btn-outline-secondary btn-sm d-none d-sm-block border-white"
-                    onclick="copyIBAN('ibanUSD', this)">
-                    <i class="bi bi-clipboard text-white"></i>
-                  </button>
+               
 
                 </div>
               </div>
