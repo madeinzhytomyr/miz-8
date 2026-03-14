@@ -1,13 +1,115 @@
-// карта ЗУСТРІЧІ
-// карта ЗУСТРІЧІ
-// карта ЗУСТРІЧІ
-// карта ЗУСТРІЧІ
-// карта ЗУСТРІЧІ
-// карта ЗУСТРІЧІ
-// карта ЗУСТРІЧІ
-// карта ЗУСТРІЧІ
-// карта ЗУСТРІЧІ
-// карта ЗУСТРІЧІ
+// карта RICHTUNG
+// карта RICHTUNG
+// карта RICHTUNG
+// карта RICHTUNG
+// карта RICHTUNG
+// карта RICHTUNG
+// карта RICHTUNG
+// карта RICHTUNG
+// карта RICHTUNG
+// карта RICHTUNG
+// карта RICHTUNG
+// карта RICHTUNG
+// карта RICHTUNG
+// карта RICHTUNG
+// карта RICHTUNG
+// карта RICHTUNG
+// карта RICHTUNG
+// карта RICHTUNG
+// карта RICHTUNG
+// карта RICHTUNG
+// карта RICHTUNG
+
+document.addEventListener("DOMContentLoaded", function () {
+    const services = [
+        {
+            title: "Educational Activities",
+            icon: "bi bi-fire",
+            description:
+                "Trainings, workshops, and non-formal education programs for all age groups.",
+        },
+        {
+            title: "Social Support and Humanitarian Assistance",
+            icon: "bi bi-people",
+            description:
+                "Aid and humanitarian support for vulnerable populations.",
+        },
+        {
+            title: "Charitable and Fundraising Activities",
+            icon: "bi bi-graph-up-arrow",
+            description:
+                "Fundraising and donation collection to support charitable programs.",
+        },
+        {
+            title: "Psychological and Legal Support",
+            icon: "bi bi-heart-fill",
+            description:
+                "Free counseling, consultations, and legal assistance.",
+        },
+        {
+            title: "Cultural and Community Development",
+            icon: "bi bi-stars",
+            description:
+                "Cultural events and initiatives that strengthen communities.",
+        },
+        {
+            title: "International Cooperation and Partnerships",
+            icon: "bi bi-compass",
+            description: "Collaboration with local and international partners.",
+        },
+    ];
+
+    const container = document.getElementById("servicesContainer");
+
+    if (!container) {
+        console.error("❌ Контейнер #servicesContainer не знайдено!");
+        return;
+    }
+
+    function createServiceItem(item, i) {
+        const div = document.createElement("div");
+        div.className = "col-md-6 col-lg-4";
+        div.style.cssText = "padding: 12px; margin: 0;";
+
+        div.innerHTML = `
+            <div class="service-item row align-items-center">
+                <div class="m-0 p-0 col-auto">
+                    <div class="icon-wrapper">
+                        <i class="m-0 p-0 ${item.icon}"></i>
+                    </div>
+                </div>
+
+                <div class="m-0 p-0 ps-4 col text-start">
+                    <h4 class="m-0 p-0 pb-2">${item.title}</h4>
+                    <a href="#support" class=" read-more ">
+                        <span>Support</span>
+                        <i class="m-0 p-0 bi bi-arrow-right"></i>
+                    </a>
+                </div>
+
+                <p class="m-0 p-0 text-start">${item.description}</p>
+            </div>
+        `;
+
+        return div;
+    }
+
+    // 🔹 Рендер
+    services.forEach((item, i) => {
+        container.appendChild(createServiceItem(item, i));
+    });
+});
+
+// карта PROJECTS
+// карта PROJECTS
+// карта PROJECTS
+// карта PROJECTS
+// карта PROJECTS
+// карта PROJECTS
+// карта PROJECTS
+// карта PROJECTS
+// карта PROJECTS
+// карта PROJECTS
 document.addEventListener("DOMContentLoaded", function () {
     const productsContainer = document.getElementById("products_2");
     const loadMoreBtn = document.getElementById("loadMoreProjects");
@@ -17,133 +119,344 @@ document.addEventListener("DOMContentLoaded", function () {
     let iso;
     let currentFilter = "*";
     const products = [
+
+        
         {
-            name: "Coming Soon",
-            img: "https://i.postimg.cc/jjDjYd4c/photo-2026-03-03-23-56-04.jpg",
-            category: "Coming Soon",
-            tags: ["Coming", "Soon"],
-            date: "Coming Soon",
-            linkDetails: "https://www.instagram.com/p/DT8KW-Bja2W/",
-            filter: "2026",
-        },
-        {
-            name: "Coming Soon",
-            img: "https://i.postimg.cc/jjDjYd4c/photo-2026-03-03-23-56-04.jpg",
-            category: "Coming Soon",
-            tags: ["Coming", "Soon"],
-            date: "Coming Soon",
-            linkDetails: "https://www.instagram.com/p/DT8KW-Bja2W/",
-            filter: "2026",
-        },
-        {
-            name: "Coming Soon",
-            img: "https://i.postimg.cc/jjDjYd4c/photo-2026-03-03-23-56-04.jpg",
-            category: "Coming Soon",
-            tags: ["Coming", "Soon"],
-            date: "Coming Soon",
-            linkDetails: "https://www.instagram.com/p/DT8KW-Bja2W/",
-            filter: "2026",
-        },
-        {
-            name: "Coming Soon",
-            img: "https://i.postimg.cc/jjDjYd4c/photo-2026-03-03-23-56-04.jpg",
-            category: "Coming Soon",
-            tags: ["Coming", "Soon"],
-            date: "Coming Soon",
-            linkDetails: "https://www.instagram.com/p/DT8KW-Bja2W/",
-            filter: "2026",
+            name: "Preschool Learning Activityn",
+            tags: ["Zhytomyr", "Ukraine"],
+            date: "October 18, 2025",
+            category: "Completed",
+            filter: "2025",
+            goal: "0.00",
+
+
+            description:
+                "Training attention, memory, motor skills and communication",
+
+            images: [
+                "https://i.postimg.cc/4xCBDHhm/project-3-1.jpg",
+                "https://i.postimg.cc/d0wn1MBb/project-3-2.jpg",
+                "https://i.postimg.cc/hGssQCZ8/project-3-3.jpg",
+                "https://i.postimg.cc/wvbk01pK/project-3-4.jpg",
+                "https://i.postimg.cc/j2p4YBCx/project-3-5.jpg",
+                "https://i.postimg.cc/ZY2GqRdv/project-3-6.jpg",
+                "https://i.postimg.cc/x1SBK45v/project-3-7.jpg",
+                "https://i.postimg.cc/Nj7SbkPh/project-3-8.jpg",
+                "https://i.postimg.cc/dVmpnjSQ/project-3-9.jpg",
+                "https://i.postimg.cc/KYGVW3dP/project-3-10.jpg",
+                "https://i.postimg.cc/q71YHMr7/project-3-11.jpg",
+                "https://i.postimg.cc/RF8Dqsqt/project-3-12.jpg",
+            ],
+
+            
+            date: "2025",
+            category1: "Workshop",
+            client: "Children",
+
+            text01: "We strive to create conditions where children can learn, develop their skills and gain valuable experience through play and interaction. Our activity became a great opportunity for kids to broaden their horizons in a comfortable environment.",
+
+            title1: "How the Activity Went",
+            text1: "Children completed educational exercises, participated in team games, and trained their motor skills, logic, and imagination. The interactive format made learning interesting and engaging.",
+
+            moment_title: "Key Moments",
+            moment_1: "Play-based developmental activities",
+            moment_2: "Group work and team exercises",
+            moment_3: "Training attention, logic and motor skills",
+            moment_4: "Friendly atmosphere and mentor support",
+
+            title2: "Why Is This Important?",
+            text2: "Development activities help children build key skills needed for future learning. Such events promote confidence, creative thinking and socialization.",
+
+            coordinator_desc:
+                "“The best learning is learning through play. We are happy to see children discovering new things and showing their abilities.”",
+
+            coordinator_img:
+                "https://i.postimg.cc/V5Ps9Nrw/anastasia-diachenko.jpg",
+
+            coordinator_name: "Anastasiia Diachenko",
+            coordinator_position: "Project Coordinator",
+
+            text02: "The project became another step toward creating useful, meaningful and warm events for children in our community.",
+
+            location: "Zhytomyr • Ukraine",
+            categoryy: "Workshop",
+            members: "Preschoolers • Parents • Volunteers",
+
+            num1: "5+ Participants",
+            num2: "2 Hours of Activities",
+            num3: "4 Skills",
+            num4: "Teamwork",
+            num5: "Interactive Learning",
+            num6: "Game-Based Learning",
+            num7: "Warm Atmosphere",
+            num8: "Creativity",
+            num9: "Community",
+            num10: "Development",
         },
 
-        // {
-        //     name: "Developmental Activity for Preschoolers",
-        //     img: "https://i.postimg.cc/4xCBDHhm/project-3-1.jpg",
-        //     category: "COMPLETED",
-        //     tags: ["Krakow", "Poland"],
-        //     date: "18 August 2023",
-        //     linkDetails: "/",
-        //     filter: "2023",
-        // },
-        // {
-        //     name: "Dance Workshop for Girls",
-        //     img: "https://i.postimg.cc/LsjKdMX5/project-2-1.jpg",
-        //     category: "COMPLETED",
-        //     tags: ["Krakow", "Poland"],
-        //     date: "20 July 2023",
-        //     linkDetails: "/",
-        //     filter: "2023",
-        // },
-        // {
-        //     name: "Drawing Workshop for Kids",
-        //     img: "https://i.postimg.cc/tCD4fWcm/project-1-1.jpg",
-        //     category: "COMPLETED",
-        //     tags: ["Krakow", "Poland"],
-        //     date: "30 Juny 2023",
-        //     linkDetails: "/",
-        //     filter: "2023",
-        // },
-        // {
-        //     name: "Donate for a child (Siepomaga)",
-        //     img: "https://i.postimg.cc/vTr1XD9D/photo-2026-03-05-14-39-12.jpg",
-        //     category: "COMPLETED",
-        //     tags: ["Krakow", "Poland"],
-        //     date: "30 Februar 2023",
-        //     linkDetails: "/",
-        //     filter: "2024",
-        // },
+        {
+            name: "Dance Workshop for Girls",
+            tags: ["Zhytomyr", "Ukraine"],
+            date: "September 20, 2025",
+            category: "Completed",
+            filter: "2025",
+            goal: "0.00",
+
+            description: "Developing rhythm, grace and self-confidence",
+
+            images: [
+                "https://i.postimg.cc/LsjKdMX5/project-2-1.jpg",
+                "https://i.postimg.cc/mZmxWjbs/project-2-2.jpg",
+                "https://i.postimg.cc/kgtL8dWj/project-2-3.jpg",
+                "https://i.postimg.cc/QtSzsNrM/project-2-4.jpg",
+                "https://i.postimg.cc/wMGbyWMK/project-2-5.jpgg",
+                "https://i.postimg.cc/CMP2QKNs/project-2-6.jpg",
+                "https://i.postimg.cc/FsY65QWP/project-2-7.jpg",
+                "https://i.postimg.cc/NfZzQPZK/project-2-8.jpg",
+                "https://i.postimg.cc/QtN66LKR/project-2-9.jpg",
+                "https://i.postimg.cc/85yZ9yhr/project-2-10.jpg",
+                "https://i.postimg.cc/zvVxrnjj/project-2-11.jpg",
+                "https://i.postimg.cc/zDcdkczF/project-2-12.jpg",
+            ],
+
+            date: "2025",
+            category1: "Workshop",
+            client: "Children",
+
+            text01: "We believe that dance is a way of self-expression, confidence and inner harmony. Our workshop gave girls the opportunity to feel free, beautiful and inspired. The project showed how important such events are for youth development and creating a supportive environment.",
+
+            title1: "How the Workshop Went",
+            text1: "Professional choreographers helped participants learn basic and modern dance movements. The girls worked as a team, learning rhythm, flexibility and interaction. The workshop took place in a warm atmosphere where everyone could feel part of a creative community.",
+
+            moment_title: "Key Moments",
+            moment_1: "Dance workshop conducted",
+            moment_2: "Professional mentors and support",
+            moment_3: "Atmosphere of motivation and energy",
+            moment_4: "New skills and self-confidence",
+
+            title2: "Why Was It Important?",
+            text2: "Dance helps develop not only physical fitness but also emotional well-being. For many girls, this workshop became an opportunity to open up, overcome shyness, make new friends and discover a new side of themselves.",
+
+            coordinator_desc:
+                "“This workshop allowed girls to feel their strength, beauty and individuality. Dance is about freedom of movement, energy and emotions. We are happy we could create such an atmosphere.”",
+
+            coordinator_img:
+                "https://i.postimg.cc/V5Ps9Nrw/anastasia-diachenko.jpg",
+
+            coordinator_name: "Anastasiia Diachenko",
+            coordinator_position: "Project Coordinator",
+
+            text02: "The completed dance workshop is an important contribution to the development of young women, supporting their self-expression and building a healthy and confident community.",
+
+            location: "Zhytomyr • Ukraine",
+            categoryy: "Workshop",
+            members: "Girls • Youth • Volunteers",
+
+            num1: "7+ Participants",
+            num2: "2 Hours of Dancing",
+            num3: "4 Dance Activities",
+            num4: "Warm-up and Rhythm",
+            num5: "Stage Movements",
+            num6: "Team Choreography",
+            num7: "Energetic Atmosphere",
+            num8: "Musicality",
+            num9: "Community",
+            num10: "Movement and Creativity",
+        },
+
+        {
+            name: "Drawing Workshop for Children",
+            tags: ["Zhytomyr", "Ukraine"],
+            date: "August 30, 2025",
+            category: "Completed",
+            filter: "2025",
+            goal: "0.00",
+
+            description: "Developing creativity and imagination",
+
+            images: [
+                "https://i.postimg.cc/tCD4fWcm/project-1-1.jpg",
+                "https://i.postimg.cc/1Xsy73ry/project-1-2.jpg",
+                "https://i.postimg.cc/xTj0KqdN/project-1-3.jpg",
+                "https://i.postimg.cc/zXdqp5LS/project-1-4.jpg",
+                "https://i.postimg.cc/cLr0bjwf/project-1-5.jpg",
+                "https://i.postimg.cc/ZRhm05g3/project-1-6.jpg",
+                "https://i.postimg.cc/xCy2mSVV/project-1-7.jpg",
+                "https://i.postimg.cc/qqJdXZpk/project-1-8.jpg",
+                "https://i.postimg.cc/T1tvkqPY/project-1-9.jpg",
+                "https://i.postimg.cc/x86VsydK/project-1-10.jpg",
+                "https://i.postimg.cc/ryjTFc9S/project-1-11.jpg",
+                "https://i.postimg.cc/zXP1KjMs/project-1-12.jpg",
+            ],
+
+            date: "2025",
+            category1: "Workshop",
+            client: "Children",
+
+            text01: "Our goal is to create a space where children can discover their talents and experience genuine emotions. The workshop became an important event that showed how much children need creative meetings and support for their development.",
+
+            title1: "How the Workshop Went",
+            text1: "Children worked with different art materials, learned new techniques and created their own paintings under the guidance of mentors. Each participant received personal attention, support and the opportunity to express themselves through art.",
+
+            moment_title: "Key Moments",
+            moment_1: "Creative workshop for children held",
+            moment_2: "All art materials provided",
+            moment_3: "Friendly and supportive atmosphere",
+            moment_4: "Positive emotions and new skills",
+
+            title2: "Why Is This Important?",
+            text2: "Such events help children develop emotionally and creatively. Our workshop became a place for inspiration, communication and a sense of support. We believe that art can bring warmth and confidence to children even in difficult times.",
+
+            coordinator_desc:
+                "“For us it is important to give children moments of joy. Every painting is a small story created by the child. We are grateful to everyone who joined us and supported this idea.”",
+
+            coordinator_img:
+                "https://i.postimg.cc/V5Ps9Nrw/anastasia-diachenko.jpg",
+
+            coordinator_name: "Anastasiia Diachenko",
+            coordinator_position: "Project Coordinator",
+
+            text02: "The completed project is another step in the development of children's creativity and strengthening our community.",
+
+            location: "Zhytomyr • Ukraine",
+            categoryy: "Workshop",
+            members: "Children • Families • Volunteers",
+
+            num1: "5+ Participants",
+            num2: "2 Hours of Creativity",
+            num3: "10+ Finished Artworks",
+            num4: "Basics of Composition",
+            num5: "Painting Techniques",
+            num6: "Imagination Development",
+            num7: "Warm Atmosphere",
+            num8: "Individual Approach",
+            num9: "Group Creativity",
+            num10: "Art for Children",
+        },
     ];
 
     function createCard(product) {
         const card = document.createElement("div");
-        card.className = `m-0 col-lg-4 col-md-6 portfolio-item isotope-item filter-${product.filter}`;
-        card.style.padding = "12px";
+        card.className = `py-2 col-12 col-md-6 col-lg-6 col-xxl-4 portfolio-item isotope-item mb-auto filter-${product.filter}`;
+        card.style.cssText = "padding: 12px; margin: 0;";
         card.innerHTML = `
-            <a href="${
-                product.linkDetails
-            }" class="portfolio-card " style="cursor: pointer;" target="_blank">
-                <div class="portfolio-image-container ">
-                    <img src="${product.img}" alt="${
-            product.name
-        }" class="img-fluid" loading="lazy">
 
 
-                    <div class="portfolio-overlay">
-                        <div class="portfolio-info">
-
-                            <span class="project-category ${
-                                product.category === "COMPLETED"
+              <div class="fundraiser-card neo-card h-100 shadow-lg">
+        
+                    <!-- Image Block -->
+                    <div class="fundraiser-img position-relative">
+                        <img src="${product.images[0]}">
+        
+                        <!-- Category Circle -->
+                             <span class="project-category ${
+                                product.category === "Completed"
                                     ? "bg-primary"
-                                    : product.category === "IN THE PROCESS"
-                                    ? "bg-primary"
+                                    : product.category === "Relative"
+                                    ? "bg-danger"
                                     : ""
                             }">
                                 ${product.category}
                             </span>
-
-
-                            <h4 class="mt-4" style="text-shado2w: 2px 2px 5px black">${
-                                product.name
-                            }</h4>
-                        </div>
-                        <div class="portfolio-actions ">
-
-                         <button type="button" class="btn btn-primary portfolio-details bg-primary text-white fw-bold rounded-3" data-bs-toggle="modal" 
-                         data-bs-target="${
-                             product.linkDetails
-                         }"> <i class="bi bi-arrow-right fw-bold"></i>   </button>
-
+        
+                
+                    </div>
+        
+                    <!-- Content -->
+                    <div class="fundraiser-content">
+                        <h5 class="fundraiser-title fw-semibold mt-2">
+                            ${product.name}
+                        </h5>
+        
+                        <p class="fundraiser-desc text-secondary mb-4 small">
+                            ${product.description}
+                        </p>
+    
+    
+    
+        
+                        <!-- Buttons -->
+                        <div class="fundraiser-actions d-flex justify-content-between">
+    
+                            <!-- Goal Block -->
+                            <div class="goal-badge d-inline-flex align-items-center justify-content-center col me-0 rounded-end-0">
+    
+                            <span class="m-0 p-0 pe-2 fw-bold fs-6 ps-2">${product.goal}</span>
+                                <span class="m-0 p-0 pe-2 fw-normal small"> EUR</span>
+    
+                            </div>
+    
+                            <a href="${product.link}" class="btn btn-outline-light btn-custom  d-flex align-items-center justify-content-center col ms-0 rounded-start-0 border-secondary">
+                                Learn more
+                            </a>
+        
+                          
                         </div>
                     </div>
+                </div>
 
-                    
-                </div>
-                <div class="portfolio-meta">
-                    <div class="project-tags">${product.tags
-                        .map((t) => `<span class="tag">${t}</span>`)
-                        .join("")}</div>
-                    <div class="project-year">${product.date}</div>
-                </div>
-            </a>
+
+
+
+
+
+                
+       
         `;
+
+        // ====== При кліку на продукт відкриваємо card.html з даними ======
+        const linkButton = card.querySelector("a");
+        linkButton.addEventListener("click", function (e) {
+            e.preventDefault();
+            const query = new URLSearchParams({
+                name: product.name,
+                tags: product.tags,
+                date: product.date,
+                category: product.category,
+                filter: product.filter,
+
+                description: product.description,
+                images: JSON.stringify(product.images),
+
+                date1: product.date,
+                category1: product.category1,
+                client1: product.client,
+
+                text01: product.text01,
+                title1: product.title1,
+                text1: product.text1,
+                moment_title: product.moment_title,
+                moment_1: product.moment_1,
+                moment_2: product.moment_2,
+                moment_3: product.moment_3,
+                moment_4: product.moment_4,
+                title2: product.title2,
+                text2: product.text2,
+
+                coordinator_desc: product.coordinator_desc,
+                coordinator_img: product.coordinator_img,
+                coordinator_name: product.coordinator_name,
+                coordinator_position: product.coordinator_position,
+                text02: product.text02,
+
+                location: product.location,
+                categoryy: product.categoryy,
+                members: product.members,
+
+                num1: product.num1,
+                num2: product.num2,
+                num3: product.num3,
+                num4: product.num4,
+                num5: product.num5,
+                num6: product.num6,
+                num7: product.num7,
+                num8: product.num8,
+                num9: product.num9,
+                num10: product.num10,
+            }).toString();
+            console.log("Redirect URL:", `index_project.html?${query}`);
+            window.location.href = `index-project.html?${query}`;
+        });
 
         return card;
     }
@@ -247,6 +560,8 @@ document.addEventListener("DOMContentLoaded", function () {
     renderInitial();
 });
 
+
+
 // карта team
 // карта team
 // карта team
@@ -271,6 +586,69 @@ document.addEventListener("DOMContentLoaded", function () {
 // карта team
 
 document.addEventListener("DOMContentLoaded", function () {
+    const products = [
+        {
+            name: "AN",
+            img: "https://i.postimg.cc/GhJdk8cb/photo-2026-03-02-22-43-38.jpg",
+            position: "Engine of Change",
+            social: [
+                // {  icon: "bi bi-instagram", link: "https://www.instagram.com/pushkar_roma/", },
+                // { icon: "bi bi-youtube", link: "https://www.youtube.com/" },
+                // { icon: "bi bi-tiktok", link: "https://www.tiktok.com/" },
+            ],
+        },
+        
+        {
+            name: "Bohdan",
+            img: "https://i.postimg.cc/hPcdBbX9/f3884486-55e6-47bf-9bc7-e1b3a1a76f2f.jpg",
+            position: "Voice of Support",
+            social: [],
+        },
+        {
+            name: "Anastasiia",
+            img: "https://i.postimg.cc/V5Ps9Nrw/anastasia-diachenko.jpg",
+            position: "Coordinator of Good Deeds",
+            social: [],
+        },
+        {
+            name: "Diana",
+            img: "https://i.postimg.cc/K8yDqXdN/diana-romaniuk.jpg",
+            position: "Opportunity Explorer",
+            social: [],
+        },
+        {
+            name: "Nazar",
+            img: "https://i.postimg.cc/Wb0MJWhg/nazar-polishchuk.jpg",
+            position: "Guardian of Order",
+            social: [],
+        },
+        {
+            name: "Illia",
+            img: "https://i.postimg.cc/L51jDvvM/illa-shewchuk.jpg",
+            position: "People Connector",
+            social: [],
+        },
+        {
+            name: "Viktoriia",
+            img: "https://i.postimg.cc/bvwbWqLg/viktoria-petrenko.jpg",
+            position: "Creator of Warmth",
+            social: [],
+        },
+        {
+            name: "Yevhen",
+            img: "https://i.postimg.cc/C1dGBwft/evgen-tkachenko.jpg",
+            position: "Technical Magician",
+            social: [],
+        },
+        {
+            name: "Sofiia",
+            img: "https://i.postimg.cc/q7vnSpQk/sofia-savchuk.jpg",
+            position: "Heart of the Team",
+            social: [],
+        },
+        
+    ];
+
     const container = document.getElementById("products_199");
     const lightbox = document.getElementById("lightbox");
     const lightboxImg = document.getElementById("lightbox-img");
@@ -278,60 +656,106 @@ document.addEventListener("DOMContentLoaded", function () {
     const lightboxDesc = document.getElementById("lightbox-desc");
     const lightboxClose = document.getElementById("lightbox-close");
 
-    const images = document.querySelectorAll(".img_team");
-
     let currentIndex = 0;
 
-    // клік по картинках
-    images.forEach((img, index) => {
+    function createCard(product) {
+        const card = document.createElement("div");
+
+        card.className =
+            "m-0 team-card col-12 col-sm-6 col-md-6 col-lg-4 col-xxl-3 team-member0 ";
+
+        // Генеруємо посилання на соцмережі
+        const socialLinks = product.social
+            .map(
+                (s) =>
+                    `<a href="${s.link}" target="_blank" rel="noopener noreferrer" class="mt-3"><i class="${s.icon}"></i></a>`
+            )
+            .join("");
+
+        card.innerHTML = `
+            <div style="padding: 12px;" class="team-member card bg-transparent border-0 shadow-sm rounded-4 ">
+                <div class="member-img rounded-3 overflow-hidden mb-2 mx-auto">
+                    <img src="${product.img}" class="img-fluid rounded-3 img_team" alt="${product.name}">
+                </div>
+                <div class="member-info text-center mt-2">
+                    <h6 class="fw-semibold text-white  mb-2">${product.name}</h6>
+                    <span class="small text-secondary d-block">${product.position}</span>
+                     <div class="team_social m-0 p-0">  ${socialLinks}    </div>
+                </div>
+            </div>
+        `;
+
+        // ✅ LIGHTBOX по кліку
+        const img = card.querySelector(".img_team");
         img.addEventListener("click", () => {
+            const index = products.indexOf(product);
             openLightbox(index);
         });
+
+        return card;
+    }
+
+    // 👉 рендер
+    products.forEach((p) => {
+        container.appendChild(createCard(p));
     });
 
-    // закриття lightbox
+    // 👉 закриття lightbox
     lightboxClose.addEventListener("click", () => {
         lightbox.style.display = "none";
+
+        // відновлюємо скрол
         document.body.style.overflow = "";
     });
 
-    // закриття по кліку на фон
+    // 👉 закриття по кліку на фон
     lightbox.addEventListener("click", (e) => {
-        if (e.target === lightbox) {
+        if (e.target === lightbox && e.target !== lightboxImg) {
             lightbox.style.display = "none";
+
+            // відновлюємо скрол ТІЛЬКИ при закритті
             document.body.style.overflow = "";
         }
     });
 
+    // 👉 закриття lightbox
+    lightboxImg.addEventListener("click", () => {
+        document.body.style.overflow = "hidden";
+    });
+
+    // ===== СТРІЛКИ =====
     const lightboxPrev = document.getElementById("lightbox-prev");
     const lightboxNext = document.getElementById("lightbox-next");
 
     lightboxPrev.addEventListener("click", () => {
-        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        currentIndex = (currentIndex - 1 + products.length) % products.length;
         openLightbox(currentIndex);
     });
 
     lightboxNext.addEventListener("click", () => {
-        currentIndex = (currentIndex + 1) % images.length;
+        currentIndex = (currentIndex + 1) % products.length;
         openLightbox(currentIndex);
     });
 
+    // додавання блокування скролу
+    // додавання блокування скролу
     function openLightbox(index) {
         currentIndex = index;
 
-        const img = images[currentIndex];
-        const card = img.closest(".team-card");
-
-        const name = card.querySelector("h6").innerText;
-        const desc = card.querySelector("span").innerText;
-
-        lightboxImg.src = img.src;
-        lightboxName.textContent = name;
-        lightboxDesc.textContent = desc;
+        lightboxImg.src = products[currentIndex].img;
+        lightboxName.textContent = products[currentIndex].name;
+        lightboxDesc.textContent = products[currentIndex].position;
 
         lightbox.style.display = "flex";
         document.body.style.overflow = "hidden";
     }
+
+    // інше
+    // інше
+    // інше
+    // інше
+    // інше
+    // інше
 
     function perView() {
         const w = window.innerWidth;
@@ -342,7 +766,8 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function updateSlider() {
-        const cardWidth = container.children[0].offsetWidth;
+        const visible = perView();
+        const cardWidth = container.children[0].offsetWidth + 0; // картка + gap
         container.style.transform = `translateX(${
             -currentIndex * cardWidth
         }px)`;
@@ -350,7 +775,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     document.getElementById("nextCard99").addEventListener("click", () => {
         const visible = perView();
-        currentIndex = Math.min(currentIndex + 1, images.length - visible);
+        currentIndex = Math.min(currentIndex + 1, products.length - visible);
         updateSlider();
     });
 
@@ -482,31 +907,17 @@ document.getElementById("currentYear").textContent = new Date().getFullYear();
 // заголовок функціЯ щоб не дублювати
 // заголовок функціЯ щоб не дублювати
 // заголовок функціЯ щоб не дублювати
+// заголовок функціЯ щоб не дублювати
 
-function renderSectionTitles(lang = "en") {
-    document.querySelectorAll("[data-section-title]").forEach((el) => {
-        let title = el.dataset.title;
-        let under = el.dataset.under;
-
-        if (el.dataset.i18nTitle) {
-            title = translations[lang][el.dataset.i18nTitle];
-        }
-
-        if (el.dataset.i18nUnder) {
-            under = translations[lang][el.dataset.i18nUnder];
-        }
-
-        el.innerHTML = `
-        <div class="my_section_title row" data-aos="fade-up">
-          <div class="my_subtitle col-12">MADE in Zhytomyr</div>
-          <div class="my_title col-12 text-center">${title}</div>
-          <div class="my_under_title col-12 text">${under}</div>
-        </div>
-
-
-      `;
-    });
-}
+document.querySelectorAll("[data-section-title]").forEach((el) => {
+    el.innerHTML = `
+      <div class="my_section_title row" data-aos="fade-up">
+        <div class="my_subtitle col-12">MADE in Zhytomyr</div>
+        <div class="my_title col-12">${el.dataset.title}</div>
+        <div class="my_under_title col-12">${el.dataset.under}</div>
+      </div>
+    `;
+});
 
 // щоб правильно працбвала форма
 // щоб правильно працбвала форма
@@ -566,538 +977,6 @@ function copyIBAN(elementId, btn) {
     });
 }
 
-// зміна мови
-// зміна мови
-// зміна мови
-// зміна мови
-// зміна мови
-// зміна мови
-// зміна мови
-// зміна мови
-// зміна мови
-// зміна мови
-// зміна мови
-// зміна мови
-// зміна мови
-// зміна мови
-
-// 3️⃣ Додай словник мов
-// 3️⃣ Додай словник мов
-// 3️⃣ Додай словник мов
-// 3️⃣ Додай словник мов
-// 3️⃣ Додай словник мов
-
-const translations = {
-    en: {
-        // Навігація
-        madeInZhytomyr: "MADE in Zhytomyr",
-        about: "About us",
-        directions: "Directions",
-        activities: "Activities",
-        team: "Team",
-        contact: "Contact",
-        support: "Support Us",
-
-        // Hero Section
-        heroSlogan: "Together, we can make the impossible possible!",
-        donate: "Donate Now",
-
-        // About Section
-        aboutTitle: "About us",
-        aboutSubtitle:
-            "We are a community of caring people, uniting active and compassionate individuals to support communities and create sustainable, meaningful change.",
-
-        organizationRole: "A Community of Caring People",
-        // established1: "Years Of Work",
-        // projects1: "Saved Lives",
-        // activeMembers1: "Team Members",
-
-        whoWeAreTag: "Who We Are",
-        whoWeAreTitle: "Together for Positive Change",
-        whoWeAreText1:
-            "We are a community of caring individuals, united to make a difference. We support each other, develop initiatives, and work to strengthen our community.",
-        whoWeAreText2:
-            "Our path is built on simple but meaningful actions: collaboration, honest dialogue, service to others, and consistent efforts toward sustainable development. Through these steps, we create real and lasting impact.",
-
-        projects: "Funds Raised",
-        projectsAmount: "1 000 EUR",
-        savedLives: "Lives Saved",
-        savedLivesCount: "6+ happy stories",
-        team: "Our Team",
-        teamMembersCount: "5+ active members",
-        experience: "Years of Work",
-        experienceDuration: "1 year of experience",
-
-        // Services Section
-        directionsTitle: "Directions",
-        directionsSubtitle:
-            "We implement social and charitable initiatives that support people, strengthen communities, and drive positive change.",
-
-        serviceArmyTitle: "Support for the Army",
-        serviceArmyText:
-            "We help the Ukrainian army by collecting supplies and supporting soldiers.",
-        serviceWarTitle: "Aid for War Victims",
-        serviceWarText:
-            "We provide humanitarian aid and support to people affected by the war.",
-        serviceChildrenTitle: "Support for Children",
-        serviceChildrenText:
-            "We organize fundraising for treatment, rehabilitation and support for children.",
-        serviceOrphanTitle: "Support for Orphanages",
-        serviceOrphanText:
-            "We provide orphanages with essential items and organize charitable activities.",
-        serviceHumanTitle: "Humanitarian Aid",
-        serviceHumanText:
-            "We organize charity campaigns to help people in difficult life situations.",
-        serviceInternationalTitle: "International Partnership",
-        serviceInternationalText:
-            "We cooperate with international partners on humanitarian projects.",
-
-        makeADifference: "Make a Difference!",
-        makeADifferenceText:
-            "Your donation helps us support people, strengthen communities, and create positive change. Every donation brings real help to someone in need.",
-
-        // Portfolio Section
-        activitiesTitle: "Our Activities",
-        activitiesSubtitle:
-            "Explore our charitable events and initiatives, where we support others, unite communities, and create positive change.",
-
-        loadMoreProjects: "Load More Projects",
-        helpUsChangeLives: "Help Us Change Lives",
-        helpUsChangeLivesText:
-            "Even a small donation can support people, strengthen communities, and make a real impact.",
-
-        // Team Section
-        teamTitle: "Our Team",
-        teamSubtitle:
-            "We are a community of caring people committed to helping others and making the world better.",
-
-        teamName1: "AN",
-        teamDesc1: "Volunteer",
-        teamName2: "Roman",
-        teamDesc2: "Volunteer",
-        teamName3: "Artem",
-        teamDesc3: "Volunteer",
-        teamName4: "Oleksandr",
-        teamDesc4: "Volunteer",
-        teamName5: "Sofiia",
-        teamDesc5: "Volunteer",
-
-        supportOurWork: "Support Our Work",
-        supportOurWorkText:
-            "   You don’t need to do a lot — just care about helping others. Your donation helps us support people, strengthen communities, and create real change.",
-        back: "Back",
-        forward: "Forward",
-
-        // Support Section
-        supportTitle: "Support Us",
-        supportSubtitle:
-            "Your support helps us develop charitable projects, implement important initiatives, and assist those in need.",
-
-        supportMissionTitle: "Support Our Work",
-        supportMissionText:
-            "Your contribution helps us develop charitable projects, organize initiatives, and provide assistance to those who need it most.",
-        donateNow: "Donate Now",
-        internalNeedsTitle: "Internal Needs",
-        internalNeedsText:
-            "Donations for internal needs help support our work. A significant part of these funds is used for advertising to attract more people to donate.",
-        supportOurWork1: "Support Our Work",
-        becomeVolunteerTitle: "Become a Volunteer",
-        becomeVolunteerText:
-            "People who join our community help us organize initiatives, support charitable projects, and make a positive impact through good deeds.",
-        joinUs: "Join Us",
-
-        transparencyTitle: "Transparency & Accountability",
-        transparencyText:
-            "Donations made to support our general activities are fully accounted for. We publish monthly reports detailing all incoming donations and expenses. Donations made for internal organizational needs help us maintain and develop the organization and cover operational expenses such as administration, infrastructure, promotion, and project development. These funds are managed at the organization’s discretion to ensure stable operations and long-term impact. Donations allocated for internal needs are not included in public financial reports. We sincerely thank everyone who supports our mission and helps us continue our work.",
-
-        // Contact Section
-        contactTitle: "Contact us",
-        contactSubtitle:
-            "Do you have any questions or would you like to join our initiatives? We are always open to communication and cooperation!",
-
-        email: "Email",
-        address: "Address",
-
-        yourName: "Your name",
-        yourEmail: "Your email address",
-        messageSubject: "Message subject",
-        yourMessage: "Your message",
-
-        sendMessage: "Send message",
-        messageSent: "Message sent!",
-
-        // Footer
-        links: "LINKS",
-        supportFooter: "SUPPORT",
-        contactFooter: "CONTACT",
-        footerText:
-            "A community of caring individuals committed to creating real, measurable impact. Together, we run charitable projects, provide support to those in need, and create meaningful change.",
-        allRightsReserved: "All rights reserved",
-
-        //modal
-        modalThank: "Thank You!",
-        modalRecipient: "Recipient:",
-        allRightsAN: "Andrian Ivaniuk",
-        modalText:
-            "Commission of intermediary banks for transfers is possible. ",
-    },
-
-    ua: {
-        // Навігація
-        madeInZhytomyr: "MADE in Zhytomyr",
-        about: "Про нас",
-        directions: "Напрямки",
-        activities: "Діяльність",
-        team: "Команда",
-        contact: "Контакти",
-        support: "Підтримати",
-
-        // Hero Section
-        heroSlogan: "Разом ми можемо зробити неможливе можливим!",
-        donate: "Задонатити",
-
-        // About Section
-        aboutTitle: "Про нас",
-        aboutSubtitle:
-            "Ми Об’єднання Небайдужих Людей, яка об'єднує небайдужих і активних людей для підтримки спільнот і створення стійких, значущих змін.",
-
-        organizationRole: "Об’єднання Небайдужих Людей",
-        // established1: "Років Працюємо",
-        // projects1: "Врятованих Життів",
-        // activeMembers1: "Членів Команди",
-
-        whoWeAreTag: "Хто ми",
-        whoWeAreTitle: "Разом за позитивні зміни",
-        whoWeAreText1:
-            "Ми – Об’єднання Небайдужих Людей, яка об’єднує активних та небайдужих людей, які хочуть змінювати світ. Ми підтримуємо один одного, розвиваємо ініціативи та працюємо на зміцнення нашої спільноти.",
-        whoWeAreText2:
-            "Наш шлях будується на простих, але значущих діях: співпраця, чесний діалог, служіння іншим та постійні зусилля задля сталого розвитку. Через ці кроки ми створюємо реальний та довготривалий вплив.",
-
-        projects: "Зібрано грошей",
-        projectsAmount: "1 000 EUR",
-        savedLives: "Врятовані життя",
-        savedLivesCount: "6+ щасливих історій",
-        team: "Наша команда",
-        teamMembersCount: "5+ активних членів",
-        experience: "Років працюємо",
-        experienceDuration: "1 рік роботи",
-
-        // Services Section
-        directionsTitle: "Напрямки",
-        directionsSubtitle:
-            "Ми реалізуємо соціальні та благодійні ініціативи, які підтримують людей, зміцнюють спільноти та сприяють позитивним змінам.",
-
-        serviceArmyTitle: "Підтримка ЗСУ",
-        serviceArmyText:
-            "Ми допомагаємо українській армії, збираючи необхідні речі та підтримуючи військових.",
-        serviceWarTitle: "Допомога жертвам війни",
-        serviceWarText:
-            "Ми надаємо гуманітарну допомогу людям, які постраждали від війни.",
-        serviceChildrenTitle: "Підтримка дітей",
-        serviceChildrenText:
-            "Ми організовуємо збори коштів на лікування та підтримку дітей.",
-        serviceOrphanTitle: "Підтримка дитбудинків",
-        serviceOrphanText:
-            "Ми допомагаємо дитячим будинкам речами та організовуємо благодійні заходи.",
-        serviceHumanTitle: "Гуманітарна допомога",
-        serviceHumanText:
-            "Ми проводимо благодійні збори для допомоги людям у складних життєвих ситуаціях.",
-        serviceInternationalTitle: "Міжнародне партнерство",
-        serviceInternationalText:
-            "Ми співпрацюємо з міжнародними партнерами для реалізації гуманітарних проєктів.",
-
-        makeADifference: "Зроби різницю!",
-        makeADifferenceText:
-            "Ваша пожертва допомагає нам підтримувати людей, зміцнювати спільноти та створювати позитивні зміни. Кожна пожертва приносить реальну допомогу тому, хто її потребує.",
-
-        // Portfolio Section
-        activitiesTitle: "Наша діяльність",
-        activitiesSubtitle:
-            "Дізнайтеся про наші благодійні події та ініціативи, де ми підтримуємо інших, об’єднуємо спільноти та створюємо позитивні зміни.",
-
-        loadMoreProjects: "Завантажити більше проєктів",
-        helpUsChangeLives: "Допоможіть змінити життя",
-        helpUsChangeLivesText:
-            "Навіть невелика пожертва може підтримати людей, зміцнити спільноти та мати реальний вплив.",
-
-        // Team Section
-        teamTitle: "Наша команда",
-        teamSubtitle:
-            "Ми – спільнота небайдужих людей, що прагнуть допомагати іншим та робити світ кращим.",
-
-        teamName1: "AN",
-        teamDesc1: "Волонтер",
-        teamName2: "Роман",
-        teamDesc2: "Волонтер",
-        teamName3: "Артем",
-        teamDesc3: "Волонтер",
-        teamName4: "Олександр",
-        teamDesc4: "Волонтер",
-        teamName5: "Софія",
-        teamDesc5: "Волонтер",
-
-        supportOurWork: "Підтримати нашу роботу",
-        supportOurWorkText:
-            "   Вам не потрібно багато робити-просто дбайте про те, щоб допомагати іншим. Ваші пожертви допомагають нам підтримувати людей, зміцнювати громади та вносити реальні зміни.",
-        back: "Назад",
-        forward: "Вперед",
-
-        // Support Section
-        supportTitle: "Підтримайте нас",
-        supportSubtitle:
-            "Ваша підтримка допомагає нам реалізовувати благодійні проєкти, впроваджувати важливі ініціативи та допомагати тим, хто цього потребує.",
-
-        supportMissionTitle: "Підтримати нашу місію",
-        supportMissionText:
-            "Ваш внесок допомагає нам реалізовувати благодійні проєкти, організовувати ініціативи та надавати допомогу тим, хто цього потребує найбільше.",
-        donateNow: "Пожертвувати",
-        internalNeedsTitle: "Внутрішні потреби",
-        internalNeedsText:
-            "Пожертви на внутрішні потреби допомагають підтримувати нашу роботу. Значна частина цих коштів спрямовується на рекламу, щоб залучити більше людей до пожертв.",
-        supportOurWork1: "Підтримати наc",
-        becomeVolunteerTitle: "Стати волонтером",
-        becomeVolunteerText:
-            "Люди, які приєднуються до нашої спільноти, допомагають організовувати ініціативи, підтримувати благодійні проєкти та робити позитивний вплив через добрі справи.",
-        joinUs: "Доєднатися",
-        transparencyTitle: "Прозорість та підзвітність",
-        transparencyText:
-            "Пожертви, зроблені для підтримки загальної діяльності, повністю враховуються. Ми публікуємо щомісячні звіти про всі надходження та витрати. Пожертви на внутрішні потреби допомагають підтримувати та розвивати організацію і покривати операційні витрати, такі як адміністрація, інфраструктура, просування та розвиток проєктів. Ці кошти управляються на розсуд організації для забезпечення стабільної роботи та довгострокового впливу. Пожертви, призначені для внутрішніх потреб, не включаються до публічних фінансових звітів. Щиро дякуємо всім, хто підтримує нашу місію та допомагає нам продовжувати роботу.",
-
-        // Contact Section
-        contactTitle: "Контакти",
-        contactSubtitle:
-            "У вас є питання або ви хочете приєднатися до наших ініціатив? Ми завжди відкриті до спілкування та співпраці!",
-
-        email: "Електронна пошта",
-        address: "Адреса",
-
-        yourName: "Ваше ім'я",
-        yourEmail: "Ваш email",
-        messageSubject: "Тема повідомлення",
-        yourMessage: "Ваше повідомлення",
-
-        sendMessage: "Відправити повідомлення",
-        messageSent: "Повідомлення надіслано!",
-
-        // Footer
-        links: "ПОСИЛАННЯ",
-        supportFooter: "ПІДТРИМКА",
-        contactFooter: "КОНТАКТИ",
-        footerText:
-            "Спільнота небайдужих людей прагне до створення реальних, відчутних результатів. Разом, ми біжимо благодійні проекти, надавати підтримку тим, хто її потребує, і створити значущі зміни.",
-        allRightsReserved: "Всі права захищені",
-
-        //modal
-        modalThank: "Дуже Дякуємо!",
-        modalRecipient: "Отримувач:",
-        allRightsAN: "Андріан Іванюк",
-        modalText: "Можлива комісія банків-посередників за перекази. ",
-    },
-
-    de: {
-        // Навігація
-        madeInZhytomyr: "MADE in Zhytomyr",
-        about: "Über uns",
-        directions: "Richtungen",
-        activities: "Aktivitäten",
-        team: "Team",
-        contact: "Kontakt",
-        support: "Unterstützen",
-
-        // Hero Section
-        heroSlogan: "Gemeinsam können wir das Unmögliche möglich machen!",
-        donate: "Spenden",
-
-        // About Section
-        aboutTitle: "Über uns",
-        aboutSubtitle:
-            "Wir sind Menschen, denen es nicht egal ist – fürsorgliche und aktive Menschen, die sich vereinen, um Gemeinschaften zu unterstützen und nachhaltige, sinnvolle Veränderungen zu bewirken.",
-
-        organizationRole: "Menschen, denen es nicht egal ist",
-        // established1: "Jahr Erfahrung",
-        // projects1: "Gerettete Leben",
-        // activeMembers1: "Teammitglieder",
-
-        whoWeAreTag: "Wer wir sind",
-        whoWeAreTitle: "Gemeinsam für positive Veränderungen",
-        whoWeAreText1:
-            "Wir sind Menschen, denen es nicht egal ist – aktive und fürsorgliche Menschen, die einen Unterschied machen wollen. Wir unterstützen uns gegenseitig, entwickeln Initiativen und arbeiten daran, unsere Gemeinschaft zu stärken.",
-        whoWeAreText2:
-            "Unser Weg basiert auf einfachen, aber bedeutungsvollen Handlungen: Zusammenarbeit, ehrlicher Dialog, Dienst an anderen und konsequente Bemühungen um nachhaltige Entwicklung. Durch diese Schritte schaffen wir echte und dauerhafte Wirkung.",
-
-        projects: "Gesammelte Mittel",
-        projectsAmount: "1 000 EUR",
-        savedLives: "Gerettete Leben",
-        savedLivesCount: "6+ glückliche Geschichten",
-        team: "Unser Team",
-        teamMembersCount: "5+ aktive Mitglieder",
-        experience: "Jahre der Arbeit",
-        experienceDuration: "1 Jahr Erfahrung",
-
-        // Services Section
-        directionsTitle: "Richtungen",
-        directionsSubtitle:
-            "Wir setzen soziale und wohltätige Initiativen um, die Menschen unterstützen, Gemeinschaften stärken und positive Veränderungen vorantreiben.",
-
-        serviceArmyTitle: "Unterstützung der Armee",
-        serviceArmyText:
-            "Wir helfen der ukrainischen Armee mit wichtigen Materialien und Unterstützung für Soldaten.",
-        serviceWarTitle: "Hilfe für Kriegsopfer",
-        serviceWarText:
-            "Wir leisten humanitäre Hilfe für Menschen, die vom Krieg betroffen sind.",
-        serviceChildrenTitle: "Hilfe für Kinder",
-        serviceChildrenText:
-            "Wir organisieren Spendenaktionen für Behandlung und Unterstützung von Kindern.",
-        serviceOrphanTitle: "Hilfe für Waisenhäuser",
-        serviceOrphanText:
-            "Wir unterstützen Waisenhäuser mit wichtigen Dingen und organisieren Wohltätigkeitsaktionen.",
-        serviceHumanTitle: "Humanitäre Hilfe",
-        serviceHumanText:
-            "Wir organisieren Spendenaktionen für Menschen in schwierigen Lebenssituationen.",
-        serviceInternationalTitle: "Internationale Zusammenarbeit",
-        serviceInternationalText:
-            "Wir arbeiten mit internationalen Partnern an humanitären Projekten.",
-
-        makeADifference: "Mach einen Unterschied!",
-        makeADifferenceText:
-            "Ihre Spende hilft uns, Menschen zu unterstützen, Gemeinschaften zu stärken und positive Veränderungen zu schaffen. Jede Spende bringt echte Hilfe für jemanden, der sie braucht.",
-
-        // Portfolio Section
-        activitiesTitle: "Unsere Aktivitäten",
-        activitiesSubtitle:
-            "Entdecken Sie unsere Wohltätigkeitsveranstaltungen und Initiativen, bei denen wir andere unterstützen, Gemeinschaften vereinen und positive Veränderungen schaffen.",
-        loadMoreProjects: "Mehr Projekte laden",
-        helpUsChangeLives: "Helfen Sie uns, Leben zu verändern",
-        helpUsChangeLivesText:
-            "Schon eine kleine Spende kann Menschen unterstützen, Gemeinschaften stärken und einen echten Unterschied machen.",
-
-        // Team Section
-        teamTitle: "Unser Team",
-        teamSubtitle:
-            "Wir sind eine Gemeinschaft von fürsorglichen Menschen, die sich dafür einsetzen, anderen zu helfen und die Welt besser zu machen.",
-
-        teamName1: "AN",
-        teamDesc1: "Volunteer",
-        teamName2: "Roman",
-        teamDesc2: "Volunteer",
-        teamName3: "Artem",
-        teamDesc3: "Volunteer",
-        teamName4: "Oleksandr",
-        teamDesc4: "Volunteer",
-        teamName5: "Sofiia",
-        teamDesc5: "Volunteer",
-
-        supportOurWork: "Unterstütze unsere Arbeit",
-        supportOurWorkText:
-            " Du musst nicht viel tun - kümmere dich nur darum, anderen zu helfen. Ihre Spende hilft uns, Menschen zu unterstützen, Gemeinschaften zu stärken und echte Veränderungen herbeizuführen.",
-        back: "Zurück",
-        forward: "Vorwärts",
-
-        // Support Section
-        supportTitle: "Unterstützen Sie uns",
-        supportSubtitle:
-            "Ihre Unterstützung hilft uns, wohltätige Projekte zu entwickeln, wichtige Initiativen umzusetzen und denen zu helfen, die sie brauchen.",
-
-        supportMissionTitle: "Unterstützen Sie uns",
-        supportMissionText:
-            "Ihr Beitrag hilft uns, wohltätige Projekte zu entwickeln, Initiativen zu organisieren und denen zu helfen, die sie am dringendsten benötigen.",
-        donateNow: "Jetzt spenden",
-        internalNeedsTitle: "Interne Bedürfnisse",
-        internalNeedsText:
-            "Spenden für interne Bedürfnisse helfen, unsere Arbeit zu unterstützen. Ein großer Teil dieser Mittel wird für Werbung verwendet, um mehr Menschen zum Spenden zu motivieren.",
-        supportOurWork1: "Unterstützen Sie uns",
-        becomeVolunteerTitle: "Freiwilliger werden",
-        becomeVolunteerText:
-            "Menschen, die sich unserer Gemeinschaft anschließen, helfen uns, Initiativen zu organisieren, wohltätige Projekte zu unterstützen und durch gute Taten positive Auswirkungen zu erzielen.",
-        joinUs: "Begleiten Sie uns",
-        transparencyTitle: "Transparenz & Verantwortung",
-        transparencyText:
-            "Spenden, die zur Unterstützung unserer allgemeinen Aktivitäten geleistet werden, werden vollständig erfasst. Wir veröffentlichen monatliche Berichte über alle Einnahmen und Ausgaben. Spenden für interne organisatorische Bedürfnisse helfen uns, die Organisation aufrechtzuerhalten und zu entwickeln sowie Betriebskosten wie Verwaltung, Infrastruktur, Werbung und Projektentwicklung zu decken. Diese Mittel werden nach Ermessen der Organisation verwaltet, um einen stabilen Betrieb und langfristige Wirkung zu gewährleisten. Für interne Bedürfnisse bestimmte Spenden sind nicht in den öffentlichen Finanzberichten enthalten. Wir danken allen, die unsere Mission unterstützen und uns helfen, unsere Arbeit fortzusetzen.",
-
-        // Contact Section
-        contactTitle: "Kontakt",
-        contactSubtitle:
-            "Haben Sie Fragen oder möchten Sie an unseren Initiativen teilnehmen? Wir sind immer offen für Kommunikation und Zusammenarbeit!",
-
-        email: "E-Mail",
-        address: "Adresse",
-
-        yourName: "Ihr Name",
-        yourEmail: "Ihre E-Mail-Adresse",
-        messageSubject: "Betreff der Nachricht",
-        yourMessage: "Ihre Nachricht",
-
-        sendMessage: "Nachricht senden",
-        messageSent: "Nachricht gesendet!",
-
-        // Footer
-        links: "LINKS",
-        supportFooter: "UNTERSTÜTZUNG",
-        contactFooter: "KONTAKT",
-        footerText:
-            "Eine Gemeinschaft von fürsorglichen Menschen, die sich dafür einsetzen, echte, messbare Auswirkungen zu erzielen. Zusammen laufen wir gemeinnützige Projekte, unterstützen Bedürftige und schaffen sinnvolle Veränderungen.",
-        allRightsReserved: "Alle Rechte vorbehalten",
-
-        //modal
-        modalThank: "Danke Schön!",
-        modalRecipient: "Empfänger:",
-        allRightsAN: "Andrian Ivaniuk",
-        modalText:
-            "Provisionen von Zwischenbanken für Überweisungen sind möglich.",
-    },
-};
-
-//   4️⃣ Функція зміни мови
-//   4️⃣ Функція зміни мови
-//   4️⃣ Функція зміни мови
-//   4️⃣ Функція зміни мови
-//   4️⃣ Функція зміни мови
-
-function setLang(lang) {
-    localStorage.setItem("lang", lang);
-
-    // Тексти
-    document.querySelectorAll("[data-i18n]").forEach((el) => {
-        const key = el.dataset.i18n;
-        if (translations[lang][key]) {
-            el.textContent = translations[lang][key];
-        }
-    });
-
-    // Поточна мова
-    document.querySelectorAll(".currentLang").forEach((el) => {
-        el.textContent = lang.toUpperCase();
-    });
-
-    // --- Додаємо для input placeholder ---
-    document.querySelectorAll("input[data-i18n-placeholder]").forEach((el) => {
-        const key = el.dataset.i18nPlaceholder;
-        if (translations[lang][key]) {
-            el.placeholder = translations[lang][key];
-        }
-    });
-
-    // --- Для textarea (якщо потрібно) ---
-    document
-        .querySelectorAll("textarea[data-i18n-placeholder]")
-        .forEach((el) => {
-            const key = el.dataset.i18nPlaceholder;
-            if (translations[lang][key]) {
-                el.placeholder = translations[lang][key];
-            }
-        });
-}
-// 5️⃣ Запам'ятовування мови
-// 5️⃣ Запам'ятовування мови
-// 5️⃣ Запам'ятовування мови
-// 5️⃣ Запам'ятовування мови
-// 5️⃣ Запам'ятовування мови
-// 5️⃣ Запам'ятовування мови
-document.addEventListener("DOMContentLoaded", () => {
-    const savedLang = localStorage.getItem("lang") || "en";
-    setLang(savedLang);
-});
-
 // закриття скрол ап на модалці
 // закриття скрол ап на модалці
 // закриття скрол ап на модалці
@@ -1113,3 +992,4 @@ if (modal) {
         if (scrollUPP) scrollUPP.classList.remove("d-none");
     });
 }
+
