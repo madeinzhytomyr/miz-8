@@ -2587,6 +2587,9 @@ border-radius: 12px;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
     transition: 0.3s ease;
     padding: 8px;
+
+    margin: 0;
+    padding: 0;
 }
 
 .fundraiser-card:hover {
@@ -2599,6 +2602,10 @@ border-radius: 12px;
     padding: 0;
 
     height: 300px !important;
+    overflow: hidden; /* ВАЖЛИВО */
+    border-radius: 12px;
+
+
 }
 
 .fundraiser-img img {
@@ -2608,6 +2615,8 @@ border-radius: 12px;
     transition: transform 0.4s ease;
 
     height: 300px !important;
+    overflow: hidden !important;
+
 }
 
 .fundraiser-img img:hover {
@@ -3238,4 +3247,3 @@ border-radius: 12px;
     background: #2a2a2a;
     color: white;
   }
-
