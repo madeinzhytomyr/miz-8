@@ -202,7 +202,7 @@ document.addEventListener("DOMContentLoaded", function () {
             filter: "2025",
             goal: "0.00",
 
-            description: "Developing rhythm, grace and self-confidence",
+            description: "Developing Rhythm, Grace and Self-Confidence Together",
 
             images: [
                 "https://i.postimg.cc/LsjKdMX5/project-2-1.jpg",
@@ -272,7 +272,7 @@ document.addEventListener("DOMContentLoaded", function () {
             filter: "2025",
             goal: "0.00",
 
-            description: "Developing creativity and imagination",
+            description: "Developing creativity and imagination through learning, exploration, play, and expression.",
 
             images: [
                 "https://i.postimg.cc/tCD4fWcm/project-1-1.jpg",
@@ -382,7 +382,7 @@ document.addEventListener("DOMContentLoaded", function () {
                             <div class="goal-badge d-inline-flex align-items-center justify-content-center col me-0 rounded-end-0">
     
                             <span class="m-0 p-0 pe-2 fw-bold fs-6 ps-2">${product.goal}</span>
-                                <span class="m-0 p-0 pe-2 fw-normal small"> EUR</span>
+                                <span class="m-0 p-0 pe-2 fw-normal small"> USD</span>
     
                             </div>
     
@@ -992,4 +992,3 @@ if (modal) {
         if (scrollUPP) scrollUPP.classList.remove("d-none");
     });
 }
-
