@@ -1106,14 +1106,14 @@ border-radius: 12px;
     font-size: 18px;
 }
 
-.about .profile-card .social-connect {
+.about .profile-card .social-links {
     display: flex;
     justify-content: center;
     gap: 12px;
     padding-top: 30px;
 }
 
-.about .profile-card .social-connect a {
+.about .profile-card .social-links a {
     width: 44px;
     height: 44px;
     display: flex;
@@ -1126,7 +1126,7 @@ border-radius: 12px;
     transition: all 0.3s ease;
 }
 
-.about .profile-card .social-connect a:hover {
+.about .profile-card .social-links a:hover {
     background: var(--accent-color);
     color: var(--contrast-color);
     transform: translateY(-3px);
@@ -2234,47 +2234,27 @@ border-radius: 12px;
     border-radius: 8px;
     transition: all 0.3s;
     font-size: 18px;
+
+
+
+font-size: 24px;
+color: #1877F2;
+
+
+
 }
 
-.portfolio-details .sidebar .share-card .social-links a.facebook {
+.portfolio-details .sidebar .share-card .social-links a {
     background: color-mix(in srgb, #1877f2, transparent 90%);
     color: #1877f2;
 }
 
-.portfolio-details .sidebar .share-card .social-links a.facebook:hover {
+.portfolio-details .sidebar .share-card .social-links a:hover {
     background: #1877f2;
     color: #ffffff;
 }
 
-.portfolio-details .sidebar .share-card .social-links a.twitter {
-    background: color-mix(in srgb, #1da1f2, transparent 90%);
-    color: #1da1f2;
-}
 
-.portfolio-details .sidebar .share-card .social-links a.twitter:hover {
-    background: #1da1f2;
-    color: #ffffff;
-}
-
-.portfolio-details .sidebar .share-card .social-links a.linkedin {
-    background: color-mix(in srgb, #0077b5, transparent 90%);
-    color: #0077b5;
-}
-
-.portfolio-details .sidebar .share-card .social-links a.linkedin:hover {
-    background: #0077b5;
-    color: #ffffff;
-}
-
-.portfolio-details .sidebar .share-card .social-links a.pinterest {
-    background: color-mix(in srgb, #bd081c, transparent 90%);
-    color: #bd081c;
-}
-
-.portfolio-details .sidebar .share-card .social-links a.pinterest:hover {
-    background: #bd081c;
-    color: #ffffff;
-}
 
 .portfolio-details .sidebar .tags-card .tags {
     display: flex;
