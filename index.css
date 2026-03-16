@@ -2291,8 +2291,8 @@ color: #1877F2;
 
 @media (max-width: 767px) {
     .portfolio-details .portfolio-content .meta-info {
-        flex-direction: column;
-        gap: 10px;
+        /* flex-direction: column; */
+        /* gap: 10px; */
     }
 
     .portfolio-details .portfolio-content blockquote {
@@ -2313,8 +2313,8 @@ color: #1877F2;
     }
 
     .portfolio-details .sidebar .info-card .info-item {
-        flex-direction: column;
-        gap: 8px;
+        /* flex-direction: column; */
+        /* gap: 8px; */
     }
 
     .portfolio-details .sidebar .info-card .info-item .value {
@@ -3308,6 +3308,8 @@ color: #1877F2;
     font-size: 0.85rem;
     color: #e0e0e0;
 }
+
+
 
 
 
