@@ -697,63 +697,48 @@ document.addEventListener("DOMContentLoaded", function () {
     let currentFilter = "*";
     const products = [
         {
-            name: "Preschool Learning Activity",
+            name: "Physical rehabilitation is the key to my health",
             desc: "Training attention, memory, motor skills and communication",
             goal: "10 000",
             images: [
-                "https://i.postimg.cc/4xCBDHhm/project-3-1.jpg",
-                "https://i.postimg.cc/d0wn1MBb/project-3-2.jpg",
-                "https://i.postimg.cc/hGssQCZ8/project-3-3.jpg",
-                "https://i.postimg.cc/wvbk01pK/project-3-4.jpg",
-                "https://i.postimg.cc/j2p4YBCx/project-3-5.jpg",
-                "https://i.postimg.cc/ZY2GqRdv/project-3-6.jpg",
-                "https://i.postimg.cc/x1SBK45v/project-3-7.jpg",
-                "https://i.postimg.cc/Nj7SbkPh/project-3-8.jpg",
-                "https://i.postimg.cc/dVmpnjSQ/project-3-9.jpg",
-                "https://i.postimg.cc/KYGVW3dP/project-3-10.jpg",
-                "https://i.postimg.cc/q71YHMr7/project-3-11.jpg",
-                "https://i.postimg.cc/RF8Dqsqt/project-3-12.jpg",
+                "https://static.dobro.ua/projects/2026/02/25/media/photo_2025-01-27_15-22-48.jpg",
+                "https://static.dobro.ua/projects/2026/02/25/media/%D1%84%D0%BE%D1%82%D0%BE_1.jpeg",
+                "https://static.dobro.ua/projects/2026/02/25/media/%D0%91%D1%96%D0%BB%D0%BE%D0%BA%D1%96%D0%BD%D1%8C_%D0%9A.%D0%A1._%D1%84%D0%BE%D1%82%D0%BE_4.jpg",
+            
             ],
             filter: "current",
 
-            icons: [
-                { icon: "bi bi-calendar", label: "2025" },
-                { icon: "bi bi-brush", label: "Workshop" },
-                { icon: "bi bi-people", label: "Children" },
-            ],
 
             details: [
-                { label: "Location", key: "Zhytomyr • Ukraine" },
-                { label: "Category", key: "Workshop" },
-                { label: "Date Of The Event", key: "October 18, 2025" },
-                { label: "Participants", key: "Preschoolers" },
+                { label: "Full name:", key: "Bilokin Kyrylo" },
+                { label: "Date of Birth:", key: "09.02.2020" },
+                { label: "City:", key: "Lozova, Kharkiv region" },
+                { label: "Diagnosis:", key: "G 80.1 CEREBRAL PALSY. Spastic tetraparesis. Motor disorders of Level IV according to GMFCS. Underdevelopment of expressive-receptive speech. Dysfunction of the emotional-volitional and communicative spheres. Cognitive impairment" },
             ],
 
             description: [
                 {
-                    title: "Our Vision",
-                    text: "We strive to create conditions where children can learn, develop their skills and gain valuable experience through play and interaction. Our activity became a great opportunity for kids to broaden their horizons in a comfortable environment.",
-                },
-                {
-                    title: "How the Activity Went",
-                    text: "Children completed educational exercises, participated in team games, and trained their motor skills, logic, and imagination. The interactive format made learning interesting and engaging.",
-                },
-                {
-                    title: "Why Is This Important?",
-                    text: "Development activities help children build key skills needed for future learning. Such events promote confidence, creative thinking and socialization.",
+                    title: "",
+                    text: "The first minutes of Kyrylo's life were a struggle for every breath. When the boy was born six years ago, the tightly wrapped umbilical cord prevented him from taking his first breath. The doctors saved the baby, but he had to spend ten days on a ventilator and undergo treatment in the neurology department. The diagnoses came one after another: hypoxic-ischemic brain damage, pneumonia, hemorrhage in the left adrenal gland.",
                 },
                 {
                     title: "",
-                    text: "The project became another step toward creating useful, meaningful and warm events for children in our community.",
+                    text: "The family began a long journey of rehabilitation. Every three months, he underwent treatment at the city hospital. At 11 months, the doctors stunned his parents: Kyrylo had cerebral palsy. At that time, he could not walk or talk, his attention span was poor, and spasticity restricted his movements.",
+                },
+                {
+                    title: "",
+                    text: "But regular rehabilitation has yielded results. Today, the boy is standing and walking better, his attention and understanding are improving, and his spasticity is decreasing. For his parents, each step forward is proof that their efforts are worthwhile.",
+                },
+                {
+                    title: "",
+                    text: "At the same time, challenges remain: Kyrylo still does not speak and is not yet walking very confidently. But there is hope: doctors say that with constant intensive physical rehabilitation, the boy has a good chance of becoming independent.",
+                },
+                {
+                    title: "",
+                    text: "We are raising funds for a new course of rehabilitation that will help Kyrylo gain new skills. Every hryvnia you donate brings him closer to the day when he will walk confidently and independently. Please help!",
                 },
             ],
 
-            moments: [
-                "Play-based developmental activities",
-                "Group work and team exercises",
-                "Training attention, logic and motor skills",
-                "Friendly atmosphere and mentor support",
-            ],
 
             quotes: [
                 {
@@ -763,11 +748,33 @@ document.addEventListener("DOMContentLoaded", function () {
             ],
 
           
-            documents: [],
+            documents: [
+                {
+                    title: "Dobro.ua",
+                    url: "https://dobro.ua/en/project/fizichna_reabilitatsiia_zaporuka_mogo_zdorovia_3/docs/",
+                },
+                {
+                    title: "Project placement letter",
+                    url: "https://static.dobro.ua/projects/2026/02/25/media/%D0%9B%D0%B8%D1%81%D1%82_-_%D0%B1%D1%8E%D0%B4%D0%B6%D0%B5%D1%82_%D0%91%D1%96%D0%BB%D0%BE%D0%BA%D1%96%D0%BD%D1%8C_%D0%9A.%D0%A1.pdf",
+                },
+                {
+                    title: "Birth certificate",
+                    url: "https://static.dobro.ua/projects/2026/02/25/media/%D0%91%D1%96%D0%BB%D0%BE%D0%BA%D1%96%D0%BD%D1%8C_%D0%9A.%D0%A1._%D1%81%D0%B2%D1%96%D0%B4%D0%BE%D1%86%D1%82%D0%B2%D0%BE_%D0%BF%D1%80%D0%BE_%D0%BD%D0%B0%D1%80%D0%BE%D0%B4%D0%B6%D0%B5%D0%BD%D0%BD%D1%8F.pdf",
+                },
+                {
+                    title: "Invoice",
+                    url: "https://static.dobro.ua/projects/2026/02/25/media/%D0%A0%D0%B0%D1%85%D1%83%D0%BD%D0%BE%D0%BA_%D0%BD%D0%B0_%D0%BE%D0%BF%D0%BB%D0%B0%D1%82%D1%83_%D0%91%D1%96%D0%BB%D0%BE%D0%BA%D1%96%D0%BD%D1%8C_%D0%9A.%D0%A1.pdf",
+                },
+                {
+                    title: "Medical report",
+                    url: "https://static.dobro.ua/projects/2026/02/25/media/%D0%91%D1%96%D0%BB%D0%BE%D0%BA%D1%96%D0%BD%D1%8C_%D0%9A.%D0%A1._%D0%BC%D0%B5%D0%B4._%D0%B2%D0%B8%D1%81%D0%BD%D0%BE%D0%B2%D0%BE%D0%BA.pdf",
+                },
+                
+            ],
         },
 
         {
-            name: "Preschool Learning Activityn",
+            name: "Preschool Learning Activity",
             desc: "Training attention, memory, motor skills, and communication through engaging activities that enhance learning, focus, and social interaction.",
             goal: "0.00",
             images: [
@@ -786,17 +793,13 @@ document.addEventListener("DOMContentLoaded", function () {
             ],
             filter: "2025",
 
-            icons: [
-                { icon: "bi bi-calendar", label: "2025" },
-                { icon: "bi bi-brush", label: "Workshop" },
-                { icon: "bi bi-people", label: "Children" },
-            ],
+         
 
             details: [
-                { label: "Location", key: "Zhytomyr • Ukraine" },
-                { label: "Category", key: "Workshop" },
-                { label: "Date Of The Event", key: "October 18, 2025" },
-                { label: "Participants", key: "Preschoolers" },
+                { label: "Location:", key: "Zhytomyr • Ukraine" },
+                { label: "Category:", key: "Workshop" },
+                { label: "Date Of The Event:", key: "October 18, 2025" },
+                { label: "Participants:", key: "Preschoolers" },
             ],
 
             description: [
@@ -818,12 +821,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 },
             ],
 
-            moments: [
-                "Play-based developmental activities",
-                "Group work and team exercises",
-                "Training attention, logic and motor skills",
-                "Friendly atmosphere and mentor support",
-            ],
+        
 
             quotes: [
              
@@ -857,17 +855,13 @@ document.addEventListener("DOMContentLoaded", function () {
             ],
             filter: "2025",
 
-            icons: [
-                { icon: "bi bi-calendar", label: "2025" },
-                { icon: "bi bi-brush", label: "Workshop" },
-                { icon: "bi bi-people", label: "Children" },
-            ],
+        
 
             details: [
-                { label: "Location", key: "Zhytomyr • Ukraine" },
-                { label: "Category", key: "Workshop" },
-                { label: "Date Of The Event", key: "October 18, 2025" },
-                { label: "Participants", key: "Preschoolers" },
+                { label: "Location:", key: "Zhytomyr • Ukraine" },
+                { label: "Category:", key: "Workshop" },
+                { label: "Date Of The Event:", key: "October 18, 2025" },
+                { label: "Participants:", key: "Preschoolers" },
             ],
 
             description: [
@@ -889,12 +883,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 },
             ],
 
-            moments: [
-                "Dance workshop conducted",
-                "Professional mentors and support",
-                "Atmosphere of motivation and energy",
-                "New skills and self-confidence",
-            ],
+        
 
             quotes: [
                 {
@@ -927,17 +916,13 @@ document.addEventListener("DOMContentLoaded", function () {
             ],
             filter: "2025",
 
-            icons: [
-                { icon: "bi bi-calendar", label: "2025" },
-                { icon: "bi bi-brush", label: "Workshop" },
-                { icon: "bi bi-people", label: "Children" },
-            ],
+           
 
             details: [
-                { label: "Location", key: "Zhytomyr • Ukraine" },
-                { label: "Category", key: "Workshop" },
-                { label: "Date Of The Event", key: "October 18, 2025" },
-                { label: "Participants", key: "Preschoolers" },
+                { label: "Location:", key: "Zhytomyr • Ukraine" },
+                { label: "Category:", key: "Workshop" },
+                { label: "Date Of The Event:", key: "October 18, 2025" },
+                { label: "Participants:", key: "Preschoolers" },
             ],
 
             description: [
@@ -959,12 +944,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 },
             ],
 
-            moments: [
-                "Creative workshop for children held",
-                "All art materials provided",
-                "Friendly and supportive atmosphere",
-                "Positive emotions and new skills",
-            ],
+         
 
             quotes: [
                 {
@@ -1036,10 +1016,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 goal: product.goal,
                 images: JSON.stringify(product.images),
                 filter: product.filter,
-                icons: JSON.stringify(product.icons),
                 details: JSON.stringify(product.details),
                 description: JSON.stringify(product.description),
-                moments: JSON.stringify(product.moments),
                 quotes: JSON.stringify(product.quotes),
                 documents: JSON.stringify(product.documents),
             }).toString();
@@ -1154,10 +1132,8 @@ function initProductPage() {
         desc: params.get("desc") || "",
         images: JSON.parse(params.get("images") || "[]"),
 
-        icons: JSON.parse(params.get("icons") || "[]"),
         details: JSON.parse(params.get("details") || "[]"),
         description: JSON.parse(params.get("description") || "[]"),
-        moments: JSON.parse(params.get("moments") || "[]"),
         quotes: JSON.parse(params.get("quotes") || "[]"),
 
 
@@ -1203,36 +1179,6 @@ function initProductPage() {
         });
     }
 
-    // icons
-    // icons
-    // icons
-    // icons
-    // icons
-    // icons
-    // icons
-    // icons
-    // icons
-    // icons
-
-    const iconsContainer = card.querySelector(".meta-info");
-
-    if (iconsContainer && product.details && product.icons.length) {
-        iconsContainer.innerHTML = ""; // очищаємо старе
-
-        product.icons.forEach((item) => {
-            const div = document.createElement("span");
-
-            const iconI = document.createElement("i");
-            iconI.className = item.icon || "";
-
-            const labelSpan = document.createElement("span");
-            labelSpan.className = "label";
-            labelSpan.textContent = item.label || "";
-
-            div.append(iconI, labelSpan);
-            iconsContainer.appendChild(div);
-        });
-    }
 
     // details
     // details
@@ -1252,12 +1198,12 @@ function initProductPage() {
 
             // label
             const labelSpan = document.createElement("span");
-            labelSpan.className = "label";
+            labelSpan.className = "label pe-3";
             labelSpan.textContent = item.label || "";
 
             // key
             const keySpan = document.createElement("span");
-            keySpan.className = "key";
+            keySpan.className = "key text-end";
             keySpan.textContent = item.key || "";
 
             // додаємо спани у div
@@ -1303,38 +1249,7 @@ function initProductPage() {
         });
     }
 
-    // Highlights
-    // Highlights
-    // Highlights
-    // Highlights
-    // Highlights
-    // Highlights
 
-    // якщо елементів немає то Highlights не відображаються
-    const highlightsBox = card.querySelector(".highlights-box");
-    if (product.moments.length === 0) {
-        highlightsBox.classList.add("d-none");
-    } else {
-        highlightsBox.classList.remove("d-none");
-    }
-
-    // саме відображення елементів
-    const momentsContainer = card.querySelector(".moments");
-    if (momentsContainer && product.moments && product.moments.length) {
-        momentsContainer.innerHTML = "";
-
-        product.moments.forEach((moment) => {
-            const li = document.createElement("li");
-
-            const i = document.createElement("i");
-            i.className = "bi bi-check-circle";
-
-            li.appendChild(i);
-            li.append(" " + moment); // текст після іконки
-
-            momentsContainer.appendChild(li);
-        });
-    }
 
     // quotes
     // quotes
@@ -1393,7 +1308,7 @@ function initProductPage() {
         product.documents.forEach((item) => {
             const a = document.createElement("a");
             a.href = item.url || "#";
-            a.textContent = item.text;
+            a.textContent = item.title;
             a.target = "_blank"; // відкриваємо в новому вікні
             a.rel = "noopener noreferrer";
             tagsContainer.appendChild(a);
