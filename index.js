@@ -697,7 +697,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let currentFilter = "*";
     const products = [
         {
-            name: "Preschool Learning Activityn",
+            name: "Preschool Learning Activity",
             desc: "Training attention, memory, motor skills and communication",
             goal: "10 000",
             images: [
@@ -714,8 +714,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 "https://i.postimg.cc/q71YHMr7/project-3-11.jpg",
                 "https://i.postimg.cc/RF8Dqsqt/project-3-12.jpg",
             ],
-            category: "Open",
-            filter: "2026",
+            filter: "current",
 
             icons: [
                 { icon: "bi bi-calendar", label: "2025" },
@@ -732,7 +731,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             description: [
                 {
-                    title: "",
+                    title: "Our Vision",
                     text: "We strive to create conditions where children can learn, develop their skills and gain valuable experience through play and interaction. Our activity became a great opportunity for kids to broaden their horizons in a comfortable environment.",
                 },
                 {
@@ -756,18 +755,20 @@ document.addEventListener("DOMContentLoaded", function () {
                 "Friendly atmosphere and mentor support",
             ],
 
-            co_name: "Anastasiia Diachenko",
-            co_position: "Project Coordinator",
-            co_img: "https://i.postimg.cc/V5Ps9Nrw/anastasia-diachenko.jpg",
-            co_desc:
-                "“The best learning is learning through play. We are happy to see children discovering new things and showing their abilities.”",
+            quotes: [
+                {
+                    title: "",
+                    text: "“The best learning is learning through play. We are happy to see children discovering new things and showing their abilities.”",
+                },
+            ],
 
+          
             documents: [],
         },
 
         {
             name: "Preschool Learning Activityn",
-            desc: "Training attention, memory, motor skills and communication",
+            desc: "Training attention, memory, motor skills, and communication through engaging activities that enhance learning, focus, and social interaction.",
             goal: "0.00",
             images: [
                 "https://i.postimg.cc/4xCBDHhm/project-3-1.jpg",
@@ -783,7 +784,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 "https://i.postimg.cc/q71YHMr7/project-3-11.jpg",
                 "https://i.postimg.cc/RF8Dqsqt/project-3-12.jpg",
             ],
-            category: "Close",
             filter: "2025",
 
             icons: [
@@ -801,7 +801,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             description: [
                 {
-                    title: "",
+                    title: "Our Vision",
                     text: "We strive to create conditions where children can learn, develop their skills and gain valuable experience through play and interaction. Our activity became a great opportunity for kids to broaden their horizons in a comfortable environment.",
                 },
                 {
@@ -825,18 +825,21 @@ document.addEventListener("DOMContentLoaded", function () {
                 "Friendly atmosphere and mentor support",
             ],
 
-            co_name: "Anastasiia Diachenko",
-            co_position: "Project Coordinator",
-            co_img: "https://i.postimg.cc/V5Ps9Nrw/anastasia-diachenko.jpg",
-            co_desc:
-                "“The best learning is learning through play. We are happy to see children discovering new things and showing their abilities.”",
+            quotes: [
+             
+                {
+                    title: "",
+                    text: "“The best learning is learning through play. We are happy to see children discovering new things and showing their abilities.”",
+                },
+            ],
 
+          
             documents: [],
         },
 
         {
             name: "Dance Workshop for Girls",
-            desc: "Developing Rhythm, Grace and Self-Confidence Together",
+            desc: "Developing rhythm, grace, and self-confidence through movement, music, and creative expression, helping children explore coordination, body awareness, and confidence.",
             goal: "0.00",
             images: [
                 "https://i.postimg.cc/LsjKdMX5/project-2-1.jpg",
@@ -852,7 +855,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 "https://i.postimg.cc/zvVxrnjj/project-2-11.jpg",
                 "https://i.postimg.cc/zDcdkczF/project-2-12.jpg",
             ],
-            category: "Close",
             filter: "2025",
 
             icons: [
@@ -870,7 +872,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             description: [
                 {
-                    title: "",
+                    title: "Our Vision",
                     text: "We believe that dance is a way of self-expression, confidence and inner harmony. Our workshop gave girls the opportunity to feel free, beautiful and inspired. The project showed how important such events are for youth development and creating a supportive environment.",
                 },
                 {
@@ -894,18 +896,20 @@ document.addEventListener("DOMContentLoaded", function () {
                 "New skills and self-confidence",
             ],
 
-            co_name: "Anastasiia Diachenko",
-            co_position: "Project Coordinator",
-            co_img: "https://i.postimg.cc/V5Ps9Nrw/anastasia-diachenko.jpg",
-            co_desc:
-                "“This workshop allowed girls to feel their strength, beauty and individuality. Dance is about freedom of movement, energy and emotions. We are happy we could create such an atmosphere.”",
+            quotes: [
+                {
+                    title: "",
+                    text: "“This workshop allowed girls to feel their strength, beauty and individuality. Dance is about freedom of movement, energy and emotions. We are happy we could create such an atmosphere.”",
+                },
+            ],
 
+          
             documents: [],
         },
 
         {
             name: "Drawing Workshop for Children",
-            desc: "Developing creativity and imagination through learning, exploration, play, and expression.",
+            desc: "Fostering creativity and imagination through learning, play, and self-expression. We help children explore ideas, try activities, and build curiosity, confidence, and growth.",
             goal: "0.00",
             images: [
                 "https://i.postimg.cc/tCD4fWcm/project-1-1.jpg",
@@ -921,7 +925,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 "https://i.postimg.cc/ryjTFc9S/project-1-11.jpg",
                 "https://i.postimg.cc/zXP1KjMs/project-1-12.jpg",
             ],
-            category: "Close",
             filter: "2025",
 
             icons: [
@@ -939,7 +942,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             description: [
                 {
-                    title: "",
+                    title: "Our Vision",
                     text: "Our goal is to create a space where children can discover their talents and experience genuine emotions. The workshop became an important event that showed how much children need creative meetings and support for their development.",
                 },
                 {
@@ -963,12 +966,14 @@ document.addEventListener("DOMContentLoaded", function () {
                 "Positive emotions and new skills",
             ],
 
-            co_name: "Anastasiia Diachenko",
-            co_position: "Project Coordinator",
-            co_img: "https://i.postimg.cc/V5Ps9Nrw/anastasia-diachenko.jpg",
-            co_desc:
-                "“For us it is important to give children moments of joy. Every painting is a small story created by the child. We are grateful to everyone who joined us and supported this idea.”",
+            quotes: [
+                {
+                    title: "",
+                    text: "“For us it is important to give children moments of joy. Every painting is a small story created by the child. We are grateful to everyone who joined us and supported this idea.”",
+                },
+            ],
 
+          
             documents: [],
         },
     ];
@@ -976,26 +981,21 @@ document.addEventListener("DOMContentLoaded", function () {
     // ====== Створення картки ======
     function createCard(product) {
         const card = document.createElement("div");
-        card.className = `
-        col-12 col-sm-9 col-md-8 col-lg-6 col-xl-5 col-xxl-4
-        portfolio-item filter-${product.filter}
-    `;
+        card.className = ` col-12 col-sm-9 col-md-8 col-lg-6 col-xl-5 col-xxl-4  portfolio-item filter-${product.filter}`;
         card.style.cssText = "padding: 12px; margin: 0;";
 
         card.innerHTML = `
-        <div class="fundraiser-card neo-card h-100 shadow-lg">
+        <div class="fundraiser-card neo-card h-100 shadow-lg ">
             <!-- Image Block -->
             <div class="fundraiser-img position-relative">
                 <img src="${product.images[0]}">
-                <span class="project-category ${
-                    product.category === "Close"
-                        ? "bg-primary"
-                        : product.category === "Open"
-                        ? "bg-success"
-                        : ""
-                }">
-                    ${product.category}
-                </span>
+                    <span class="project-category ${
+                        product.filter === "current"
+                            ? "bg-success"
+                            : "bg-primary"
+                    }">
+                    ${product.filter === "current" ? "Open" : "Closed"}</span>
+                  
             </div>
 
             <!-- Content -->
@@ -1009,16 +1009,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 <!-- Buttons -->
                 <div class="fundraiser-actions d-flex justify-content-between">
-                    <div class="goal-badge d-inline-flex align-items-center justify-content-center col me-0 rounded-end-0">
-                        <span class="m-0 p-0 pe-2 fw-bold fs-6 ps-2">${
+                    <div class="goal-badge d-inline-flex align-items-center justify-content-center col me-0 rounded-end-0 px-1">
+                        <span class="m-0 p-0 pe-1 fw-bold fs-6 ">${
                             product.goal
                         }</span>
-                        <span class="m-0 p-0 pe-2 fw-normal small"> USD</span>
+                        <i class="bi bi-currency-dollar"></i>
                     </div>
                     <a href="${
                         product.link
                     }" class="btn btn-outline-light btn-custom d-flex align-items-center justify-content-center col ms-0 rounded-start-0 border-secondary">
                         Learn more
+                        <i class="bi bi-box-arrow-up-right ps-3"></i>
                     </a>
                 </div>
             </div>
@@ -1039,10 +1040,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 details: JSON.stringify(product.details),
                 description: JSON.stringify(product.description),
                 moments: JSON.stringify(product.moments),
-                co_desc: product.co_desc,
-                co_img: product.co_img,
-                co_name: product.co_name,
-                co_position: product.co_position,
+                quotes: JSON.stringify(product.quotes),
                 documents: JSON.stringify(product.documents),
             }).toString();
 
@@ -1148,10 +1146,6 @@ function initProductPage() {
     const productDesc = card.querySelector(".product-desc");
     const productImg = card.querySelector(".product-img");
 
-    const productCo_desc = card.querySelector(".product-co_desc");
-    const productCo_img = card.querySelector(".product-co_img");
-    const productCo_name = card.querySelector(".product-co_name");
-    const productCo_position = card.querySelector(".product-co_position");
 
     // 🔹 URL параметри
     const params = new URLSearchParams(window.location.search);
@@ -1164,27 +1158,19 @@ function initProductPage() {
         details: JSON.parse(params.get("details") || "[]"),
         description: JSON.parse(params.get("description") || "[]"),
         moments: JSON.parse(params.get("moments") || "[]"),
+        quotes: JSON.parse(params.get("quotes") || "[]"),
 
-        co_desc: params.get("co_desc") || "",
-        co_img: params.get("co_img") || "",
-        co_name: params.get("co_name") || "",
-        co_position: params.get("co_position") || "",
 
         documents: JSON.parse(params.get("documents") || "[]"),
     };
 
-    // 🔹 Заповнення контенту (safe)
-    document.title = product.name || document.title;
+    // ЗМІНА ЗАГОЛОВКИ САЙТУ ЗВЕРТУ ТАЙТЛ ЗАМІНУ ЦЕ ТУТ
+    // document.title = product.name || document.title;
 
+    // 🔹 Заповнення контенту (safe)
     if (productName) productName.textContent = product.name;
     if (productDesc) productDesc.textContent = product.desc;
     if (productImg) productImg.src = product.img;
-
-    if (productCo_desc) productCo_desc.textContent = product.co_desc;
-    if (productCo_img) productCo_img.src = product.co_img;
-    if (productCo_name) productCo_name.textContent = product.co_name;
-    if (productCo_position)
-        productCo_position.textContent = product.co_position;
 
     // фото
     // фото
@@ -1317,15 +1303,23 @@ function initProductPage() {
         });
     }
 
-    // moments
-    // moments
-    // moments
-    // moments
-    // moments
-    // moments
+    // Highlights
+    // Highlights
+    // Highlights
+    // Highlights
+    // Highlights
+    // Highlights
 
+    // якщо елементів немає то Highlights не відображаються
+    const highlightsBox = card.querySelector(".highlights-box");
+    if (product.moments.length === 0) {
+        highlightsBox.classList.add("d-none");
+    } else {
+        highlightsBox.classList.remove("d-none");
+    }
+
+    // саме відображення елементів
     const momentsContainer = card.querySelector(".moments");
-
     if (momentsContainer && product.moments && product.moments.length) {
         momentsContainer.innerHTML = "";
 
@@ -1341,6 +1335,41 @@ function initProductPage() {
             momentsContainer.appendChild(li);
         });
     }
+
+    // quotes
+    // quotes
+    // quotes
+    // quotes
+    // quotes
+    // quotes
+    const quotesContainer = card.querySelector(".quotes-container");
+
+    if (quotesContainer && product.quotes && product.quotes.length) {
+        quotesContainer.innerHTML = ""; // очищаємо старе
+
+        product.quotes.forEach((item) => {
+            // створюємо контейнер
+            const div = document.createElement("div");
+
+            // title
+            const titleH3 = document.createElement("h3");
+            titleH3.className = "title";
+            titleH3.textContent = item.title || "";
+
+            // text
+            const textP = document.createElement("p");
+            textP.className = "text";
+            textP.textContent = item.text || "";
+
+            // додаємо спани у div
+            div.appendChild(titleH3);
+            div.appendChild(textP);
+
+            // додаємо div у контейнер
+            quotesContainer.appendChild(div);
+        });
+    }
+
     // documents
     // documents
     // documents
@@ -1348,6 +1377,15 @@ function initProductPage() {
     // documents
     // documents
 
+    // якщо елементів немає то локументи не відображаються
+    const tagsCard = card.querySelector(".tags-card");
+    if (product.documents.length === 0) {
+        tagsCard.classList.add("d-none");
+    } else {
+        tagsCard.classList.remove("d-none");
+    }
+
+    // саме відображення елементів
     const tagsContainer = card.querySelector(".tags");
     if (tagsContainer && product.documents.length) {
         tagsContainer.innerHTML = "";
