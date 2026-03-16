@@ -23,39 +23,40 @@
 document.addEventListener("DOMContentLoaded", function () {
     const services = [
         {
-            title: "Educational Activities",
+            title: "Support for the Army",
             icon: "bi bi-fire",
             description:
-                "Trainings, workshops, and non-formal education programs for all age groups.",
+                "We support the Ukrainian army by collecting essential supplies and helping soldiers on the front lines.",
         },
         {
-            title: "Social Support and Humanitarian Assistance",
+            title: "Aid for War Victims",
             icon: "bi bi-people",
             description:
-                "Aid and humanitarian support for vulnerable populations.",
+                "We provide humanitarian aid to people affected by the war, including food, medical supplies, and shelter.",
         },
         {
-            title: "Charitable and Fundraising Activities",
+            title: "Support for Children",
             icon: "bi bi-graph-up-arrow",
             description:
-                "Fundraising and donation collection to support charitable programs.",
+                "We organize fundraising campaigns to provide treatment, rehabilitation, and support for children.",
         },
         {
-            title: "Psychological and Legal Support",
+            title: "Support for Orphanages",
             icon: "bi bi-heart-fill",
             description:
-                "Free counseling, consultations, and legal assistance.",
+                "We provide orphanages with essential items and organize charitable activities to support the children.",
         },
         {
-            title: "Cultural and Community Development",
+            title: "Humanitarian Aid",
             icon: "bi bi-stars",
             description:
-                "Cultural events and initiatives that strengthen communities.",
+                "We organize charity campaigns to help people in difficult life situations with support and resources.",
         },
         {
-            title: "International Cooperation and Partnerships",
+            title: "International Partnership",
             icon: "bi bi-compass",
-            description: "Collaboration with local and international partners.",
+            description:
+                "We work with local and international partners to implement humanitarian and social projects.",
         },
     ];
 
@@ -357,7 +358,6 @@ document.addEventListener("DOMContentLoaded", function () {
 // карта REPORTING
 // карта REPORTING
 document.addEventListener("DOMContentLoaded", function () {
-
     const reports = [
         { title: "April 2026", href: "https://madeinzhytomyr.vercel.app/" },
         { title: "May 2026", href: "https://madeinzhytomyr.vercel.app/" },
@@ -368,7 +368,6 @@ document.addEventListener("DOMContentLoaded", function () {
         { title: "October 2025", href: "https://madeinzhytomyr.vercel.app/" },
         { title: "September 2025", href: "https://madeinzhytomyr.vercel.app/" },
         { title: "August 2025", href: "https://madeinzhytomyr.vercel.app/" },
-
     ];
 
     const container = document.getElementById("reportingContainer");
@@ -404,12 +403,13 @@ document.addEventListener("DOMContentLoaded", function () {
     function updateReports() {
         container.innerHTML = "";
 
-        reports.slice(0, visibleCount).forEach(item => {
+        reports.slice(0, visibleCount).forEach((item) => {
             container.appendChild(createServiceItem(item));
         });
 
         // показати або сховати кнопку Load More
-        loadMoreBtn.style.display = visibleCount < reports.length ? "block" : "none";
+        loadMoreBtn.style.display =
+            visibleCount < reports.length ? "block" : "none";
     }
 
     // кнопка Load More
@@ -692,6 +692,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (!productsContainer || !loadMoreBtn) return;
 
     let visibleCount = 3;
+
     let iso;
     let currentFilter = "*";
     const products = [
@@ -714,7 +715,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 "https://i.postimg.cc/RF8Dqsqt/project-3-12.jpg",
             ],
             category: "Open",
-            filter: "2025",
+            filter: "2026",
 
             icons: [
                 { icon: "bi bi-calendar", label: "2025" },
@@ -761,7 +762,7 @@ document.addEventListener("DOMContentLoaded", function () {
             co_desc:
                 "“The best learning is learning through play. We are happy to see children discovering new things and showing their abilities.”",
 
-            num: [],
+            documents: [],
         },
 
         {
@@ -830,7 +831,7 @@ document.addEventListener("DOMContentLoaded", function () {
             co_desc:
                 "“The best learning is learning through play. We are happy to see children discovering new things and showing their abilities.”",
 
-            num: [],
+            documents: [],
         },
 
         {
@@ -972,80 +973,59 @@ document.addEventListener("DOMContentLoaded", function () {
         },
     ];
 
+    // ====== Створення картки ======
     function createCard(product) {
         const card = document.createElement("div");
-        card.className = `py-2 col-12 col-md-6 col-lg-6 col-xxl-4 portfolio-item isotope-item mb-auto filter-${product.filter}`;
+        card.className = `
+        col-12 col-sm-9 col-md-8 col-lg-6 col-xl-5 col-xxl-4
+        portfolio-item filter-${product.filter}
+    `;
         card.style.cssText = "padding: 12px; margin: 0;";
+
         card.innerHTML = `
+        <div class="fundraiser-card neo-card h-100 shadow-lg">
+            <!-- Image Block -->
+            <div class="fundraiser-img position-relative">
+                <img src="${product.images[0]}">
+                <span class="project-category ${
+                    product.category === "Close"
+                        ? "bg-primary"
+                        : product.category === "Open"
+                        ? "bg-success"
+                        : ""
+                }">
+                    ${product.category}
+                </span>
+            </div>
 
+            <!-- Content -->
+            <div class="fundraiser-content">
+                <h5 class="fundraiser-title fw-semibold mt-2">${
+                    product.name
+                }</h5>
+                <p class="fundraiser-desc text-secondary mb-4 small">${
+                    product.desc
+                }</p>
 
-              <div class="fundraiser-card neo-card h-100 shadow-lg">
-        
-                    <!-- Image Block -->
-                    <div class="fundraiser-img position-relative">
-                        <img src="${product.images[0]}">
-        
-                        <!-- Category Circle -->
-                             <span class="project-category ${
-                                 product.category === "Close"
-                                     ? "bg-primary"
-                                     : product.category === "Open"
-                                     ? "bg-success"
-                                     : ""
-                             }">
-                                ${product.category}
-                            </span>
-        
-                
+                <!-- Buttons -->
+                <div class="fundraiser-actions d-flex justify-content-between">
+                    <div class="goal-badge d-inline-flex align-items-center justify-content-center col me-0 rounded-end-0">
+                        <span class="m-0 p-0 pe-2 fw-bold fs-6 ps-2">${
+                            product.goal
+                        }</span>
+                        <span class="m-0 p-0 pe-2 fw-normal small"> USD</span>
                     </div>
-        
-                    <!-- Content -->
-                    <div class="fundraiser-content">
-                        <h5 class="fundraiser-title fw-semibold mt-2">
-                            ${product.name}
-                        </h5>
-        
-                        <p class="fundraiser-desc text-secondary mb-4 small">
-                            ${product.desc}
-                        </p>
-    
-    
-    
-        
-                        <!-- Buttons -->
-                        <div class="fundraiser-actions d-flex justify-content-between">
-    
-                            <!-- Goal Block -->
-                            <div class="goal-badge d-inline-flex align-items-center justify-content-center col me-0 rounded-end-0">
-    
-                            <span class="m-0 p-0 pe-2 fw-bold fs-6 ps-2">${
-                                product.goal
-                            }</span>
-                                <span class="m-0 p-0 pe-2 fw-normal small"> USD</span>
-    
-                            </div>
-    
-                            <a href="${
-                                product.link
-                            }" class="btn btn-outline-light btn-custom  d-flex align-items-center justify-content-center col ms-0 rounded-start-0 border-secondary">
-                                Learn more
-                            </a>
-        
-                          
-                        </div>
-                    </div>
+                    <a href="${
+                        product.link
+                    }" class="btn btn-outline-light btn-custom d-flex align-items-center justify-content-center col ms-0 rounded-start-0 border-secondary">
+                        Learn more
+                    </a>
                 </div>
+            </div>
+        </div>
+    `;
 
-
-
-
-
-
-                
-       
-        `;
-
-        // ====== При кліку на продукт відкриваємо card.html з даними ======
+        // Клік на кнопку "Learn more"
         const linkButton = card.querySelector("a");
         linkButton.addEventListener("click", function (e) {
             e.preventDefault();
@@ -1055,31 +1035,69 @@ document.addEventListener("DOMContentLoaded", function () {
                 goal: product.goal,
                 images: JSON.stringify(product.images),
                 filter: product.filter,
-
                 icons: JSON.stringify(product.icons),
                 details: JSON.stringify(product.details),
                 description: JSON.stringify(product.description),
                 moments: JSON.stringify(product.moments),
-
                 co_desc: product.co_desc,
                 co_img: product.co_img,
                 co_name: product.co_name,
                 co_position: product.co_position,
-
                 documents: JSON.stringify(product.documents),
             }).toString();
-            console.log("Redirect URL:", `index_project.html?${query}`);
+
             window.location.href = `index-project.html?${query}`;
         });
 
         return card;
     }
 
+    // ====== Рендер карток ======
+    function renderProducts() {
+        productsContainer.innerHTML = "";
+
+        const filteredProducts = products.filter(
+            (p) =>
+                currentFilter === "*" || `.filter-${p.filter}` === currentFilter
+        );
+
+        const visibleProducts = filteredProducts.slice(0, visibleCount);
+        visibleProducts.forEach((p) =>
+            productsContainer.appendChild(createCard(p))
+        );
+    }
+
+    // ====== Ініціалізація фільтрів ======
+    function initFilters() {
+        const filters = document.querySelectorAll(".portfolio-filters li");
+        filters.forEach((filter) => {
+            filter.addEventListener("click", function () {
+                filters.forEach((f) => f.classList.remove("filter-active"));
+                this.classList.add("filter-active");
+
+                currentFilter = this.getAttribute("data-filter");
+                visibleCount = 3;
+
+                renderProducts();
+                updateLoadMoreButton();
+            });
+        });
+    }
+
+    // ====== Load More ======
+    function loadMore() {
+        visibleCount += 3;
+        renderProducts();
+        updateLoadMoreButton();
+    }
+
+    // ====== Кнопка Load More ======
     function updateLoadMoreButton() {
         const filteredProducts = products.filter(
             (p) =>
                 currentFilter === "*" || `.filter-${p.filter}` === currentFilter
         );
+
         loadMoreBtn.style.display =
             filteredProducts.length > visibleCount &&
             filteredProducts.length > 3
@@ -1087,90 +1105,17 @@ document.addEventListener("DOMContentLoaded", function () {
                 : "none";
     }
 
-    function initIsotope() {
-        imagesLoaded(productsContainer, function () {
-            iso = new Isotope(productsContainer, {
-                itemSelector: ".portfolio-item",
-                layoutMode: "masonry",
-                transitionDuration: "0.0s",
-            });
-
-            const filters = document.querySelectorAll(".portfolio-filters li");
-            filters.forEach((filter) => {
-                filter.addEventListener("click", function () {
-                    filters.forEach((f) => f.classList.remove("filter-active"));
-                    this.classList.add("filter-active");
-
-                    currentFilter = this.getAttribute("data-filter");
-                    visibleCount = 3;
-
-                    // --- Очищаємо контейнер ---
-                    const allItems =
-                        productsContainer.querySelectorAll(".portfolio-item");
-                    allItems.forEach((item) => item.remove());
-
-                    // --- Додаємо перші 3 елементи фільтру ---
-                    const filteredProducts = products.filter(
-                        (p) =>
-                            currentFilter === "*" ||
-                            `.filter-${p.filter}` === currentFilter
-                    );
-                    const initialProducts = filteredProducts.slice(
-                        0,
-                        visibleCount
-                    );
-                    initialProducts.forEach((p) =>
-                        productsContainer.appendChild(createCard(p))
-                    );
-
-                    // --- Оновлюємо Isotope ---
-                    iso.reloadItems();
-                    iso.arrange({ filter: currentFilter });
-
-                    updateLoadMoreButton();
-                });
-            });
-
-            updateLoadMoreButton();
-        });
-    }
-
+    // ====== Початковий рендер ======
     function renderInitial() {
-        const initialProducts = products.slice(0, visibleCount);
-        initialProducts.forEach((p) =>
-            productsContainer.appendChild(createCard(p))
-        );
-        visibleCount = initialProducts.length;
-        initIsotope();
-    }
-
-    function loadMore() {
-        const filteredProducts = products.filter(
-            (p) =>
-                currentFilter === "*" || `.filter-${p.filter}` === currentFilter
-        );
-        const nextVisible = visibleCount + 3;
-        const newCards = [];
-        for (
-            let i = visibleCount;
-            i < nextVisible && i < filteredProducts.length;
-            i++
-        ) {
-            const card = createCard(filteredProducts[i]);
-            productsContainer.appendChild(card);
-            newCards.push(card);
-        }
-        visibleCount = Math.min(nextVisible, filteredProducts.length);
-
-        if (iso) {
-            iso.appended(newCards);
-            iso.layout();
-        }
-
+        renderProducts();
+        initFilters();
         updateLoadMoreButton();
     }
 
+    // ====== Подія на Load More ======
     loadMoreBtn.addEventListener("click", loadMore);
+
+    // ====== Старт ======
     renderInitial();
 });
 
