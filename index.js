@@ -100,8 +100,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-
-
 // карта team
 // карта team
 // карта team
@@ -343,6 +341,86 @@ document.addEventListener("DOMContentLoaded", function () {
     updateSlider();
 });
 
+// карта REPORTING
+// карта REPORTING
+// карта REPORTING
+// карта REPORTING
+// карта REPORTING
+// карта REPORTING
+// карта REPORTING
+// карта REPORTING
+// карта REPORTING
+// карта REPORTING
+// карта REPORTING
+// карта REPORTING
+// карта REPORTING
+// карта REPORTING
+// карта REPORTING
+document.addEventListener("DOMContentLoaded", function () {
+
+    const reports = [
+        { title: "April 2026", href: "https://madeinzhytomyr.vercel.app/" },
+        { title: "May 2026", href: "https://madeinzhytomyr.vercel.app/" },
+        { title: "February 2026", href: "https://madeinzhytomyr.vercel.app/" },
+        { title: "January 2026", href: "https://madeinzhytomyr.vercel.app/" },
+        { title: "December 2025", href: "https://madeinzhytomyr.vercel.app/" },
+        { title: "November 2025", href: "https://madeinzhytomyr.vercel.app/" },
+        { title: "October 2025", href: "https://madeinzhytomyr.vercel.app/" },
+        { title: "September 2025", href: "https://madeinzhytomyr.vercel.app/" },
+        { title: "August 2025", href: "https://madeinzhytomyr.vercel.app/" },
+
+    ];
+
+    const container = document.getElementById("reportingContainer");
+    const loadMoreBtn = document.getElementById("loadMoreBtn");
+    let visibleCount = 8; // скільки елементів показуємо спочатку
+
+    if (!container) {
+        console.error("❌ Контейнер #reportingContainer не знайдено!");
+        return;
+    }
+
+    function createServiceItem(item) {
+        const div = document.createElement("div");
+        div.className = "col-sm-6 col-lg-4 col-xl-3";
+        div.style.cssText = "padding: 12px; margin: 0;";
+
+        div.innerHTML = `
+            <a href="${item.href}" class="report-item d-flex flex-column justify-content-between p-4 rounded-4 text-decoration-none" target="_blank">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                    <span class="title ">
+                        <i class="bi bi-calendar2-event pe-2 text-white rounded  p-2 py-1 d-none"></i> ${item.title}
+                    </span>
+                    <i class="bi bi-box-arrow-up-right icon text-primary"></i>
+                </div>
+                <p class="description mb-0 fst-italic text-secondary">View full report and details <i class="m-0 p-0 bi bi-arrow-right"></i></p>
+                                        
+
+            </a>
+        `;
+        return div;
+    }
+
+    function updateReports() {
+        container.innerHTML = "";
+
+        reports.slice(0, visibleCount).forEach(item => {
+            container.appendChild(createServiceItem(item));
+        });
+
+        // показати або сховати кнопку Load More
+        loadMoreBtn.style.display = visibleCount < reports.length ? "block" : "none";
+    }
+
+    // кнопка Load More
+    loadMoreBtn.addEventListener("click", () => {
+        visibleCount += 3; // додаємо ще 3 елементи
+        updateReports();
+    });
+
+    updateReports(); // початковий рендер
+});
+
 // КНОПКА БУРГЕР НА МАЛЕНЬКИХ ЕКРАНАХ ШРЬ ПРАЦБВАЛО
 // КНОПКА БУРГЕР НА МАЛЕНЬКИХ ЕКРАНАХ ШРЬ ПРАЦБВАЛО
 // КНОПКА БУРГЕР НА МАЛЕНЬКИХ ЕКРАНАХ ШРЬ ПРАЦБВАЛО
@@ -556,9 +634,6 @@ if (modal) {
     });
 }
 
-
-
-
 // соцмережі вставка
 // соцмережі вставка
 // соцмережі вставка
@@ -570,19 +645,25 @@ if (modal) {
 // соцмережі вставка
 
 const socialLinks = [
-    { icon: "bi bi-instagram", url: "https://www.instagram.com/madeinzhytomyr/" },
-    { icon: "bi bi-facebook", url: "https://www.facebook.com/profile.php?id=61586613398207" },
+    {
+        icon: "bi bi-instagram",
+        url: "https://www.instagram.com/madeinzhytomyr/",
+    },
+    {
+        icon: "bi bi-facebook",
+        url: "https://www.facebook.com/profile.php?id=61586613398207",
+    },
     { icon: "bi bi-tiktok", url: "https://www.tiktok.com/@madeinzhytomyr" },
     { icon: "bi bi-youtube", url: "https://www.youtube.com/@madeinzhytomyr" },
-    { icon: "bi bi-telegram", url: "https://t.me/madeinzhytomyr884" }
+    { icon: "bi bi-telegram", url: "https://t.me/madeinzhytomyr884" },
 ];
 
 const socialContainers = document.querySelectorAll(".social-links");
 
-socialContainers.forEach(container => {
+socialContainers.forEach((container) => {
     container.innerHTML = "";
 
-    socialLinks.forEach(item => {
+    socialLinks.forEach((item) => {
         const a = document.createElement("a");
         a.href = item.url;
         a.target = "_blank";
@@ -594,7 +675,6 @@ socialContainers.forEach(container => {
         container.appendChild(a);
     });
 });
-
 
 // карта PROJECTS
 // карта PROJECTS
@@ -618,7 +698,7 @@ document.addEventListener("DOMContentLoaded", function () {
         {
             name: "Preschool Learning Activityn",
             desc: "Training attention, memory, motor skills and communication",
-            goal: "0.00",
+            goal: "10 000",
             images: [
                 "https://i.postimg.cc/4xCBDHhm/project-3-1.jpg",
                 "https://i.postimg.cc/d0wn1MBb/project-3-2.jpg",
@@ -633,7 +713,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 "https://i.postimg.cc/q71YHMr7/project-3-11.jpg",
                 "https://i.postimg.cc/RF8Dqsqt/project-3-12.jpg",
             ],
-            category: "Completed",
+            category: "Open",
             filter: "2025",
 
             icons: [
@@ -681,27 +761,76 @@ document.addEventListener("DOMContentLoaded", function () {
             co_desc:
                 "“The best learning is learning through play. We are happy to see children discovering new things and showing their abilities.”",
 
-            num: [
-                { text: "5+ Participants", url: "https://docdro.id/eE4wcz6" },
-                {
-                    text: "2 Hours of Activities",
-                    url: "https://docdro.id/eE4wcz6",
-                },
-                { text: "4 Skills", url: "https://docdro.id/eE4wcz6" },
-                { text: "Teamwork", url: "https://docdro.id/eE4wcz6" },
-                {
-                    text: "Interactive Learning",
-                    url: "https://docdro.id/eE4wcz6",
-                },
-                {
-                    text: "Game-Based Learning",
-                    url: "https://docdro.id/eE4wcz6",
-                },
-                { text: "Warm Atmosphere", url: "https://docdro.id/eE4wcz6" },
-                { text: "Creativity", url: "https://docdro.id/eE4wcz6" },
-                { text: "Community", url: "https://docdro.id/eE4wcz6" },
-                { text: "Development", url: "https://docdro.id/eE4wcz6" },
+            num: [],
+        },
+
+        {
+            name: "Preschool Learning Activityn",
+            desc: "Training attention, memory, motor skills and communication",
+            goal: "0.00",
+            images: [
+                "https://i.postimg.cc/4xCBDHhm/project-3-1.jpg",
+                "https://i.postimg.cc/d0wn1MBb/project-3-2.jpg",
+                "https://i.postimg.cc/hGssQCZ8/project-3-3.jpg",
+                "https://i.postimg.cc/wvbk01pK/project-3-4.jpg",
+                "https://i.postimg.cc/j2p4YBCx/project-3-5.jpg",
+                "https://i.postimg.cc/ZY2GqRdv/project-3-6.jpg",
+                "https://i.postimg.cc/x1SBK45v/project-3-7.jpg",
+                "https://i.postimg.cc/Nj7SbkPh/project-3-8.jpg",
+                "https://i.postimg.cc/dVmpnjSQ/project-3-9.jpg",
+                "https://i.postimg.cc/KYGVW3dP/project-3-10.jpg",
+                "https://i.postimg.cc/q71YHMr7/project-3-11.jpg",
+                "https://i.postimg.cc/RF8Dqsqt/project-3-12.jpg",
             ],
+            category: "Close",
+            filter: "2025",
+
+            icons: [
+                { icon: "bi bi-calendar", label: "2025" },
+                { icon: "bi bi-brush", label: "Workshop" },
+                { icon: "bi bi-people", label: "Children" },
+            ],
+
+            details: [
+                { label: "Location", key: "Zhytomyr • Ukraine" },
+                { label: "Category", key: "Workshop" },
+                { label: "Date Of The Event", key: "October 18, 2025" },
+                { label: "Participants", key: "Preschoolers" },
+            ],
+
+            description: [
+                {
+                    title: "",
+                    text: "We strive to create conditions where children can learn, develop their skills and gain valuable experience through play and interaction. Our activity became a great opportunity for kids to broaden their horizons in a comfortable environment.",
+                },
+                {
+                    title: "How the Activity Went",
+                    text: "Children completed educational exercises, participated in team games, and trained their motor skills, logic, and imagination. The interactive format made learning interesting and engaging.",
+                },
+                {
+                    title: "Why Is This Important?",
+                    text: "Development activities help children build key skills needed for future learning. Such events promote confidence, creative thinking and socialization.",
+                },
+                {
+                    title: "",
+                    text: "The project became another step toward creating useful, meaningful and warm events for children in our community.",
+                },
+            ],
+
+            moments: [
+                "Play-based developmental activities",
+                "Group work and team exercises",
+                "Training attention, logic and motor skills",
+                "Friendly atmosphere and mentor support",
+            ],
+
+            co_name: "Anastasiia Diachenko",
+            co_position: "Project Coordinator",
+            co_img: "https://i.postimg.cc/V5Ps9Nrw/anastasia-diachenko.jpg",
+            co_desc:
+                "“The best learning is learning through play. We are happy to see children discovering new things and showing their abilities.”",
+
+            num: [],
         },
 
         {
@@ -722,7 +851,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 "https://i.postimg.cc/zvVxrnjj/project-2-11.jpg",
                 "https://i.postimg.cc/zDcdkczF/project-2-12.jpg",
             ],
-            category: "Completed",
+            category: "Close",
             filter: "2025",
 
             icons: [
@@ -770,33 +899,7 @@ document.addEventListener("DOMContentLoaded", function () {
             co_desc:
                 "“This workshop allowed girls to feel their strength, beauty and individuality. Dance is about freedom of movement, energy and emotions. We are happy we could create such an atmosphere.”",
 
-            num: [
-                { text: "7+ Participants", url: "https://docdro.id/eE4wcz6" },
-                {
-                    text: "2 Hours of Dancing",
-                    url: "https://docdro.id/eE4wcz6",
-                },
-                {
-                    text: "4 Dance Activities",
-                    url: "https://docdro.id/eE4wcz6",
-                },
-                {
-                    text: "Warm-up and Rhythm",
-                    url: "https://docdro.id/eE4wcz6",
-                },
-                { text: "Stage Movements", url: "https://docdro.id/eE4wcz6" },
-                { text: "Team Choreography", url: "https://docdro.id/eE4wcz6" },
-                {
-                    text: "Energetic Atmosphere",
-                    url: "https://docdro.id/eE4wcz6",
-                },
-                { text: "Musicality", url: "https://docdro.id/eE4wcz6" },
-                { text: "Community", url: "https://docdro.id/eE4wcz6" },
-                {
-                    text: "Movement and Creativity",
-                    url: "https://docdro.id/eE4wcz6",
-                },
-            ],
+            documents: [],
         },
 
         {
@@ -817,7 +920,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 "https://i.postimg.cc/ryjTFc9S/project-1-11.jpg",
                 "https://i.postimg.cc/zXP1KjMs/project-1-12.jpg",
             ],
-            category: "Completed",
+            category: "Close",
             filter: "2025",
 
             icons: [
@@ -865,36 +968,7 @@ document.addEventListener("DOMContentLoaded", function () {
             co_desc:
                 "“For us it is important to give children moments of joy. Every painting is a small story created by the child. We are grateful to everyone who joined us and supported this idea.”",
 
-            num: [
-                { text: "5+ Participants", url: "https://docdro.id/eE4wcz6" },
-                {
-                    text: "2 Hours of Creativity",
-                    url: "https://docdro.id/eE4wcz6",
-                },
-                {
-                    text: "10+ Finished Artworks",
-                    url: "https://docdro.id/eE4wcz6",
-                },
-                {
-                    text: "Basics of Composition",
-                    url: "https://docdro.id/eE4wcz6",
-                },
-                {
-                    text: "Painting Techniques",
-                    url: "https://docdro.id/eE4wcz6",
-                },
-                {
-                    text: "Imagination Development",
-                    url: "https://docdro.id/eE4wcz6",
-                },
-                { text: "Warm Atmosphere", url: "https://docdro.id/eE4wcz6" },
-                {
-                    text: "Individual Approach",
-                    url: "https://docdro.id/eE4wcz6",
-                },
-                { text: "Group Creativity", url: "https://docdro.id/eE4wcz6" },
-                { text: "Art for Children", url: "https://docdro.id/eE4wcz6" },
-            ],
+            documents: [],
         },
     ];
 
@@ -913,10 +987,10 @@ document.addEventListener("DOMContentLoaded", function () {
         
                         <!-- Category Circle -->
                              <span class="project-category ${
-                                 product.category === "Completed"
+                                 product.category === "Close"
                                      ? "bg-primary"
-                                     : product.category === "Relative"
-                                     ? "bg-danger"
+                                     : product.category === "Open"
+                                     ? "bg-success"
                                      : ""
                              }">
                                 ${product.category}
@@ -992,7 +1066,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 co_name: product.co_name,
                 co_position: product.co_position,
 
-                num: JSON.stringify(product.num),
+                documents: JSON.stringify(product.documents),
             }).toString();
             console.log("Redirect URL:", `index_project.html?${query}`);
             window.location.href = `index-project.html?${query}`;
@@ -1100,11 +1174,6 @@ document.addEventListener("DOMContentLoaded", function () {
     renderInitial();
 });
 
-
-
-
-
-
 // 🔹 Ініціалізація при завантаженні index_project
 // 🔹 Ініціалізація при завантаженні index_project
 // 🔹 Ініціалізація при завантаженні index_project
@@ -1156,7 +1225,7 @@ function initProductPage() {
         co_name: params.get("co_name") || "",
         co_position: params.get("co_position") || "",
 
-        num: JSON.parse(params.get("num") || "[]"),
+        documents: JSON.parse(params.get("documents") || "[]"),
     };
 
     // 🔹 Заповнення контенту (safe)
@@ -1327,18 +1396,18 @@ function initProductPage() {
             momentsContainer.appendChild(li);
         });
     }
-    // num
-    // num
-    // num
-    // num
-    // num
-    // num
+    // documents
+    // documents
+    // documents
+    // documents
+    // documents
+    // documents
 
     const tagsContainer = card.querySelector(".tags");
-    if (tagsContainer && product.num.length) {
+    if (tagsContainer && product.documents.length) {
         tagsContainer.innerHTML = "";
 
-        product.num.forEach((item) => {
+        product.documents.forEach((item) => {
             const a = document.createElement("a");
             a.href = item.url || "#";
             a.textContent = item.text;
