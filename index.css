@@ -17,7 +17,6 @@
     scroll-behavior: smooth;
 }
 
-
 body {
     margin: 0;
     padding: 0;
@@ -27,36 +26,30 @@ body {
     font-family: var(--default-font);
 }
 
-
-
-
-
-
 section {
     position: relative;
-    background-image: url('https://lifehacker.ru/wp-content/uploads/2017/03/bluesky_1488891825.jpg');
+    background-image: url("https://lifehacker.ru/wp-content/uploads/2017/03/bluesky_1488891825.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-  }
-  
-  /* затемнення */
-  section::before {
+}
+
+/* затемнення */
+section::before {
     content: "";
     position: absolute;
     inset: 0;
     background: rgba(0, 0, 0, 0.5); /* рівень затемнення */
     z-index: 1;
-  }
-  
-  /* щоб контент був поверх */
-  section > .container-xxl {
+}
+
+/* щоб контент був поверх */
+section > .container-xxl {
     position: relative;
     z-index: 2;
-  }
+}
 
-
-  .my_btn {
+.my_btn {
     margin: 12px;
     padding: 8px;
     padding-inline: 16px;
@@ -82,17 +75,64 @@ section {
 
 .my_btn:hover {
     color: white;
-    transform: scale(0.8) rotate(-2deg) ;
+    transform: scale(0.8) rotate(-2deg);
 }
 
 .my_btn:active {
     color: white;
-    transform: scale(0.6) rotate(-2deg);}
+    transform: scale(0.6) rotate(-2deg);
+}
+
+.my_logo {
+    margin: 0;
+    padding: 0;
+
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.my_logo:hover {
+    transform: scale(1.1);
+}
+
+.my_logo:active {
+    transform: scale(0.8);
+}
+
+
+
+
+.btn-close {
+    filter: brightness(0) invert(1);
+    opacity: 1;
+    transition: 0.3s;
+  }
+  
+  .btn-close:hover {
+    opacity: 1;
+
+    transform: scale(1.2);
+  }
+  
+  .btn-close:active {
+    opacity: 1;
+
+    transform: scale(0.8);
+  }
+  
+  .btn-close:focus,
+  .btn-close:active {
+    outline: none;
+    box-shadow: none;
+  }
 
 
 
 
 
+.modal-backdrop.show {
+    opacity: 0.7; /* стандарт ~0.5, тут значно темніше */
+  }
 
 
 
