@@ -131,8 +131,9 @@ section > .container-xxl {
 
 
 .modal-backdrop.show {
-    opacity: 0.7; /* стандарт ~0.5, тут значно темніше */
+    opacity: 0.5; /* стандарт ~0.5, тут значно темніше */
   }
+
 
 
 
