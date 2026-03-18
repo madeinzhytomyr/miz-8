@@ -94,7 +94,7 @@
 
         <div class="m-0 p-3 modal-header bg-transparent border-0">
           <h5 class="m-0 me-auto p-0 modal-title" id="exampleModalLabel"></h5>
-          <button type="button"  class="m-0 p-0 my-btn text-white btn-close btn-close-white" data-bs-dismiss="modal"
+          <button type="button" class="m-0 p-0 my-btn text-white btn-close btn-close-white" data-bs-dismiss="modal"
             aria-label="Close"></button>
         </div>
 
@@ -156,12 +156,12 @@
 
 
               <!-- USD -->
-              <div class="m-0 p-2 py-1 row justify-content-start justify-conte5nt-sm-center align-items-center">
+              <div class="m-0 p-2 py-1 row justify-content-start justify-conte5nt-sm-center align-items-center d-none">
 
                 <span class="m-0 p-0  pe-2 col-auto fw-bold small" style="font-size: clamp(12px,1.2vw,13px);">
                   <!-- <i  style="width:32px; height:32px;"
                     class="m-0 p-0 px-1 me-2 bi bi-currency-dollar border rounded-2"></i> -->
-                    USD:</span>
+                  USD:</span>
 
                 <!-- IBAN -->
                 <span id="ibanUSD" class="m-0 p-0 px-2 mx-auto col-auto font-monospace fst-italic"
@@ -175,12 +175,12 @@
               </div>
 
               <!-- EUR -->
-              <div class="m-0 p-2 py-1 row justify-content-start justify-con5tent-sm-center align-items-center">
+              <div class="m-0 p-2 py-1 row justify-content-start justify-con5tent-sm-center align-items-center d-none">
 
                 <span class="m-0 p-0 pe-2 col-auto fw-bold small" style="font-size: clamp(12px,1.2vw,13px);">
                   <!-- <i  style="width:32px; height:32px;"
                   class="m-0 p-0 px-1 me-2 bi bi-currency-euro border rounded-2 "></i> -->
-                EUR:</span>
+                  EUR:</span>
 
                 <!-- IBAN -->
                 <span id="ibanUSD" class="m-0 p-0 px-2 mx-auto  col-auto font-monospace fst-italic"
@@ -193,12 +193,66 @@
                 </button>
               </div>
 
+
+
+
+              <!-- USD -->
+              <div class="m-0 p-2 py-1 d-flex align-items-center justify-content-between flex-wrap">
+
+                <!-- Валюта та кнопка мобільна -->
+                <div class="d-flex align-items-center gap-1 m-0  p-0">
+
+                  <span class="fw-bold   ">USD:</span>
+
+                  <!-- Копіювання десктоп -->
+                  <button class="btn btn-outline-secondary btn-sm    position-absolute end-0 m-0 me-4 border-0"
+                    onclick="copyIBAN('ibanUSD', this)">
+                    <i class="bi bi-clipboard text-white"></i>
+                  </button>
+                </div>
+
+                <!-- IBAN -->
+                <div
+                  class="flex-grow-1 text-center bg-black rounded m-0 p-1 overflow-auto text-truncate col-12 col-sm-auto m-0 me-sm-3 fst-italic">
+                  <span id="ibanUSD" class="font-monospace" style="font-size: clamp(12px,1.2vw,14px);">
+                    UA 40 3220 0100 0000 2620 3376 0927 04
+                  </span>
+                </div>
+
+              </div>
+
+
+              <!-- EUR -->
+              <div class="m-0 p-2 py-1 d-flex align-items-center justify-content-between flex-wrap">
+
+                <!-- Валюта та кнопка мобільна -->
+                <div class="d-flex align-items-center gap-1 m-0  p-0">
+
+                  <span class="fw-bold   ">EUR:</span>
+
+                  <!-- Копіювання десктоп -->
+                  <button class="btn btn-outline-secondary btn-sm    position-absolute end-0 m-0 me-4 border-0"
+                    onclick="copyIBAN('ibanUSD', this)">
+                    <i class="bi bi-clipboard text-white"></i>
+                  </button>
+                </div>
+
+                <!-- IBAN -->
+                <div
+                  class="flex-grow-1 text-center bg-black rounded m-0 p-1 overflow-auto text-truncate col-12 col-sm-auto m-0 me-sm-3 fst-italic">
+                  <span id="ibanUSD" class="font-monospace" style="font-size: clamp(12px,1.2vw,14px);">
+                    UA 40 3220 0100 0000 2620 5376 1280 41
+                  </span>
+                </div>
+
+              </div>
             </div>
 
 
 
 
-       
+
+
 
 
 
