@@ -135,6 +135,24 @@ section > .container-xxl {
   }
 
 
-
-
-
+  @media (max-width: 576px) {
+    #exampleModal .modal-dialog {
+      margin: 0;
+      max-width: 100%;
+      height: 100vh;
+    }
+  
+    #exampleModal .modal-content {
+      height: 100%;
+      border-radius: 0;
+    }
+  }
+  
+  @media (min-width: 577px) {
+    #exampleModal .modal-dialog {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+  }
