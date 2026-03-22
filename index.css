@@ -156,3 +156,11 @@ section > .container-xxl {
       min-height: 100vh;
     }
   }
+
+
+
+/* для секшн */
+  .dvh-100 {
+    height: 100vh;
+    height: 100dvh;
+  }
