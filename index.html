@@ -71,7 +71,7 @@
             target="_blank"></a>
           <a href="https://www.youtube.com/@madeinzhytomyr" class="bi bi-youtube text-white m-0 p-2 py-1 mx-1 my_btn"
             target="_blank"></a>
-    
+
         </div>
       </div>
 
@@ -88,17 +88,17 @@
   <!-- Modal -->
   <div class="m-0 p-0 modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
     aria-hidden="true">
-    <div style="max-width: 498px; " class="m-0 p-0 mx-auto modal-dialog modal-md modal-dialog-centered">
-      <div class="m-0 p-0 modal-content bg-transparent text-white border-0">
+    <div style="max-width: 498px; " class="m-0 p-0 mx-auto modal-dialog modal-md ">
+      <div
+        class="m-0 p-2 modal-content bg-transparent text-white border-0 d-flex flex-column justify-content-between ">
 
-        <div class="m-0 p-3 modal-header bg-transparent border-0">
-          <h5 class="m-0 me-auto p-0 modal-title" id="exampleModalLabel"></h5>
+        <div class="m-0 p-3 modal-body ms-auto bg-transparent border-0">
           <button type="button" class="m-0 p-0 my-btn text-white btn-close btn-close-white" data-bs-dismiss="modal"
             aria-label="Close"></button>
         </div>
 
 
-        <div class="m-0 p-2 modal-body">
+        <div class="m-0 p-0 modal-body  ">
 
 
           <!-- Додати кнопку Monobank -->
@@ -131,8 +131,6 @@
 
           </div>
 
-
-
           <!-- Картки валют -->
           <div class="m-0 p-2 py-4 row  justify-content-between">
             <div class="m-0 p-2 col-12  small  bg-black rounded-3 border " style="font-size: clamp(12px,1.2vw,13px);">
@@ -153,6 +151,31 @@
               </div>
 
 
+
+              <!-- EUR -->
+              <div class="m-0 p-2 py-1 d-flex align-items-center justify-content-between flex-wrap">
+
+                <!-- Валюта та кнопка мобільна -->
+                <div class="d-flex align-items-center gap-1 m-0  p-0">
+
+                  <span class="fw-bold   ">EUR:</span>
+
+                  <!-- Копіювання десктоп -->
+                  <button class="btn btn-outline-secondary btn-sm    position-absolute end-0 m-0 me-4 border-0"
+                    onclick="copyIBAN('ibanEUR', this)">
+                    <i class="bi bi-clipboard text-white"></i>
+                  </button>
+                </div>
+
+                <!-- IBAN -->
+                <div
+                  class="flex-grow-1 text-center bg-black rounded m-0 p-1 overflow-auto text-truncate col-auto me-3 fst-italic">
+                  <span id="ibanEUR" class="font-monospace" style="font-size: clamp(11px,1.2vw,14px);">
+                    UA 40 3220 0100 0000 2620 5376 1280 41
+                  </span>
+                </div>
+
+              </div>
 
 
 
@@ -182,52 +205,49 @@
               </div>
 
 
-              <!-- EUR -->
+
+              <!-- MONO CARD UAH -->
               <div class="m-0 p-2 py-1 d-flex align-items-center justify-content-between flex-wrap">
 
                 <!-- Валюта та кнопка мобільна -->
                 <div class="d-flex align-items-center gap-1 m-0  p-0">
 
-                  <span class="fw-bold   ">EUR:</span>
+                  <span class="fw-bold   ">Card number:</span>
 
                   <!-- Копіювання десктоп -->
                   <button class="btn btn-outline-secondary btn-sm    position-absolute end-0 m-0 me-4 border-0"
-                    onclick="copyIBAN('ibanUSD', this)">
+                    onclick="copyIBAN('cardUAH', this)">
                     <i class="bi bi-clipboard text-white"></i>
                   </button>
                 </div>
 
                 <!-- IBAN -->
                 <div
-                  class="flex-grow-1 text-center bg-black rounded m-0 p-1 overflow-auto text-truncate col-auto me-3 fst-italic">
-                  <span id="ibanUSD" class="font-monospace" style="font-size: clamp(11px,1.2vw,14px);">
-                    UA 40 3220 0100 0000 2620 5376 1280 41
+                  class="flex-grow-1 text-center bg-black rounded m-0 p-1 overflow-auto text-truncate  col-auto me-3 fst-italic ">
+                  <span id="cardUAH" class="font-monospace" style="font-size: clamp(11px,1.2vw,14px);">
+                    4874 1000 2561 4044
                   </span>
                 </div>
 
               </div>
+
+
             </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
           </div>
 
 
+        </div>
 
 
-          <div class="m-0 p-0 py-4 row justify-content-between align-items-center g-3 m-0 p-0">
 
-            <div class="m-0 p-2 col-auto  small ">
+
+
+        <div class="m-0 p-0 modal-body mb-md-5 pb-md-5 mt-auto flex-grow-0">
+
+
+          <div class="m-0 p-0 py-4 pb-3 row  justify-content-between align-items-center g-3 m-0 p-0">
+
+            <div class="m-0 p-2 col-auto   small ">
               <a href="https://send.monobank.ua/jar/9Yy4Pc3zTx" target="_blank" rel="noopener noreferrer"
                 class="my_btn m-0 p-2 px-3 row justify-content-center text-decoration-none border rounded-3 bg-black">
                 <div class="m-0 p-0 py-1 me-2 col-auto bi bi-gift-fill"></div>
@@ -236,32 +256,18 @@
             </div>
 
 
-            <div class="m-0 p-2 col-auto  small ">
-              <a href="https://drive.google.com/drive/folders/1qALusGwxPA0YhZ5xsBl9Ny_DBH_nzpFo?usp=drive_link" target="_blank"
+            <div class="m-0 p-2 col-auto small ">
+              <a href="https://drive.google.com/drive/folders/1qALusGwxPA0YhZ5xsBl9Ny_DBH_nzpFo?usp=drive_link"
+                target="_blank"
                 class="my_btn m-0 p-2 px-3 row justify-content-center text-decoration-none  border rounded-3 bg-black">
                 <div class="m-0 p-0 py-1 me-2 col-auto bi bi-clipboard-check"></div>
                 <span class="m-0 p-0 py-1 col-auto">Documents</span>
               </a>
-
-
             </div>
 
 
-
           </div>
-
-
-
-          <!-- <a href="https://www.youtube.com/@madeinzhytomyr"
-            class="my_logo m-0 mt-5 p-3 row justify-content-center text-secondary text-decoration-none small">
-            <div class="m-0 p-0 pe-2 col-auto bi bi-clipboard-check"></div>
-            <span class="m-0 p-0 col-auto">Documents</span>
-          </a> -->
-
-
         </div>
-
-
 
       </div>
     </div>
