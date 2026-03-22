@@ -160,6 +160,10 @@ section > .container-xxl {
 
 
 /* для секшн */
-.dvh-100 {
-    height: 100dvh;
+html, body {
+    height: 100%;
+  }
+  .dvh-100 {
+    min-height: 100vh;
+    min-height: 100dvh;
   }
