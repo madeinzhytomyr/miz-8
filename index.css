@@ -139,11 +139,11 @@ section > .container-xxl {
     #exampleModal .modal-dialog {
       margin: 0;
       max-width: 100%;
-      height: 100vh;
+      height: 100dvh;
     }
   
     #exampleModal .modal-content {
-      height: 100vh;
+      height: 100dvh;
       border-radius: 0;
     }
   }
