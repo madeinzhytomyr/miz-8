@@ -24,6 +24,9 @@ body {
     color: var(--default-color);
     background-color: var(--background-color);
     font-family: var(--default-font);
+
+    /* font-family: 'Oswald', Arial, sans-serif; */
+
 }
 
 section {
@@ -91,13 +94,13 @@ section > .container-xxl {
     transition: 0.3s;
 }
 
-.my_logo:hover {
+/* .my_logo:hover {
     transform: scale(1.1);
 }
 
 .my_logo:active {
     transform: scale(0.8);
-}
+} */
 
 
 
@@ -129,12 +132,14 @@ section > .container-xxl {
 
 
 
-
+/* це затемнення модалки бекграундп */
 .modal-backdrop.show {
     opacity: 0.6; /* стандарт ~0.5, тут значно темніше */
   }
 
 
+
+  /* це типу висота щоб по центру було і модалкав враховував менб зверху на телефлнах */
   @media (max-width: 576px) {
     #exampleModal .modal-dialog {
       margin: 0;
@@ -159,7 +164,7 @@ section > .container-xxl {
 
 
 
-/* для секшн */
+/* для секшн  щоб висота на телефонах вразовувала верхнє меню і не було скролу щоб підлаштовувалось */
 html, body {
     height: 100%;
   }
@@ -167,3 +172,12 @@ html, body {
     min-height: 100vh;
     min-height: 100dvh;
   }
+
+
+
+
+
+
+
+
+  
